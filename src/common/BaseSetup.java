@@ -32,6 +32,11 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 public class BaseSetup {
 
     public static WebDriver driver;
@@ -62,6 +67,23 @@ public class BaseSetup {
         prefs.put("credentials_enable_service", false);
         prefs.put("profile.password_manager_enabled", false);
         options.setExperimentalOption("prefs", prefs);
+        
+        
+      //  ChromeOptions options = new ChromeOptions();   duplicate code
+   //     Map<String, Object> prefs = new HashMap<>(); duplicate code
+        prefs.put("profile.password_manager_leak_detection", false);
+        prefs.put("profile.credentials_enable_service", false);
+
+        options.setExperimentalOption("prefs", prefs);
+
+      
+
+        
+        
+        
+        
+        
+        
 
         // Initialize ChromeDriver
         driver = new ChromeDriver(options);
