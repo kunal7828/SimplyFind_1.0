@@ -5,6 +5,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import common.BaseSetup;
+import pages.QuickSearchPage;
 import pages.QuickSearchPageFun;
 
 public class QuickSearchTest extends BaseSetup {
@@ -13,22 +14,19 @@ public class QuickSearchTest extends BaseSetup {
     WebDriverWait wait;
 
 	
-	String postCode="HA1 1LG";
+	
+	String postCodeValue="HA1 1LG";
 	
 	@Test(priority = 1)
 
 	 public void verifyQuickSearchFunctionality() throws Exception {
-	        QuickSearchPageFun quickSearchPageFun = new QuickSearchPageFun(driver);
-	        quickSearchPageFun.clickOnQuickSearch();
-	    //    quickSearchPageFun.enterPostcode();
+		QuickSearchPage quickSearchPage = new QuickSearchPage(driver);
+		quickSearchPage.clickOnQuickSearch();
+		quickSearchPage.enterTextPostCodeField(postCodeValue);
+		quickSearchPage.clickOnselectPropertyType();
+		
+		
 	    }
-
-	
-	
-	
-	
-	
-	
 	
 	
 	

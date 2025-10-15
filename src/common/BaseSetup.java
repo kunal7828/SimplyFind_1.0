@@ -74,17 +74,8 @@ public class BaseSetup {
         prefs.put("profile.password_manager_leak_detection", false);
         prefs.put("profile.credentials_enable_service", false);
 
-        options.setExperimentalOption("prefs", prefs);
-
-      
-
+        options.setExperimentalOption("prefs", prefs);   
         
-        
-        
-        
-        
-        
-
         // Initialize ChromeDriver
         driver = new ChromeDriver(options);
         log.info("Chrome browser launched successfully.");
@@ -118,7 +109,7 @@ public class BaseSetup {
             Thread.sleep(2000);
             
             loginPage.clickOnLogin();
-            Thread.sleep(5000);
+            Thread.sleep(2000);
             
             log.info("Login successful with username: " + username);
 
@@ -137,9 +128,12 @@ public class BaseSetup {
 		 */      
         
 
-        // Wait for the popup to appear
-        Thread.sleep(2000); // adjust according to popup timing
-
+       
+/*------------------------------------------------
+  
+         // Wait for the popup to appear
+      //  Thread.sleep(2000); // adjust according to popup timing
+        
         // Create Robot instance
         Robot robot = new Robot();
 
@@ -151,11 +145,9 @@ public class BaseSetup {
         Thread.sleep(500);
 
         System.out.println("OK clicked using Robot!");
-
+------------------------------------------------*/
         
-        
-        Thread.sleep(3000);
-        
+       
         // --- Handle Alert if present ---
         try {
             Alert alert = driver.switchTo().alert();
@@ -167,6 +159,7 @@ public class BaseSetup {
 
         Thread.sleep(3000);
     }
+
 
     @BeforeMethod
     public void beforeMethod(Method method) {

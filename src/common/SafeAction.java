@@ -4,18 +4,25 @@ import java.io.File;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 
@@ -26,42 +33,61 @@ public class SafeAction extends Sync {
     public SafeAction() {
         this.driver = BaseSetup.driver;
     }
-
-    
-    
-    
-    
-    
     
     
     // Click action using XPath
     public void safeClick(String xpathLocator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
-            driver.findElement(By.xpath(xpathLocator)).click();
-            Reporter.log("Clicked successfully on element with XPath: " + xpathLocator, true);
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpathLocator)));
+            element.click();
+
+            Reporter.log(String.format("✅ Successfully clicked element with XPath: %s", xpathLocator), true);
+
+        } catch (TimeoutException e) {
+            Reporter.log(String.format("❌ Timeout: Element not clickable within time limit. XPath: %s", xpathLocator), true);
         } catch (NoSuchElementException e) {
-            Reporter.log("Element not found with XPath: " + xpathLocator, true);
+            Reporter.log(String.format("❌ Element not found with XPath: %s", xpathLocator), true);
+        } catch (ElementClickInterceptedException e) {
+            Reporter.log(String.format("⚠️ Click intercepted by another element. XPath: %s", xpathLocator), true);
         } catch (ElementNotInteractableException e) {
-            Reporter.log("Element not interactable with XPath: " + xpathLocator, true);
+            Reporter.log(String.format("⚠️ Element not interactable with XPath: %s", xpathLocator), true);
+        } catch (StaleElementReferenceException e) {
+            Reporter.log(String.format("⚠️ Element became stale while attempting to click. XPath: %s", xpathLocator), true);
         } catch (Exception e) {
-            Reporter.log("An error occurred while clicking the element with XPath: " + xpathLocator, true);
+            Reporter.log(String.format("❌ Unexpected error while clicking element with XPath: %s. Error: %s", xpathLocator, e.getMessage()), true);
         }
     }
 
     // Type action using XPath
     public void safeType(String xpathLocator, String value) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
-            WebElement element = driver.findElement(By.xpath(xpathLocator));
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathLocator)));
+
+            element.clear(); // Always clear existing text before typing
             element.sendKeys(value);
-            Reporter.log("Entered value: " + value + " successfully into element with XPath: " + xpathLocator, true);
+            
+            if (!element.getAttribute("value").equals(value)) {
+                // Fallback: use JavaScript if sendKeys didn't register
+                ((JavascriptExecutor) driver).executeScript("arguments[0].value = arguments[1];", element, value);
+            }
+
+            Reporter.log(String.format("✅ Successfully entered value '%s' into element with XPath: %s", value, xpathLocator), true);
+
+        } catch (TimeoutException e) {
+            Reporter.log(String.format("❌ Timeout: Element not visible within time limit. XPath: %s", xpathLocator), true);
         } catch (NoSuchElementException e) {
-            Reporter.log("Element not found with XPath: " + xpathLocator, true);
+            Reporter.log(String.format("❌ Element not found with XPath: %s", xpathLocator), true);
         } catch (ElementNotInteractableException e) {
-            Reporter.log("Unable to type into the element with XPath: " + xpathLocator, true);
+            Reporter.log(String.format("⚠️ Element not interactable with XPath: %s", xpathLocator), true);
+        } catch (StaleElementReferenceException e) {
+            Reporter.log(String.format("⚠️ Element became stale while typing. XPath: %s", xpathLocator), true);
         } catch (Exception e) {
-            Reporter.log("An error occurred while typing into element with XPath: " + xpathLocator, true);
+            Reporter.log(String.format("❌ Unexpected error while typing into element with XPath: %s. Error: %s", xpathLocator, e.getMessage()), true);
         }
     }
+
 
     // Clear action using XPath
     public void safeClear(String xpathLocator) {

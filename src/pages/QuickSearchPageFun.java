@@ -24,6 +24,8 @@ public class QuickSearchPageFun extends SafeAction {
 
     WebDriver driver;
     WebDriverWait wait;
+    
+    String postCodeValue="HA1 1LG";
 
 public QuickSearchPageFun(WebDriver driver) {
     super(); // Ensure SafeAction uses this driver
@@ -53,7 +55,7 @@ public QuickSearchPageFun(WebDriver driver) {
             WebElement postcodeElement = wait.until(ExpectedConditions.visibilityOfElementLocated(postcodeInput));
             Thread.sleep(5000);
             postcodeElement.clear();
-            postcodeElement.sendKeys("HA1");
+            postcodeElement.sendKeys(postCodeValue);
             System.out.println("✅ Postcode entered successfully.");
         } catch (Exception e) {
             System.out.println("❌ Could not enter postcode: " + e.getMessage());
