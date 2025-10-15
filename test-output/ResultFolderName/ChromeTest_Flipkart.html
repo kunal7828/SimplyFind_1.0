@@ -1,0 +1,299 @@
+<html>
+<head>
+<title>TestNG:  ChromeTest_Flipkart</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ChromeTest_Flipkart</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Aug 17 15:39:00 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>50 seconds (50724 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.AdminTest.verifyUpdateFunUnderAdmin()'><b>verifyUpdateFunUnderAdmin</b><br>Test class: tests.AdminTest<br/>
+<a href="#Output-87193813" onClick='toggleBox("Output-87193813", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-87193813" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-87193813">
+Element not found with XPath: //div[text()='Actions']//following::button[2]<br/>
+IOException occurred while saving the screenshot: C:\Users\ak200\OneDrive\Documents\workspace\SeleniumWDclickOnUpdateButton_20250817_153928.png (The system cannot find the path specified)<br/>
+Clicked successfully on element with XPath: //label[text()='Username']//following::i[1]<br/>
+IOException occurred while saving the screenshot: C:\Users\ak200\OneDrive\Documents\workspace\SeleniumWDclickOnBoxInUpdatePanel_20250817_153930.png (The system cannot find the path specified)<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //label[text()=&apos;Password&apos;]//following::input[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\kunal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53985}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53985/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 957e46d825369aa3a9109a320f1541a3
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at common.Sync.safeExplicitWait(Sync.java:41)
+	at pages.AdminPage.clickOnBoxInUpdatePanel(AdminPage.java:118)
+	at tests.AdminTest.verifyUpdateFunUnderAdmin(AdminTest.java:45)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace87193813", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace87193813'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //label[text()=&apos;Password&apos;]//following::input[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\kunal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53985}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53985/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 957e46d825369aa3a9109a320f1541a3
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at common.Sync.safeExplicitWait(Sync.java:41)
+	at pages.AdminPage.clickOnBoxInUpdatePanel(AdminPage.java:118)
+	at tests.AdminTest.verifyUpdateFunUnderAdmin(AdminTest.java:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>12</td>
+<td>tests.AdminTest@302a07d</td></tr>
+<tr>
+<td title='tests.AdminTest.verifySearchFunUnderAdmin()'><b>verifySearchFunUnderAdmin</b><br>Test class: tests.AdminTest<br/>
+<a href="#Output-1017897616" onClick='toggleBox("Output-1017897616", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1017897616" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1017897616">
+Entered value: Akash Patil successfully into element with XPath: //label[text()='Username']//following::input[1]<br/>
+IOException occurred while saving the screenshot: C:\Users\ak200\OneDrive\Documents\workspace\SeleniumWDenterUsernameInSearchPanel_Akash Patil_20250817_153917.png (The system cannot find the path specified)<br/>
+Clicked successfully on element with XPath: //label[text()='Username']//following::button[2]<br/>
+IOException occurred while saving the screenshot: C:\Users\ak200\OneDrive\Documents\workspace\SeleniumWDclickOnSearchButton_20250817_153917.png (The system cannot find the path specified)<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //div[text()=&apos;Actions&apos;]//following::button[2] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\kunal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53985}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53985/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 957e46d825369aa3a9109a320f1541a3
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at common.Sync.safeExplicitWait(Sync.java:41)
+	at pages.AdminPage.clickOnSearchButton(AdminPage.java:106)
+	at tests.AdminTest.verifySearchFunUnderAdmin(AdminTest.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1017897616", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1017897616'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //div[text()=&apos;Actions&apos;]//following::button[2] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\kunal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53985}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53985/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 957e46d825369aa3a9109a320f1541a3
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at common.Sync.safeExplicitWait(Sync.java:41)
+	at pages.AdminPage.clickOnSearchButton(AdminPage.java:106)
+	at tests.AdminTest.verifySearchFunUnderAdmin(AdminTest.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>11</td>
+<td>tests.AdminTest@302a07d</td></tr>
+<tr>
+<td title='tests.AdminTest.verifyAddUserFunUnderAdmin()'><b>verifyAddUserFunUnderAdmin</b><br>Test class: tests.AdminTest<br/>
+<a href="#Output-1762698941" onClick='toggleBox("Output-1762698941", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1762698941" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1762698941">
+Clicked successfully on element with XPath: //span[text()='Admin']<br/>
+IOException occurred while saving the screenshot: C:\Users\ak200\OneDrive\Documents\workspace\SeleniumWDclickOnAdmin_20250817_153901.png (The system cannot find the path specified)<br/>
+Clicked successfully on element with XPath: //button[contains(@class, 'oxd-button--secondary')]<br/>
+IOException occurred while saving the screenshot: C:\Users\ak200\OneDrive\Documents\workspace\SeleniumWDclickOnAddButton_20250817_153902.png (The system cannot find the path specified)<br/>
+Clicked successfully on element with XPath: //input[@placeholder='Type for hints...']//preceding::i[1]<br/>
+IOException occurred while saving the screenshot: C:\Users\ak200\OneDrive\Documents\workspace\SeleniumWDselectUserRole_20250817_153903.png (The system cannot find the path specified)<br/>
+Element not found with XPath: //div[@class='oxd-select-dropdown --position-bottom']//span[text()='Admin']<br/>
+Entered value: a successfully into element with XPath: //input[@placeholder='Type for hints...']<br/>
+IOException occurred while saving the screenshot: C:\Users\ak200\OneDrive\Documents\workspace\SeleniumWDselectEmployeeName_a_20250817_153903.png (The system cannot find the path specified)<br/>
+Clicked successfully on element with XPath: //input[@placeholder='Type for hints...']//following::span[1]<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //input[@placeholder=&apos;Type for hints...&apos;]//following::i (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\kunal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53985}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53985/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 957e46d825369aa3a9109a320f1541a3
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at common.Sync.safeExplicitWait(Sync.java:41)
+	at pages.AdminPage.selectEmployeeName(AdminPage.java:62)
+	at tests.AdminTest.verifyAddUserFunUnderAdmin(AdminTest.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1762698941", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1762698941'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //input[@placeholder=&apos;Type for hints...&apos;]//following::i (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\kunal\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53985}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53985/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 957e46d825369aa3a9109a320f1541a3
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at common.Sync.safeExplicitWait(Sync.java:41)
+	at pages.AdminPage.selectEmployeeName(AdminPage.java:62)
+	at tests.AdminTest.verifyAddUserFunUnderAdmin(AdminTest.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>16</td>
+<td>tests.AdminTest@302a07d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.AdminTest.verifyDeleteFunUnderAdmin()'><b>verifyDeleteFunUnderAdmin</b><br>Test class: tests.AdminTest<br/>
+<a href="#Output-1767942865" onClick='toggleBox("Output-1767942865", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1767942865" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1767942865">
+Element not found with XPath: //div[text()='Akash Patil']//following::button[1]<br/>
+IOException occurred while saving the screenshot: C:\Users\ak200\OneDrive\Documents\workspace\SeleniumWDclickOnDeleteButton_20250817_153941.png (The system cannot find the path specified)<br/>
+Element not found with XPath: //button[text()=' Yes, Delete ']<br/>
+IOException occurred while saving the screenshot: C:\Users\ak200\OneDrive\Documents\workspace\SeleniumWDclickOnConfirmDeleteButton_20250817_153941.png (The system cannot find the path specified)<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>tests.AdminTest@302a07d</td></tr>
+</table><p>
+</body>
+</html>

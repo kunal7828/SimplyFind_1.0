@@ -1,0 +1,21 @@
+<suite name="ResultFolderName" parallel="tests" thread-count="2">
+
+<!-- Chrome test for HRMAdmin_CURD_26 -->
+    <test name="ChromeTest_HRM">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.PIMTest"/>
+        </classes>
+    </test>
+
+    <!-- Chrome test for LaunchFlipkartFun -->
+    <test name="ChromeTest_Flipkart">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+	            <class name="tests.AdminTest"/>
+        </classes>
+    </test>
+
+
+
+</suite>
