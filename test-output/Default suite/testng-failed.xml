@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.SimplifyQuickSearch">
+      <class name="tests.QuickSearchTest">
         <methods>
-          <include name="openBrowserWithLogin"/>
           <include name="verifyQuickSearchFunctionality"/>
+          <include name="openBrowserWithLogin"/>
           <include name="beforeMethod"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- tests.SimplifyQuickSearch -->
+      </class> <!-- tests.QuickSearchTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
