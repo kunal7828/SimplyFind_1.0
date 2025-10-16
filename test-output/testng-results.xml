@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (ed4cc2f7fb207382e249d2a6be0dbb92)]]>
+      <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (9e1c5fdffcbf0eb8cc7b6bd12eb34f5c)]]>
     </line>
     <line>
       <![CDATA[✅ Element(s) visible for XPath: //h6[text()='Quick Search '] (Waited 10 sec)]]>
@@ -32,16 +32,16 @@
       <![CDATA[✅ Property Type dropdown clicked successfully.]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-10-15T19:40:18 IST" name="Default suite" finished-at="2025-10-15T19:40:22 IST" duration-ms="3726">
+  <suite started-at="2025-10-16T09:41:30 IST" name="Default suite" finished-at="2025-10-16T09:41:34 IST" duration-ms="3802">
     <groups>
     </groups>
-    <test started-at="2025-10-15T19:40:18 IST" name="Default test" finished-at="2025-10-15T19:40:22 IST" duration-ms="3726">
+    <test started-at="2025-10-16T09:41:30 IST" name="Default test" finished-at="2025-10-16T09:41:34 IST" duration-ms="3802">
       <class name="tests.QuickSearchTest">
-        <test-method is-config="true" signature="openBrowserWithLogin()[pri:0, instance:tests.QuickSearchTest@1d131e1b]" started-at="2025-10-15T19:39:53 IST" name="openBrowserWithLogin" finished-at="2025-10-15T19:40:18 IST" duration-ms="24665" status="PASS">
+        <test-method is-config="true" signature="openBrowserWithLogin()[pri:0, instance:tests.QuickSearchTest@50468873]" started-at="2025-10-16T09:41:09 IST" name="openBrowserWithLogin" finished-at="2025-10-16T09:41:30 IST" duration-ms="21099" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowserWithLogin -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.QuickSearchTest@1d131e1b]" started-at="2025-10-15T19:40:18 IST" name="beforeMethod" finished-at="2025-10-15T19:40:18 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.QuickSearchTest@50468873]" started-at="2025-10-16T09:41:30 IST" name="beforeMethod" finished-at="2025-10-16T09:41:30 IST" duration-ms="10" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -52,10 +52,10 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyQuickSearchFunctionality()[pri:1, instance:tests.QuickSearchTest@1d131e1b]" started-at="2025-10-15T19:40:18 IST" name="verifyQuickSearchFunctionality" finished-at="2025-10-15T19:40:22 IST" duration-ms="3639" status="PASS">
+        <test-method signature="verifyQuickSearchFunctionality()[pri:1, instance:tests.QuickSearchTest@50468873]" started-at="2025-10-16T09:41:30 IST" name="verifyQuickSearchFunctionality" finished-at="2025-10-16T09:41:34 IST" duration-ms="3728" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (ed4cc2f7fb207382e249d2a6be0dbb92)]]>
+              <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (9e1c5fdffcbf0eb8cc7b6bd12eb34f5c)]]>
             </line>
             <line>
               <![CDATA[✅ Element(s) visible for XPath: //h6[text()='Quick Search '] (Waited 10 sec)]]>
@@ -86,7 +86,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- verifyQuickSearchFunctionality -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.QuickSearchTest@1d131e1b]" started-at="2025-10-15T19:40:22 IST" name="closeBrowser" finished-at="2025-10-15T19:40:22 IST" duration-ms="745" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.QuickSearchTest@50468873]" started-at="2025-10-16T09:41:34 IST" name="closeBrowser" finished-at="2025-10-16T09:41:35 IST" duration-ms="521" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

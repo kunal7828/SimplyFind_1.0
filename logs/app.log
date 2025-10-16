@@ -603,3 +603,9 @@ Session ID: b07ade6aac6d7a8d2841ffe2ea710be3
 2025-10-15 19:40:15 WARN  BaseSetup:168 - No alert present after login.
 2025-10-15 19:40:22 INFO  BaseSetup:185 - Extent Report generated successfully.
 2025-10-15 19:40:22 INFO  BaseSetup:189 - Browser closed successfully.
+2025-10-16 09:41:09 INFO  BaseSetup:49 - Launching Chrome browser...
+2025-10-16 09:41:13 INFO  BaseSetup:81 - Chrome browser launched successfully.
+2025-10-16 09:41:27 INFO  BaseSetup:125 - Login successful with username: kunal@simplyphi.co.uk
+2025-10-16 09:41:27 WARN  BaseSetup:168 - No alert present after login.
+2025-10-16 09:41:35 INFO  BaseSetup:186 - Extent Report generated successfully.
+2025-10-16 09:41:35 INFO  BaseSetup:190 - Browser closed successfully.

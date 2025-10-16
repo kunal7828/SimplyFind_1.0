@@ -87,14 +87,25 @@ public class BaseSetup {
 
         // --- Setup Extent Reports ---
         ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter("ExtentReport.html");
-        extentSparkReporter.config().setTheme(Theme.STANDARD);
+        extentSparkReporter.config().setTheme(Theme.DARK); //STANDARD OR DARK
         extentSparkReporter.config().setDocumentTitle("Automation Test Report");
         extentSparkReporter.config().setReportName("IRIS2 QA Sanity Report");
+        extentSparkReporter.config().setTimeStampFormat("dd-MM-yyyy HH:mm:ss");
 
         extentReports = new ExtentReports();
         extentReports.attachReporter(extentSparkReporter);
+        extentReports.setSystemInfo("Tester", "Kunal Sharma");
         extentReports.setSystemInfo("Environment", "QA");
         extentReports.setSystemInfo("Suite", "Sanity");
+        extentReports.setSystemInfo("Browser", "Chrome");
+        
+        
+        
+ 
+        
+        
+        
+        
 
         // --- Perform Login ---
         try {
