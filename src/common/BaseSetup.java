@@ -199,6 +199,8 @@ public class BaseSetup {
         extentTest.log(Status.PASS, steps);
         log.info(steps);
     }
+    
+    
 
     public static void failLog(String steps) {
         extentTest.log(Status.FAIL, steps);

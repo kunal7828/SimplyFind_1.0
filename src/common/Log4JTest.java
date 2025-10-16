@@ -31,7 +31,8 @@ public class Log4JTest {
 		log.error("This is an error log");
 		log.error("This is an error log");
 		log.error("This is an error log");
-		log.error("This is an error log");log.error("This is an error log");
+		log.error("This is an error log");
+		log.error("This is an error log");
 		
 		log.info("Info log");
 		log.info("Info log");

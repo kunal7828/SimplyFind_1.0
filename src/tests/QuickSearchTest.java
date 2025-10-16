@@ -1,12 +1,12 @@
 package tests;
 
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import common.BaseSetup;
 import pages.QuickSearchPage;
-import pages.QuickSearchPageFun;
 
 public class QuickSearchTest extends BaseSetup {
 	
@@ -15,7 +15,7 @@ public class QuickSearchTest extends BaseSetup {
 
 	
 	
-	String postCodeValue="HA1 1LG";
+	String postCodeValue="HA1";
 	
 	@Test(priority = 1)
 
@@ -23,7 +23,7 @@ public class QuickSearchTest extends BaseSetup {
 		QuickSearchPage quickSearchPage = new QuickSearchPage(driver);
 		quickSearchPage.clickOnQuickSearch();
 		quickSearchPage.enterTextPostCodeField(postCodeValue);
-		quickSearchPage.clickOnselectPropertyType();
+		quickSearchPage.clickOnSelectPropertyType();
 		
 		
 	    }

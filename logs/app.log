@@ -609,3 +609,93 @@ Session ID: b07ade6aac6d7a8d2841ffe2ea710be3
 2025-10-16 09:41:27 WARN  BaseSetup:168 - No alert present after login.
 2025-10-16 09:41:35 INFO  BaseSetup:186 - Extent Report generated successfully.
 2025-10-16 09:41:35 INFO  BaseSetup:190 - Browser closed successfully.
+2025-10-16 11:06:38 INFO  BaseSetup:49 - Launching Chrome browser...
+2025-10-16 11:06:42 INFO  BaseSetup:81 - Chrome browser launched successfully.
+2025-10-16 11:06:58 INFO  BaseSetup:125 - Login successful with username: kunal@simplyphi.co.uk
+2025-10-16 11:06:58 WARN  BaseSetup:168 - No alert present after login.
+2025-10-16 11:07:08 INFO  BaseSetup:186 - Extent Report generated successfully.
+2025-10-16 11:07:08 INFO  BaseSetup:190 - Browser closed successfully.
+2025-10-16 11:10:42 INFO  BaseSetup:49 - Launching Chrome browser...
+2025-10-16 11:10:44 INFO  BaseSetup:81 - Chrome browser launched successfully.
+2025-10-16 11:11:01 INFO  BaseSetup:125 - Login successful with username: kunal@simplyphi.co.uk
+2025-10-16 11:11:01 WARN  BaseSetup:168 - No alert present after login.
+2025-10-16 11:11:09 INFO  BaseSetup:186 - Extent Report generated successfully.
+2025-10-16 11:11:09 INFO  BaseSetup:190 - Browser closed successfully.
+2025-10-16 11:43:44 INFO  BaseSetup:49 - Launching Chrome browser...
+2025-10-16 11:43:45 INFO  BaseSetup:81 - Chrome browser launched successfully.
+2025-10-16 11:44:02 INFO  BaseSetup:125 - Login successful with username: kunal@simplyphi.co.uk
+2025-10-16 11:44:02 WARN  BaseSetup:168 - No alert present after login.
+2025-10-16 11:44:05 INFO  BaseSetup:222 - Attempting to click on the Quick Search tab...
+2025-10-16 11:44:05 INFO  BaseSetup:200 - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-16 11:44:05 INFO  BaseSetup:222 - Attempting to enter postcode: HA1 1LG
+2025-10-16 11:44:08 INFO  BaseSetup:200 - ✅ Entered postcode 'HA1 1LG' successfully into Postcode field.
+2025-10-16 11:44:08 INFO  BaseSetup:222 - Attempting to click on Property Type dropdown...
+2025-10-16 11:44:10 INFO  BaseSetup:200 - ✅ Property Type dropdown clicked successfully.
+2025-10-16 11:44:11 INFO  BaseSetup:186 - Extent Report generated successfully.
+2025-10-16 11:44:11 INFO  BaseSetup:190 - Browser closed successfully.
+2025-10-16 11:50:05 INFO  BaseSetup:49 - Launching Chrome browser...
+2025-10-16 11:50:07 INFO  BaseSetup:81 - Chrome browser launched successfully.
+2025-10-16 11:50:23 INFO  BaseSetup:125 - Login successful with username: kunal@simplyphi.co.uk
+2025-10-16 11:50:23 WARN  BaseSetup:168 - No alert present after login.
+2025-10-16 11:50:26 INFO  BaseSetup:222 - Attempting to click on the Quick Search tab...
+2025-10-16 11:50:27 INFO  BaseSetup:200 - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-16 11:50:27 INFO  BaseSetup:222 - Attempting to enter postcode: HA1 1LG
+2025-10-16 11:50:30 INFO  BaseSetup:200 - ✅ Entered postcode 'HA1 1LG' successfully into Postcode field.
+2025-10-16 11:50:30 INFO  BaseSetup:222 - Attempting to click on Property Type dropdown...
+2025-10-16 11:50:31 INFO  BaseSetup:200 - ✅ Property Type dropdown clicked successfully.
+2025-10-16 11:50:32 INFO  BaseSetup:186 - Extent Report generated successfully.
+2025-10-16 11:50:32 INFO  BaseSetup:190 - Browser closed successfully.
+2025-10-16 11:52:51 INFO  BaseSetup:49 - Launching Chrome browser...
+2025-10-16 11:52:52 INFO  BaseSetup:81 - Chrome browser launched successfully.
+2025-10-16 11:53:09 INFO  BaseSetup:125 - Login successful with username: kunal@simplyphi.co.uk
+2025-10-16 11:53:09 WARN  BaseSetup:168 - No alert present after login.
+2025-10-16 11:53:12 INFO  BaseSetup:222 - Attempting to click on the Quick Search tab...
+2025-10-16 11:53:12 INFO  BaseSetup:200 - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-16 11:53:12 INFO  BaseSetup:222 - Attempting to enter postcode: HA1
+2025-10-16 11:53:15 INFO  BaseSetup:200 - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-16 11:53:15 INFO  BaseSetup:222 - Attempting to click on Property Type dropdown...
+2025-10-16 11:53:16 INFO  BaseSetup:200 - ✅ Property Type dropdown clicked successfully.
+2025-10-16 11:53:17 INFO  BaseSetup:186 - Extent Report generated successfully.
+2025-10-16 11:53:17 INFO  BaseSetup:190 - Browser closed successfully.
+2025-10-16 11:57:00 INFO  BaseSetup:49 - Launching Chrome browser...
+2025-10-16 11:57:01 INFO  BaseSetup:81 - Chrome browser launched successfully.
+2025-10-16 11:57:17 INFO  BaseSetup:125 - Login successful with username: kunal@simplyphi.co.uk
+2025-10-16 11:57:17 WARN  BaseSetup:168 - No alert present after login.
+2025-10-16 11:57:20 INFO  BaseSetup:222 - Attempting to click on the Quick Search tab...
+2025-10-16 11:57:21 INFO  BaseSetup:200 - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-16 11:57:21 INFO  BaseSetup:222 - Attempting to enter postcode: HA1
+2025-10-16 11:57:24 INFO  BaseSetup:200 - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-16 11:57:24 INFO  BaseSetup:222 - Attempting to select Property From List: HA1
+2025-10-16 11:57:34 INFO  BaseSetup:200 - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-16 11:57:34 INFO  BaseSetup:222 - Attempting to click on Property Type dropdown...
+2025-10-16 11:57:34 INFO  BaseSetup:200 - ✅ Property Type dropdown clicked successfully.
+2025-10-16 11:57:35 INFO  BaseSetup:186 - Extent Report generated successfully.
+2025-10-16 11:57:35 INFO  BaseSetup:190 - Browser closed successfully.
+2025-10-16 12:00:22 INFO  BaseSetup:49 - Launching Chrome browser...
+2025-10-16 12:00:24 INFO  BaseSetup:81 - Chrome browser launched successfully.
+2025-10-16 12:00:40 INFO  BaseSetup:125 - Login successful with username: kunal@simplyphi.co.uk
+2025-10-16 12:00:40 WARN  BaseSetup:168 - No alert present after login.
+2025-10-16 12:00:43 INFO  BaseSetup:222 - Attempting to click on the Quick Search tab...
+2025-10-16 12:00:43 INFO  BaseSetup:200 - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-16 12:00:43 INFO  BaseSetup:222 - Attempting to enter postcode: HA1
+2025-10-16 12:00:49 INFO  BaseSetup:200 - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-16 12:00:49 INFO  BaseSetup:222 - Attempting to select Property From List: HA1
+2025-10-16 12:00:49 INFO  BaseSetup:200 - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-16 12:00:49 INFO  BaseSetup:222 - Attempting to click on Property Type dropdown...
+2025-10-16 12:00:49 INFO  BaseSetup:200 - ✅ Property Type dropdown clicked successfully.
+2025-10-16 12:00:50 INFO  BaseSetup:186 - Extent Report generated successfully.
+2025-10-16 12:00:50 INFO  BaseSetup:190 - Browser closed successfully.
+2025-10-16 12:01:36 INFO  BaseSetup:49 - Launching Chrome browser...
+2025-10-16 12:01:38 INFO  BaseSetup:81 - Chrome browser launched successfully.
+2025-10-16 12:01:55 INFO  BaseSetup:125 - Login successful with username: kunal@simplyphi.co.uk
+2025-10-16 12:01:55 WARN  BaseSetup:168 - No alert present after login.
+2025-10-16 12:01:58 INFO  BaseSetup:222 - Attempting to click on the Quick Search tab...
+2025-10-16 12:01:59 INFO  BaseSetup:200 - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-16 12:01:59 INFO  BaseSetup:222 - Attempting to enter postcode: HA1
+2025-10-16 12:02:04 INFO  BaseSetup:200 - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-16 12:02:04 INFO  BaseSetup:222 - Attempting to select Property From List: HA1
+2025-10-16 12:02:10 INFO  BaseSetup:200 - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-16 12:02:10 INFO  BaseSetup:222 - Attempting to click on Property Type dropdown...
+2025-10-16 12:02:15 INFO  BaseSetup:200 - ✅ Property Type dropdown clicked successfully.
+2025-10-16 12:02:16 INFO  BaseSetup:186 - Extent Report generated successfully.
+2025-10-16 12:02:16 INFO  BaseSetup:190 - Browser closed successfully.

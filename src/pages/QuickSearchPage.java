@@ -1,7 +1,8 @@
 package pages;
 
 import java.time.Duration;
-
+import org.testng.annotations.Test;
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
+import common.BaseSetup;
 import common.SafeAction;
 
 public class QuickSearchPage extends SafeAction {
@@ -31,44 +33,59 @@ public class QuickSearchPage extends SafeAction {
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // ✅ Correct for Selenium 4+
 	}
 
-	public void clickOnQuickSearch() throws Exception {
-		try {
-			safeExplicitWait(quickSearchLinkLoc, 10);
+	 // ✅ Click on Quick Search tab
+    public void clickOnQuickSearch() {
+     BaseSetup.infoLog("Attempting to click on the Quick Search tab...");
+        try {
+            safeExplicitWait(quickSearchLinkLoc, 10);
 
-			try {
-				safeClick(quickSearchLinkLoc); // normal Selenium click
-			} catch (Exception e) {
-				WebElement element = driver.findElement(By.xpath(quickSearchLinkLoc));
-				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-				Reporter.log("⚠️ Normal click failed. JS click executed for Quick Search tab.", true);
-			}
+            try {
+                safeClick(quickSearchLinkLoc);
+                BaseSetup. passLog("✅ Quick Search tab clicked successfully using normal click.");
+            } catch (Exception e) {
+                WebElement element = driver.findElement(By.xpath(quickSearchLinkLoc));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+                BaseSetup.  warningLog("⚠️ Normal click failed. Executed JavaScript click on Quick Search tab.");
+            }
 
-			Reporter.log("✅ Quick Search tab clicked successfully.", true);
+        } catch (Exception e) {
+        	BaseSetup.    failLog("❌ Unable to click on Quick Search tab. Error: " + e.getMessage());
+        }
+    }
 
-		} catch (Exception e) {
-			Reporter.log(String.format("❌ Quick Search tab not clickable. Error: %s", e.getMessage()), true);
-		}
-	}
+    // ✅ Enter Postcode
+    public void enterTextPostCodeField(String postCodeValue) {
+    	BaseSetup. infoLog("Attempting to enter postcode: " + postCodeValue);
+        try {
+        	needToWait(5);
+            safeType(fullPostcodeInputLoc, postCodeValue);
+            BaseSetup.   passLog("✅ Entered postcode '" + postCodeValue + "' successfully into Postcode field.");
+        } catch (Exception e) {
+        	BaseSetup.     failLog("❌ Failed to enter postcode '" + postCodeValue + "'. Error: " + e.getMessage());
+        }
+        
+    	BaseSetup. infoLog("Attempting to select Property From List: " + postCodeValue);
+    	
+    	try {
+        	needToWait(5);
+            safeClick(valueSelectLoc);
+            BaseSetup.   passLog("✅ Entered postcode '" + postCodeValue + "' successfully into Postcode field.");
+        } catch (Exception e) {
+        	BaseSetup.     failLog("❌ Failed to enter postcode '" + valueSelectLoc + "'. Error: " + e.getMessage());
+        }
+        
+        
+    }
 
-	public void enterTextPostCodeField(String postCodeValue) {
-	    try {
-	      
-	        safeType(fullPostcodeInputLoc, postCodeValue);
-	        safeExplicitWait(fullPostcodeInputLoc, 10);
-	        Reporter.log(String.format("✅ Entered postcode '%s' successfully into the Postcode field.", postCodeValue), true);
-	    } catch (Exception e) {
-	        Reporter.log(String.format("❌ Failed to enter postcode '%s' into Postcode field. Error: %s", postCodeValue, e.getMessage()), true);
-	    }
-	}
-
-	public void clickOnselectPropertyType() {
-	    try {
-	       
-	        safeClick(propertyTypeDropdownLoc);
-	        safeExplicitWait(propertyTypeDropdownLoc, 10);
-	        Reporter.log("✅ Property Type dropdown clicked successfully.", true);
-	    } catch (Exception e) {
-	        Reporter.log(String.format("❌ Failed to click on Property Type dropdown. Error: %s", e.getMessage()), true);
-	    }
-	}
+    // ✅ Select Property Type
+    public void clickOnSelectPropertyType() {
+    	BaseSetup.infoLog("Attempting to click on Property Type dropdown...");
+        try {
+        	needToWait(5);
+            safeClick(propertyTypeDropdownLoc);
+            BaseSetup.     passLog("✅ Property Type dropdown clicked successfully.");
+        } catch (Exception e) {
+        	BaseSetup.      failLog("❌ Failed to click on Property Type dropdown. Error: " + e.getMessage());
+        }
+    }
 }
