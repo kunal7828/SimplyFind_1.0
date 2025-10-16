@@ -38,16 +38,14 @@ public class QuickSearchPage extends SafeAction {
      BaseSetup.infoLog("Attempting to click on the Quick Search tab...");
         try {
             safeExplicitWait(quickSearchLinkLoc, 10);
-
             try {
                 safeClick(quickSearchLinkLoc);
                 BaseSetup. passLog("✅ Quick Search tab clicked successfully using normal click.");
             } catch (Exception e) {
                 WebElement element = driver.findElement(By.xpath(quickSearchLinkLoc));
                 ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-                BaseSetup.  warningLog("⚠️ Normal click failed. Executed JavaScript click on Quick Search tab.");
+                BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript click on Quick Search tab.");
             }
-
         } catch (Exception e) {
         	BaseSetup.    failLog("❌ Unable to click on Quick Search tab. Error: " + e.getMessage());
         }
@@ -61,7 +59,7 @@ public class QuickSearchPage extends SafeAction {
             safeType(fullPostcodeInputLoc, postCodeValue);
             BaseSetup.   passLog("✅ Entered postcode '" + postCodeValue + "' successfully into Postcode field.");
         } catch (Exception e) {
-        	BaseSetup.     failLog("❌ Failed to enter postcode '" + postCodeValue + "'. Error: " + e.getMessage());
+        	BaseSetup.failLog("❌ Failed to enter postcode '" + postCodeValue + "'. Error: " + e.getMessage());
         }
         
     	BaseSetup. infoLog("Attempting to select Property From List: " + postCodeValue);
@@ -71,10 +69,8 @@ public class QuickSearchPage extends SafeAction {
             safeClick(valueSelectLoc);
             BaseSetup.   passLog("✅ Entered postcode '" + postCodeValue + "' successfully into Postcode field.");
         } catch (Exception e) {
-        	BaseSetup.     failLog("❌ Failed to enter postcode '" + valueSelectLoc + "'. Error: " + e.getMessage());
+        	BaseSetup.failLog("❌ Failed to enter postcode '" + valueSelectLoc + "'. Error: " + e.getMessage());
         }
-        
-        
     }
 
     // ✅ Select Property Type
@@ -85,7 +81,36 @@ public class QuickSearchPage extends SafeAction {
             safeClick(propertyTypeDropdownLoc);
             BaseSetup.     passLog("✅ Property Type dropdown clicked successfully.");
         } catch (Exception e) {
-        	BaseSetup.      failLog("❌ Failed to click on Property Type dropdown. Error: " + e.getMessage());
+        	BaseSetup.failLog("❌ Failed to click on Property Type dropdown. Error: " + e.getMessage());
+        }
+        
+        String propertyTypeListValueLocator = "//label[text()='Property Type']//following::label[1]";
+      BaseSetup. infoLog("Attempting to select Property Type From List: " + propertyTypeListValueLocator);
+    	
+    	try {
+        	needToWait(5);
+            safeClick(propertyTypeListValueLocator);
+            BaseSetup.   passLog("✅ Entered postcode '" + propertyTypeListValueLocator + "' successfully into Postcode field.");
+        } catch (Exception e) {
+        	BaseSetup.failLog("❌ Failed to enter postcode '" + propertyTypeListValueLocator + "'. Error: " + e.getMessage());
+        }
+    	BaseSetup.infoLog("Attempting to click on Property Type dropdown...");
+        try {
+        	needToWait(5);
+            safeClick(propertyTypeDropdownLoc);
+            BaseSetup.     passLog("✅ Property Type dropdown clicked successfully.");
+        } catch (Exception e) {
+        	BaseSetup.failLog("❌ Failed to click on Property Type dropdown. Error: " + e.getMessage());
         }
     }
+    
+    // ✅ Select Property Type
+
+    
+    
+    
+    
+    
+    
+    
 }
