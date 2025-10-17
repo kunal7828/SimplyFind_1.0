@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -165,8 +166,78 @@ public void getTotalPropertiesOnMarket() {
 
 
 public void sumAllBedAndStudioCounts() {
+	
+	try {
+	    BaseSetup.infoLog("Fetching all property counts for Studio and Beds...");
+
+	    // Initialize total count
+	    int total = 0;
+
+	    // Loop dynamically for Studio to up to 10 Bed cells
+	    for (int i = 10; i <= 16; i += 2) {  
+	        // XPath pattern based on your example:
+	        // property1 = following::div[10]
+	        // property2 = following::div[12]
+	        // property3 = following::div[14] ... etc.
+	        String dynamicXpath = "//div[normalize-space(text())='Studio']//following::div[" + i + "]";
+
+	        try {
+	            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+	            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(dynamicXpath)));
+
+	            String text = element.getText().trim().replace(",", "");
+
+	            if (!text.isEmpty()) {
+	                try {
+	                    int value = Integer.parseInt(text);
+	                    total += value;
+	                    BaseSetup.infoLog("Property " + ((i - 8) / 2) + " count: " + value);
+	                } catch (NumberFormatException e) {
+	                    BaseSetup.warningLog("⚠️ Skipped invalid number at index " + i + ": " + text);
+	                }
+	            }
+
+	        } catch (TimeoutException te) {
+	            BaseSetup.warningLog("⚠️ No more property cells found after index " + i + " (ending loop).");
+	            break; // Stop if next property cell not found
+	        }
+	    }
+
+	    BaseSetup.passLog("✅ Total count for Studio and Beds: " + total);
+
+	} catch (Exception e) {
+	    BaseSetup.failLog("❌ Failed to fetch and sum property counts. Error: " + e.getMessage());
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+/*	
     // Locator for all numeric cells in the highlighted row
-    String propertyRowLocator = "//div[contains(@class,'dasboard_list_inner') and contains(@class,'font-600')]";
+    String property1 = "//div[text()='Studio ']//following::div[10]";
+    String property2 = "//div[text()='Studio ']//following::div[12]";
+    String property3 = "//div[text()='Studio ']//following::div[14]";
+    String property4 = "//div[text()='Studio ']//following::div[16]";
+   
+    
 
     try {
         BaseSetup.infoLog("Fetching all property counts for Studio and Beds...");
@@ -174,7 +245,7 @@ public void sumAllBedAndStudioCounts() {
         // Wait for elements to be visible
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> propertyElements = wait.until(
-            ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(propertyRowLocator))
+            ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(property1))
         );
 
         int total = 0;
@@ -194,6 +265,18 @@ public void sumAllBedAndStudioCounts() {
     } catch (Exception e) {
         BaseSetup.failLog("❌ Failed to fetch and sum property counts. Error: " + e.getMessage());
     }
+	
+	*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
 

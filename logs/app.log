@@ -111,3 +111,318 @@ Session ID: 1bb8964302124c613e987bd3f2102413
 2025-10-17 11:12:08 [main] INFO  common.BaseSetup: - ✅ Total count for Studio and Beds: 5864
 2025-10-17 11:12:08 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
 2025-10-17 11:12:09 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 12:14:52 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 12:14:59 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 12:15:14 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 12:15:14 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 12:15:17 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-17 12:15:17 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 12:15:17 [main] INFO  common.BaseSetup: - Attempting to click on the My Requirement Field Drop down tab...
+2025-10-17 12:15:28 [main] INFO  common.BaseSetup: - ✅ My Requirement tab clicked successfully using normal click.
+2025-10-17 12:15:28 [main] INFO  common.BaseSetup: - Select Value from My Requirement Field Drop down.
+2025-10-17 12:15:38 [main] INFO  common.BaseSetup: - ✅ Select Value from My Requirement Field Drop down successfully using normal click.
+2025-10-17 12:15:38 [main] INFO  common.BaseSetup: - Fetching number of properties from locator: //a[text()='Reset']//following::strong[1]
+2025-10-17 12:15:48 [main] INFO  common.BaseSetup: - Property count text fetched: 4,176
+2025-10-17 12:15:48 [main] INFO  common.BaseSetup: - ✅ Number of properties found: 4176
+2025-10-17 12:15:49 [main] INFO  common.BaseSetup: - ✅ Dashboard clicked successfully.
+2025-10-17 12:15:49 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 12:15:49 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 15:02:48 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 15:02:51 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 15:03:05 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 15:03:05 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 15:03:08 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-17 15:03:08 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 15:03:08 [main] INFO  common.BaseSetup: - Attempting to click on the My Requirement Field Drop down tab...
+2025-10-17 15:03:19 [main] INFO  common.BaseSetup: - ✅ My Requirement tab clicked successfully using normal click.
+2025-10-17 15:03:19 [main] INFO  common.BaseSetup: - Select Value from My Requirement Field Drop down.
+2025-10-17 15:03:45 [main] INFO  common.BaseSetup: - ✅ Select Value from My Requirement Field Drop down successfully using normal click.
+2025-10-17 15:03:45 [main] INFO  common.BaseSetup: - Fetching number of properties from locator: //a[text()='Reset']//following::strong[1]
+2025-10-17 15:03:59 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 15:04:02 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 15:04:16 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 15:04:16 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 15:04:19 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-17 15:04:19 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 15:04:19 [main] INFO  common.BaseSetup: - Attempting to click on the My Requirement Field Drop down tab...
+2025-10-17 15:04:29 [main] INFO  common.BaseSetup: - ✅ My Requirement tab clicked successfully using normal click.
+2025-10-17 15:04:29 [main] INFO  common.BaseSetup: - Select Value from My Requirement Field Drop down.
+2025-10-17 15:04:39 [main] INFO  common.BaseSetup: - ✅ Select Value from My Requirement Field Drop down successfully using normal click.
+2025-10-17 15:04:39 [main] INFO  common.BaseSetup: - Fetching number of properties from locator: //a[text()='Reset']//following::strong[1]
+2025-10-17 15:04:50 [main] INFO  common.BaseSetup: - Property count text fetched: 4,176
+2025-10-17 15:04:50 [main] INFO  common.BaseSetup: - ✅ Number of properties found: 4176
+2025-10-17 15:04:50 [main] INFO  common.BaseSetup: - ✅ Dashboard clicked successfully.
+2025-10-17 15:04:50 [main] INFO  common.BaseSetup: - Fetching all property counts for Studio and Beds...
+2025-10-17 15:04:52 [main] INFO  common.BaseSetup: - Property 1 count: 114
+2025-10-17 15:04:52 [main] INFO  common.BaseSetup: - Property 2 count: 974
+2025-10-17 15:04:52 [main] INFO  common.BaseSetup: - Property 3 count: 1638
+2025-10-17 15:04:53 [main] INFO  common.BaseSetup: - Property 4 count: 1385
+2025-10-17 15:04:53 [main] WARN  common.BaseSetup: - ⚠️ Skipped invalid number at index 18: 0 (0%)
+2025-10-17 15:04:53 [main] WARN  common.BaseSetup: - ⚠️ Skipped invalid number at index 20: 0 (0%)
+2025-10-17 15:04:53 [main] WARN  common.BaseSetup: - ⚠️ Skipped invalid number at index 22: 0 (0%)
+2025-10-17 15:04:53 [main] WARN  common.BaseSetup: - ⚠️ Skipped invalid number at index 24: 0 (0%)
+2025-10-17 15:04:53 [main] WARN  common.BaseSetup: - ⚠️ Skipped invalid number at index 26: £287685
+£321009
+£471470
+£652971
+2025-10-17 15:04:53 [main] WARN  common.BaseSetup: - ⚠️ Skipped invalid number at index 28: £287685
+2025-10-17 15:04:53 [main] INFO  common.BaseSetup: - ✅ Total count for Studio and Beds: 4111
+2025-10-17 15:04:53 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 15:04:53 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 15:12:25 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 15:12:26 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 15:12:40 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 15:12:40 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 15:12:43 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-17 15:12:43 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 15:12:43 [main] INFO  common.BaseSetup: - Attempting to click on the My Requirement Field Drop down tab...
+2025-10-17 15:12:53 [main] INFO  common.BaseSetup: - ✅ My Requirement tab clicked successfully using normal click.
+2025-10-17 15:12:53 [main] INFO  common.BaseSetup: - Select Value from My Requirement Field Drop down.
+2025-10-17 15:13:04 [main] INFO  common.BaseSetup: - ✅ Select Value from My Requirement Field Drop down successfully using normal click.
+2025-10-17 15:13:04 [main] INFO  common.BaseSetup: - Fetching number of properties from locator: //a[text()='Reset']//following::strong[1]
+2025-10-17 15:13:14 [main] INFO  common.BaseSetup: - Property count text fetched: 4,176
+2025-10-17 15:13:14 [main] INFO  common.BaseSetup: - ✅ Number of properties found: 4176
+2025-10-17 15:13:14 [main] INFO  common.BaseSetup: - ✅ Dashboard clicked successfully.
+2025-10-17 15:13:14 [main] INFO  common.BaseSetup: - Fetching all property counts for Studio and Beds...
+2025-10-17 15:13:17 [main] INFO  common.BaseSetup: - Property 1 count: 114
+2025-10-17 15:13:17 [main] INFO  common.BaseSetup: - Property 2 count: 974
+2025-10-17 15:13:17 [main] INFO  common.BaseSetup: - Property 3 count: 1638
+2025-10-17 15:13:17 [main] INFO  common.BaseSetup: - Property 4 count: 1385
+2025-10-17 15:13:17 [main] INFO  common.BaseSetup: - ✅ Total count for Studio and Beds: 4111
+2025-10-17 15:13:18 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 15:13:18 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 15:22:21 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 15:22:23 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 15:22:36 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 15:22:36 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 15:22:40 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-17 15:22:40 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 15:22:40 [main] INFO  common.BaseSetup: - Attempting to click on the My Requirement Field Drop down tab...
+2025-10-17 15:22:50 [main] INFO  common.BaseSetup: - ✅ My Requirement tab clicked successfully using normal click.
+2025-10-17 15:22:50 [main] INFO  common.BaseSetup: - Select Value from My Requirement Field Drop down.
+2025-10-17 15:23:00 [main] INFO  common.BaseSetup: - ✅ Select Value from My Requirement Field Drop down successfully using normal click.
+2025-10-17 15:23:00 [main] INFO  common.BaseSetup: - Fetching number of properties from locator: //a[text()='Reset']//following::strong[1]
+2025-10-17 15:23:10 [main] INFO  common.BaseSetup: - Property count text fetched: 4,176
+2025-10-17 15:23:10 [main] INFO  common.BaseSetup: - ✅ Number of properties found: 4176
+2025-10-17 15:23:10 [main] INFO  common.BaseSetup: - ✅ Dashboard clicked successfully.
+2025-10-17 15:23:10 [main] INFO  common.BaseSetup: - Fetching all property counts for Studio and Beds...
+2025-10-17 15:23:13 [main] INFO  common.BaseSetup: - Property 1 count: 114
+2025-10-17 15:23:13 [main] INFO  common.BaseSetup: - Property 2 count: 974
+2025-10-17 15:23:13 [main] INFO  common.BaseSetup: - Property 3 count: 1638
+2025-10-17 15:23:13 [main] INFO  common.BaseSetup: - Property 4 count: 1385
+2025-10-17 15:23:13 [main] INFO  common.BaseSetup: - ✅ Total count for Studio and Beds: 4111
+2025-10-17 15:23:13 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 15:23:14 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 16:57:12 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 16:57:15 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 16:57:29 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 16:57:29 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 16:57:57 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 16:57:57 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 17:01:39 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 17:01:41 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 17:01:55 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 17:01:55 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 17:01:58 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 17:01:58 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 17:01:58 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 17:02:03 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:02:03 [main] INFO  common.BaseSetup: - Attempting to select Property From List: HA1
+2025-10-17 17:02:09 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:02:09 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:02:14 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:02:14 [main] INFO  common.BaseSetup: - Attempting to select Property Type From List: //label[text()='Property Type']//following::label[1]
+2025-10-17 17:02:19 [main] INFO  common.BaseSetup: - ✅ Entered postcode '//label[text()='Property Type']//following::label[1]' successfully into Postcode field.
+2025-10-17 17:02:19 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:02:24 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:02:24 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 17:02:24 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 17:09:40 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 17:09:42 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 17:09:56 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 17:09:56 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 17:09:59 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 17:10:00 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 17:10:00 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 17:10:05 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:10:05 [main] INFO  common.BaseSetup: - Attempting to select Property From List: HA1
+2025-10-17 17:10:10 [main] INFO  common.BaseSetup: - ✅ Select postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:10:10 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:10:15 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:10:15 [main] INFO  common.BaseSetup: - Attempting to select Property Type From List: //label[text()='Property Type']//following::label[1]
+2025-10-17 17:10:20 [main] INFO  common.BaseSetup: - ✅ Entered postcode '//label[text()='Property Type']//following::label[1]' successfully into Postcode field.
+2025-10-17 17:10:20 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:10:25 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:10:26 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 17:10:26 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 17:14:20 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 17:14:21 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 17:14:35 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 17:14:35 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 17:14:38 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 17:14:38 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 17:14:38 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 17:14:40 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:14:40 [main] INFO  common.BaseSetup: - Attempting to select Property From List: HA1
+2025-10-17 17:14:55 [main] INFO  common.BaseSetup: - ✅ Select postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:14:55 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:14:55 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:14:55 [main] INFO  common.BaseSetup: - Attempting to select Property Type From List: //label[text()='Property Type']//following::label[1]
+2025-10-17 17:14:55 [main] INFO  common.BaseSetup: - ✅ Entered postcode '//label[text()='Property Type']//following::label[1]' successfully into Postcode field.
+2025-10-17 17:14:55 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:14:55 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:14:55 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 17:14:56 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 17:22:54 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 17:22:55 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 17:23:09 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 17:23:09 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 17:23:12 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 17:23:13 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 17:23:13 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 17:23:15 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:23:15 [main] INFO  common.BaseSetup: - Attempting to select Property From List: HA1
+2025-10-17 17:23:30 [main] INFO  common.BaseSetup: - ✅ Select postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:23:30 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:23:30 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:23:30 [main] INFO  common.BaseSetup: - Attempting to select Property Type From List: //label[text()='Property Type']//following::label[1]
+2025-10-17 17:23:30 [main] INFO  common.BaseSetup: - ✅ Entered postcode '//label[text()='Property Type']//following::label[1]' successfully into Postcode field.
+2025-10-17 17:23:30 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:23:31 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:23:31 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 17:23:31 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 17:24:19 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 17:24:21 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 17:24:34 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 17:24:35 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 17:24:38 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 17:24:38 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 17:24:38 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 17:24:40 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:24:40 [main] INFO  common.BaseSetup: - Attempting to select Property From List: HA1
+2025-10-17 17:25:05 [main] INFO  common.BaseSetup: - ✅ Select postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:25:05 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:25:05 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:25:05 [main] INFO  common.BaseSetup: - Attempting to select Property Type From List: //label[text()='Property Type']//following::label[1]
+2025-10-17 17:25:05 [main] INFO  common.BaseSetup: - ✅ Entered postcode '//label[text()='Property Type']//following::label[1]' successfully into Postcode field.
+2025-10-17 17:25:05 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:25:05 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:25:06 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 17:25:06 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 17:26:14 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 17:26:15 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 17:26:29 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 17:26:29 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 17:26:32 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 17:26:32 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 17:26:32 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 17:26:34 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:26:34 [main] INFO  common.BaseSetup: - Attempting to select Property From List: HA1
+2025-10-17 17:27:20 [main] INFO  common.BaseSetup: - ✅ Select postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:27:20 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:27:20 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:27:20 [main] INFO  common.BaseSetup: - Attempting to select Property Type From List: //label[text()='Property Type']//following::label[1]
+2025-10-17 17:27:20 [main] INFO  common.BaseSetup: - ✅ Entered postcode '//label[text()='Property Type']//following::label[1]' successfully into Postcode field.
+2025-10-17 17:27:20 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:27:20 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:27:21 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 17:27:21 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 17:37:21 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 17:37:23 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 17:37:37 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 17:37:37 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 17:37:40 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 17:37:40 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 17:37:40 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 17:37:42 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:37:42 [main] INFO  common.BaseSetup: - Attempting to select Property From List: HA1
+2025-10-17 17:38:33 [main] INFO  common.BaseSetup: - ✅ Select postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:38:33 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:38:33 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:38:33 [main] INFO  common.BaseSetup: - Attempting to select Property Type From List: //label[text()='Property Type']//following::label[1]
+2025-10-17 17:38:33 [main] INFO  common.BaseSetup: - ✅ Entered postcode '//label[text()='Property Type']//following::label[1]' successfully into Postcode field.
+2025-10-17 17:38:33 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:38:33 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:38:34 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 17:38:34 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 17:40:37 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 17:40:38 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 17:40:52 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 17:40:52 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 17:40:55 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 17:40:55 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 17:40:55 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 17:40:58 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:40:58 [main] INFO  common.BaseSetup: - Attempting to select Property From List: HA1
+2025-10-17 17:41:48 [main] INFO  common.BaseSetup: - ✅ Select postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:41:48 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:41:49 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:41:49 [main] INFO  common.BaseSetup: - Attempting to select Property Type From List: //label[text()='Property Type']//following::label[1]
+2025-10-17 17:41:49 [main] INFO  common.BaseSetup: - ✅ Entered postcode '//label[text()='Property Type']//following::label[1]' successfully into Postcode field.
+2025-10-17 17:41:49 [main] INFO  common.BaseSetup: - Attempting to click on Property Type dropdown...
+2025-10-17 17:41:49 [main] INFO  common.BaseSetup: - ✅ Property Type dropdown clicked successfully.
+2025-10-17 17:41:49 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 17:41:49 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 17:43:47 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 17:43:49 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 17:44:03 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 17:44:03 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 17:44:06 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 17:44:08 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 17:44:08 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 17:44:24 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:44:24 [main] INFO  common.BaseSetup: - Attempting to select Property From List: HA1
+2025-10-17 17:44:45 [main] INFO  common.BaseSetup: - ✅ Select postcode 'HA1' successfully into Postcode field.
+2025-10-17 17:44:45 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 17:44:45 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 18:02:59 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 18:03:03 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 18:03:17 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 18:03:17 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 18:03:20 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 18:03:20 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 18:03:20 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 18:03:21 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 18:03:22 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 18:03:22 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 18:03:42 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 18:03:43 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 18:03:57 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 18:03:57 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 18:04:00 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 18:04:00 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 18:04:00 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 18:04:02 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 18:04:02 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 18:04:03 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 18:07:16 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 18:07:17 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 18:07:31 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 18:07:31 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 18:07:34 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 18:07:34 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 18:07:34 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 18:07:40 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 18:07:40 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 18:07:40 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 18:14:01 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 18:14:03 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 18:14:17 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 18:14:17 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 18:14:20 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 18:14:20 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 18:14:20 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 18:14:26 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 18:14:26 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 18:14:26 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-17 18:16:47 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-17 18:16:48 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-17 18:17:02 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-17 18:17:02 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-17 18:17:05 [main] INFO  common.BaseSetup: - Attempting to click on the Quick Search tab...
+2025-10-17 18:17:05 [main] INFO  common.BaseSetup: - ✅ Quick Search tab clicked successfully using normal click.
+2025-10-17 18:17:05 [main] INFO  common.BaseSetup: - Attempting to enter postcode: HA1
+2025-10-17 18:17:07 [main] INFO  common.BaseSetup: - Attempting to click on label postcode: Full Postcode
+2025-10-17 18:17:12 [main] INFO  common.BaseSetup: - ✅ Entered postcode 'HA1' successfully into Postcode field.
+2025-10-17 18:17:13 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-17 18:17:13 [main] INFO  common.BaseSetup: - Browser closed successfully.

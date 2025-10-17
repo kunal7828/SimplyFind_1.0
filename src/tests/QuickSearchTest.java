@@ -23,7 +23,20 @@ public class QuickSearchTest extends BaseSetup {
 		QuickSearchPage quickSearchPage = new QuickSearchPage(driver);
 		quickSearchPage.clickOnQuickSearch();
 		quickSearchPage.enterTextPostCodeField(postCodeValue);
-		quickSearchPage.clickOnSelectPropertyType();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	//quickSearchPage.selectPostCodeProperty(postCodeValue);
+	//	quickSearchPage.clickOnSelectPropertyType();
+		
 		
 		
 	    }
