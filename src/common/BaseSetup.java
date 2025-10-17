@@ -68,12 +68,22 @@ public class BaseSetup {
         prefs.put("profile.password_manager_enabled", false);
         options.setExperimentalOption("prefs", prefs);
         
-        
+     // Disable password manager completely
+        //    Map<String, Object> prefs = new HashMap<>();
+            prefs.put("credentials_enable_service", false);
+            prefs.put("profile.password_manager_enabled", false);
+            prefs.put("profile.password_manager_leak_detection", false);
+            prefs.put("profile.credentials_enable_service", false);
+            options.setExperimentalOption("prefs", prefs);
+            
+            //OR
       //  ChromeOptions options = new ChromeOptions();   duplicate code
-   //     Map<String, Object> prefs = new HashMap<>(); duplicate code
-        prefs.put("profile.password_manager_leak_detection", false);
-        prefs.put("profile.credentials_enable_service", false);
+     //     Map<String, Object> prefs = new HashMap<>(); duplicate code
+ //       prefs.put("profile.password_manager_leak_detection", false);
+   //     prefs.put("profile.credentials_enable_service", false);
 
+     
+        
         options.setExperimentalOption("prefs", prefs);   
         
         // Initialize ChromeDriver
@@ -122,13 +132,55 @@ public class BaseSetup {
             loginPage.clickOnLogin();
             Thread.sleep(2000);
             
-            log.info("Login successful with username: " + username);
+          BaseSetup.log.info("Login successful with username: " + username);
 
         } catch (Exception e) {
-            log.error("Login failed! Check Excel file or locators.", e);
+        	 BaseSetup.  log.error("Login failed! Check Excel file or locators.", e);
             throw e;
         }
 
+        
+
+        // Headless mode
+        options.addArguments("--headless=new"); // Use "--headless=new" for Chrome 109+
+        options.addArguments("--enable-gpu");  // Recommended for headless
+        options.addArguments("--window-size=1920,1080"); // Set resolution for headless
+
+        // Other options
+        options.addArguments("--disable-notifications");
+        options.addArguments("--start-maximized");
+        options.addArguments("--disable-infobars");
+        options.addArguments("--disable-save-password-bubble");
+        options.addArguments("--disable-autofill-keyboard-accessory-view");
+
+        // Remove “Chrome is being controlled by automated test software” message
+        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+        options.setExperimentalOption("useAutomationExtension", false);
+
+        
+
+        // Initialize ChromeDriver
+        //driver = new ChromeDriver(options);
+     //   log.info("Chrome browser launched successfully in headless mode.");
+
+       
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
 		/*
 		 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); try {
@@ -186,7 +238,7 @@ public class BaseSetup {
                 log.info("Extent Report generated successfully.");
             }
             if (driver != null) {
-        //       driver.quit();
+               driver.quit();
                 log.info("Browser closed successfully.");
             }
         } catch (Exception e) {

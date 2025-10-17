@@ -2,113 +2,125 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (05807f7a04637d669335b445dc686ae8)]]>
+      <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (73477078b516c03b385215924d629930)]]>
     </line>
     <line>
-      <![CDATA[✅ Element(s) visible for XPath: //h6[text()='Quick Search '] (Waited 10 sec)]]>
+      <![CDATA[✅ Element(s) visible for XPath: //h6[text()='Buy '] (Waited 5 sec)]]>
     </line>
     <line>
-      <![CDATA[✅ Successfully clicked element with XPath: //h6[text()='Quick Search ']]]>
+      <![CDATA[✅ Successfully clicked element with XPath: //h6[text()='Buy ']]]>
     </line>
     <line>
-      <![CDATA[⏸️ Thread paused for 5 seconds]]>
+      <![CDATA[⏸️ Thread paused for 10 seconds]]>
     </line>
     <line>
-      <![CDATA[✅ Successfully entered value 'HA1' into element with XPath: //label[text()='Property Type']//preceding::input[1]]]>
+      <![CDATA[✅ Element is visible with XPath: //label[text()='My Requirements ']//following::span[1]]]>
     </line>
     <line>
-      <![CDATA[⏸️ Thread paused for 5 seconds]]>
+      <![CDATA[✅ Element clickable for XPath: //label[text()='My Requirements ']//following::span[1] (Waited 10 sec)]]>
     </line>
     <line>
-      <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Full Postcode']//following::a[1]]]>
+      <![CDATA[✅ Successfully clicked element with XPath: //label[text()='My Requirements ']//following::span[1]]]>
     </line>
     <line>
-      <![CDATA[⏸️ Thread paused for 5 seconds]]>
+      <![CDATA[⏸️ Thread paused for 10 seconds]]>
     </line>
     <line>
-      <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Property Type']//following::span[1]]]>
+      <![CDATA[✅ Element clickable for XPath: //label[text()='My Requirements ']//following::a[2] (Waited 5 sec)]]>
     </line>
     <line>
-      <![CDATA[⏸️ Thread paused for 5 seconds]]>
+      <![CDATA[✅ Successfully clicked element with XPath: //label[text()='My Requirements ']//following::a[2]]]>
     </line>
     <line>
-      <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Property Type']//following::label[1]]]>
+      <![CDATA[⏸️ Thread paused for 10 seconds]]>
     </line>
     <line>
-      <![CDATA[⏸️ Thread paused for 5 seconds]]>
+      <![CDATA[✅ Element is visible with XPath: //a[text()='Reset']//following::strong[1]]]>
     </line>
     <line>
-      <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Property Type']//following::span[1]]]>
+      <![CDATA[✅ Element clickable for XPath: //a[text()='Reset']//following::strong[1] (Waited 5 sec)]]>
+    </line>
+    <line>
+      <![CDATA[✅ Successfully clicked element with XPath: //a[text()='Reset']//following::strong[1]]]>
+    </line>
+    <line>
+      <![CDATA[✅ Successfully clicked element with XPath: //a[text()='Dashboard']]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-10-16T12:51:23 IST" name="Default suite" finished-at="2025-10-16T12:51:49 IST" duration-ms="25900">
+  <suite started-at="2025-10-17T11:11:24 IST" name="Default suite" finished-at="2025-10-17T11:12:08 IST" duration-ms="43145">
     <groups>
     </groups>
-    <test started-at="2025-10-16T12:51:23 IST" name="Default test" finished-at="2025-10-16T12:51:49 IST" duration-ms="25900">
-      <class name="tests.QuickSearchTest">
-        <test-method is-config="true" signature="openBrowserWithLogin()[pri:0, instance:tests.QuickSearchTest@5c10f1c3]" started-at="2025-10-16T12:51:04 IST" name="openBrowserWithLogin" finished-at="2025-10-16T12:51:23 IST" duration-ms="19144" status="PASS">
+    <test started-at="2025-10-17T11:11:24 IST" name="Default test" finished-at="2025-10-17T11:12:08 IST" duration-ms="43145">
+      <class name="tests.PropertyCountTest">
+        <test-method is-config="true" signature="openBrowserWithLogin()[pri:0, instance:tests.PropertyCountTest@5c10f1c3]" started-at="2025-10-17T11:11:04 IST" name="openBrowserWithLogin" finished-at="2025-10-17T11:11:24 IST" duration-ms="20518" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowserWithLogin -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.QuickSearchTest@5c10f1c3]" started-at="2025-10-16T12:51:23 IST" name="beforeMethod" finished-at="2025-10-16T12:51:23 IST" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.PropertyCountTest@5c10f1c3]" started-at="2025-10-17T11:11:25 IST" name="beforeMethod" finished-at="2025-10-17T11:11:25 IST" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.QuickSearchTest.verifyQuickSearchFunctionality() throws java.lang.Exception]]>
+                <![CDATA[public void tests.PropertyCountTest.verifyQuickSearchFunctionality() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyQuickSearchFunctionality()[pri:1, instance:tests.QuickSearchTest@5c10f1c3]" started-at="2025-10-16T12:51:23 IST" name="verifyQuickSearchFunctionality" finished-at="2025-10-16T12:51:49 IST" duration-ms="25827" status="PASS">
+        <test-method signature="verifyQuickSearchFunctionality()[pri:1, instance:tests.PropertyCountTest@5c10f1c3]" started-at="2025-10-17T11:11:25 IST" name="verifyQuickSearchFunctionality" finished-at="2025-10-17T11:12:08 IST" duration-ms="43072" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (05807f7a04637d669335b445dc686ae8)]]>
+              <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (73477078b516c03b385215924d629930)]]>
             </line>
             <line>
-              <![CDATA[✅ Element(s) visible for XPath: //h6[text()='Quick Search '] (Waited 10 sec)]]>
+              <![CDATA[✅ Element(s) visible for XPath: //h6[text()='Buy '] (Waited 5 sec)]]>
             </line>
             <line>
-              <![CDATA[✅ Successfully clicked element with XPath: //h6[text()='Quick Search ']]]>
+              <![CDATA[✅ Successfully clicked element with XPath: //h6[text()='Buy ']]]>
             </line>
             <line>
-              <![CDATA[⏸️ Thread paused for 5 seconds]]>
+              <![CDATA[⏸️ Thread paused for 10 seconds]]>
             </line>
             <line>
-              <![CDATA[✅ Successfully entered value 'HA1' into element with XPath: //label[text()='Property Type']//preceding::input[1]]]>
+              <![CDATA[✅ Element is visible with XPath: //label[text()='My Requirements ']//following::span[1]]]>
             </line>
             <line>
-              <![CDATA[⏸️ Thread paused for 5 seconds]]>
+              <![CDATA[✅ Element clickable for XPath: //label[text()='My Requirements ']//following::span[1] (Waited 10 sec)]]>
             </line>
             <line>
-              <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Full Postcode']//following::a[1]]]>
+              <![CDATA[✅ Successfully clicked element with XPath: //label[text()='My Requirements ']//following::span[1]]]>
             </line>
             <line>
-              <![CDATA[⏸️ Thread paused for 5 seconds]]>
+              <![CDATA[⏸️ Thread paused for 10 seconds]]>
             </line>
             <line>
-              <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Property Type']//following::span[1]]]>
+              <![CDATA[✅ Element clickable for XPath: //label[text()='My Requirements ']//following::a[2] (Waited 5 sec)]]>
             </line>
             <line>
-              <![CDATA[⏸️ Thread paused for 5 seconds]]>
+              <![CDATA[✅ Successfully clicked element with XPath: //label[text()='My Requirements ']//following::a[2]]]>
             </line>
             <line>
-              <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Property Type']//following::label[1]]]>
+              <![CDATA[⏸️ Thread paused for 10 seconds]]>
             </line>
             <line>
-              <![CDATA[⏸️ Thread paused for 5 seconds]]>
+              <![CDATA[✅ Element is visible with XPath: //a[text()='Reset']//following::strong[1]]]>
             </line>
             <line>
-              <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Property Type']//following::span[1]]]>
+              <![CDATA[✅ Element clickable for XPath: //a[text()='Reset']//following::strong[1] (Waited 5 sec)]]>
+            </line>
+            <line>
+              <![CDATA[✅ Successfully clicked element with XPath: //a[text()='Reset']//following::strong[1]]]>
+            </line>
+            <line>
+              <![CDATA[✅ Successfully clicked element with XPath: //a[text()='Dashboard']]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyQuickSearchFunctionality -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.QuickSearchTest@5c10f1c3]" started-at="2025-10-16T12:51:49 IST" name="closeBrowser" finished-at="2025-10-16T12:51:49 IST" duration-ms="267" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.PropertyCountTest@5c10f1c3]" started-at="2025-10-17T11:12:08 IST" name="closeBrowser" finished-at="2025-10-17T11:12:09 IST" duration-ms="1049" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.QuickSearchTest -->
+      </class> <!-- tests.PropertyCountTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

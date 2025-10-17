@@ -37,7 +37,7 @@ public class QuickSearchPage extends SafeAction {
     public void clickOnQuickSearch() {
      BaseSetup.infoLog("Attempting to click on the Quick Search tab...");
         try {
-            safeExplicitWait(quickSearchLinkLoc, 10);
+            safeExplicitWait(quickSearchLinkLoc, VERYSHORTWAIT);
             try {
                 safeClick(quickSearchLinkLoc);
                 BaseSetup. passLog("✅ Quick Search tab clicked successfully using normal click.");
@@ -55,7 +55,7 @@ public class QuickSearchPage extends SafeAction {
     public void enterTextPostCodeField(String postCodeValue) {
     	BaseSetup. infoLog("Attempting to enter postcode: " + postCodeValue);
         try {
-        	needToWait(5);
+        	needToWait(VERYSHORTWAIT);
             safeType(fullPostcodeInputLoc, postCodeValue);
             BaseSetup.   passLog("✅ Entered postcode '" + postCodeValue + "' successfully into Postcode field.");
         } catch (Exception e) {
@@ -65,7 +65,7 @@ public class QuickSearchPage extends SafeAction {
     	BaseSetup. infoLog("Attempting to select Property From List: " + postCodeValue);
     	
     	try {
-        	needToWait(5);
+        	needToWait(VERYSHORTWAIT);
             safeClick(valueSelectLoc);
             BaseSetup.   passLog("✅ Entered postcode '" + postCodeValue + "' successfully into Postcode field.");
         } catch (Exception e) {
@@ -77,7 +77,7 @@ public class QuickSearchPage extends SafeAction {
     public void clickOnSelectPropertyType() {
     	BaseSetup.infoLog("Attempting to click on Property Type dropdown...");
         try {
-        	needToWait(5);
+        	needToWait(VERYSHORTWAIT);
             safeClick(propertyTypeDropdownLoc);
             BaseSetup.     passLog("✅ Property Type dropdown clicked successfully.");
         } catch (Exception e) {
@@ -88,7 +88,7 @@ public class QuickSearchPage extends SafeAction {
       BaseSetup. infoLog("Attempting to select Property Type From List: " + propertyTypeListValueLocator);
     	
     	try {
-        	needToWait(5);
+        	needToWait(VERYSHORTWAIT);
             safeClick(propertyTypeListValueLocator);
             BaseSetup.   passLog("✅ Entered postcode '" + propertyTypeListValueLocator + "' successfully into Postcode field.");
         } catch (Exception e) {
@@ -96,7 +96,7 @@ public class QuickSearchPage extends SafeAction {
         }
     	BaseSetup.infoLog("Attempting to click on Property Type dropdown...");
         try {
-        	needToWait(5);
+        	needToWait(VERYSHORTWAIT);
             safeClick(propertyTypeDropdownLoc);
             BaseSetup.     passLog("✅ Property Type dropdown clicked successfully.");
         } catch (Exception e) {

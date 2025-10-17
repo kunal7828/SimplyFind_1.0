@@ -8,4 +8,7 @@ public static final int LONGWAIT=30;
 public static final int VERYLONGWAIT=60;
 
 
+public static final String SUCCESSMSG="Successfully created";
+
+
 }
