@@ -41,6 +41,9 @@ public class QuickSearchPage extends SafeAction {
 			safeExplicitWait(quickSearchLinkLoc, VERYSHORTWAIT);
 			try {
 				safeWaitForElementToBeClickable(quickSearchLinkLoc, VERYSHORTWAIT);
+		
+				
+				
 				safeClick(quickSearchLinkLoc);
 				BaseSetup.passLog("✅ Quick Search tab clicked successfully using normal click.");
 			} catch (Exception e) {
