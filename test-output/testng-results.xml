@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (53c03a2188e8976c54cbc607665b2073)]]>
+      <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (423f10155e992b8d89691ae1c71d2f30)]]>
     </line>
     <line>
       <![CDATA[✅ Element(s) visible for XPath: //h6[text()='Buy '] (Waited 5 sec)]]>
@@ -71,16 +71,16 @@
       <![CDATA[Retrieved text from element with XPath: //label[text()="Properties found"]//preceding::strong[1]. Text: 910]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-10-23T17:18:25 IST" name="Default suite" finished-at="2025-10-23T17:18:36 IST" duration-ms="11218">
+  <suite started-at="2025-10-23T17:46:54 IST" name="ResultFolderName" finished-at="2025-10-23T17:47:05 IST" duration-ms="11242">
     <groups>
     </groups>
-    <test started-at="2025-10-23T17:18:25 IST" name="Default test" finished-at="2025-10-23T17:18:36 IST" duration-ms="11218">
+    <test started-at="2025-10-23T17:46:54 IST" name="ChromeTest_Simplify" finished-at="2025-10-23T17:47:05 IST" duration-ms="11242">
       <class name="tests.BuyTest">
-        <test-method is-config="true" signature="openBrowserWithLogin()[pri:0, instance:tests.BuyTest@3f6db3fb]" started-at="2025-10-23T17:18:07 IST" name="openBrowserWithLogin" finished-at="2025-10-23T17:18:25 IST" duration-ms="18013" status="PASS">
+        <test-method is-config="true" signature="openBrowserWithLogin()[pri:0, instance:tests.BuyTest@4b9df8a]" started-at="2025-10-23T17:46:36 IST" name="openBrowserWithLogin" finished-at="2025-10-23T17:46:54 IST" duration-ms="18128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowserWithLogin -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.BuyTest@3f6db3fb]" started-at="2025-10-23T17:18:25 IST" name="beforeMethod" finished-at="2025-10-23T17:18:25 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.BuyTest@4b9df8a]" started-at="2025-10-23T17:46:54 IST" name="beforeMethod" finished-at="2025-10-23T17:46:54 IST" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -91,10 +91,10 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyBuyFiltersFunctionality()[pri:1, instance:tests.BuyTest@3f6db3fb]" started-at="2025-10-23T17:18:25 IST" name="verifyBuyFiltersFunctionality" finished-at="2025-10-23T17:18:36 IST" duration-ms="11139" status="PASS">
+        <test-method signature="verifyBuyFiltersFunctionality()[pri:1, instance:tests.BuyTest@4b9df8a]" started-at="2025-10-23T17:46:54 IST" name="verifyBuyFiltersFunctionality" finished-at="2025-10-23T17:47:05 IST" duration-ms="11195" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (53c03a2188e8976c54cbc607665b2073)]]>
+              <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (423f10155e992b8d89691ae1c71d2f30)]]>
             </line>
             <line>
               <![CDATA[✅ Element(s) visible for XPath: //h6[text()='Buy '] (Waited 5 sec)]]>
@@ -164,11 +164,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- verifyBuyFiltersFunctionality -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.BuyTest@3f6db3fb]" started-at="2025-10-23T17:18:36 IST" name="closeBrowser" finished-at="2025-10-23T17:18:37 IST" duration-ms="586" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.BuyTest@4b9df8a]" started-at="2025-10-23T17:47:05 IST" name="closeBrowser" finished-at="2025-10-23T17:47:06 IST" duration-ms="554" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- tests.BuyTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- ChromeTest_Simplify -->
+  </suite> <!-- ResultFolderName -->
 </testng-results>

@@ -542,3 +542,44 @@
 2025-10-23 17:18:36 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->910
 2025-10-23 17:18:36 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
 2025-10-23 17:18:37 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-23 17:45:32 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-23 17:45:34 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-23 17:45:48 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-23 17:45:48 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-23 17:45:52 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-23 17:45:52 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-23 17:45:52 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-23 17:45:58 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ Page fully loaded and ready.
+2025-10-23 17:45:58 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-23 17:45:58 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-23 17:46:19 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-23 17:46:19 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-23 17:46:19 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ Get property Count successfully------->null
+2025-10-23 17:46:19 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to enter Yield Percentage.
+2025-10-23 17:46:19 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ Yield Percentage Value entered successfully.------->5.6
+2025-10-23 17:46:19 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to click on search button.
+2025-10-23 17:46:19 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ Search button clicked successfully.
+2025-10-23 17:46:19 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-23 17:46:19 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ Get property Count successfully------->null
+2025-10-23 17:46:19 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-23 17:46:19 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-23 17:46:36 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-23 17:46:37 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-23 17:46:51 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-23 17:46:51 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-23 17:46:54 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-23 17:46:54 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-23 17:46:54 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-23 17:46:59 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-23 17:46:59 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-23 17:47:00 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-23 17:47:00 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-23 17:47:04 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,176
+2025-10-23 17:47:04 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to enter Yield Percentage.
+2025-10-23 17:47:04 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ Yield Percentage Value entered successfully.------->5.6
+2025-10-23 17:47:04 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to click on search button.
+2025-10-23 17:47:05 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ Search button clicked successfully.
+2025-10-23 17:47:05 [TestNG-tests-1] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-23 17:47:05 [TestNG-tests-1] INFO  common.BaseSetup: - ✅ Get property Count successfully------->910
+2025-10-23 17:47:06 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-23 17:47:06 [main] INFO  common.BaseSetup: - Browser closed successfully.
