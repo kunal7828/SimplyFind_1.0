@@ -40,10 +40,7 @@ public class QuickSearchPage extends SafeAction {
 		try {
 			safeExplicitWait(quickSearchLinkLoc, VERYSHORTWAIT);
 			try {
-				safeWaitForElementToBeClickable(quickSearchLinkLoc, VERYSHORTWAIT);
-		
-				
-				
+				safeWaitForElementToBeClickable(quickSearchLinkLoc, VERYSHORTWAIT);	
 				safeClick(quickSearchLinkLoc);
 				BaseSetup.passLog("✅ Quick Search tab clicked successfully using normal click.");
 			} catch (Exception e) {

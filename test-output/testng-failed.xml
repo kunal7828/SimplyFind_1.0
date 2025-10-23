@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.PropertyCountTest">
+      <class name="tests.BuyTest">
         <methods>
-          <include name="verifyQuickSearchFunctionality"/>
           <include name="openBrowserWithLogin"/>
           <include name="beforeMethod"/>
           <include name="closeBrowser"/>
+          <include name="verifyBuyFiltersFunctionality"/>
         </methods>
-      </class> <!-- tests.PropertyCountTest -->
+      </class> <!-- tests.BuyTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

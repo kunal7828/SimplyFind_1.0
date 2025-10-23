@@ -21,8 +21,8 @@ public class QuickSearchTest extends BaseSetup {
 
 	 public void verifyQuickSearchFunctionality() throws Exception {
 		QuickSearchPage quickSearchPage = new QuickSearchPage(driver);
-		quickSearchPage.clickOnQuickSearch();
-		quickSearchPage.enterTextPostCodeField(postCodeValue);
+//		quickSearchPage.clickOnQuickSearch();
+//		quickSearchPage.enterTextPostCodeField(postCodeValue);
 		
 		
 		

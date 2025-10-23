@@ -34,22 +34,21 @@ public class SafeAction extends Sync {
         this.driver = BaseSetup.driver;
     }
     
-    
+   
     // Click action using XPath
     public void safeClick(String xpathLocator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        try {
+           try {
             WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpathLocator)));
             element.click();
-
             Reporter.log(String.format("✅ Successfully clicked element with XPath: %s", xpathLocator), true);
-
         } catch (TimeoutException e) {
             Reporter.log(String.format("❌ Timeout: Element not clickable within time limit. XPath: %s", xpathLocator), true);
         } catch (NoSuchElementException e) {
             Reporter.log(String.format("❌ Element not found with XPath: %s", xpathLocator), true);
         } catch (ElementClickInterceptedException e) {
             Reporter.log(String.format("⚠️ Click intercepted by another element. XPath: %s", xpathLocator), true);
+            waitForPageToLoad(driver, 10);
         } catch (ElementNotInteractableException e) {
             Reporter.log(String.format("⚠️ Element not interactable with XPath: %s", xpathLocator), true);
         } catch (StaleElementReferenceException e) {
@@ -58,6 +57,41 @@ public class SafeAction extends Sync {
             Reporter.log(String.format("❌ Unexpected error while clicking element with XPath: %s. Error: %s", xpathLocator, e.getMessage()), true);
         }
     }
+    
+    
+   /*
+    public void safeClick(By locator) {
+        int attempts = 0;
+        while (attempts < 3) {
+            try {
+                driver.findElement(locator).click();
+                return;
+            } catch (ElementClickInterceptedException e) {
+                BaseSetup.warningLog("⚠️ Click intercepted, retrying...");
+                waitForPageToLoad(driver, 10);
+            }
+            attempts++;
+        }
+        throw new RuntimeException("❌ Failed to click element after multiple retries: " + locator);
+    }
+    
+    */
+    public void waitForPageToLoad(WebDriver driver, int timeoutInSeconds) {
+        new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds)).until(webDriver ->
+            ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete")
+        );
+        BaseSetup.infoLog("✅ Page fully loaded and ready.");
+    }
+
+    public void waitForLoaderToDisappear(By loaderLocator, int timeoutInSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(loaderLocator));
+        BaseSetup.infoLog("✅ Loader disappeared, page ready for interaction.");
+    }
+    
+    
+    
+    
 
     // Type action using XPath
     public void safeType(String xpathLocator, String value) {
@@ -323,4 +357,12 @@ public class SafeAction extends Sync {
             Reporter.log("An error occurred while quitting the WebDriver.", true);
         }
     }
+    
+    
+ 
+
+  
+    
+
+    
 }

@@ -230,7 +230,7 @@ public class BaseSetup {
         extentTest = extentReports.createTest(method.getName());
     }
 
-    @AfterSuite
+    @AfterSuite (enabled=true)
     public void closeBrowser() {
         try {
             if (extentReports != null) {
