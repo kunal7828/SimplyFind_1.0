@@ -238,7 +238,7 @@ public class BaseSetup {
                 log.info("Extent Report generated successfully.");
             }
             if (driver != null) {
-               driver.quit();
+        //       driver.quit();
                 log.info("Browser closed successfully.");
             }
         } catch (Exception e) {

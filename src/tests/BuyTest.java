@@ -14,7 +14,8 @@ public class BuyTest extends BaseSetup {
 
 	
 	
-	String yieldValue="5.6";
+	String yieldValue="8";
+	String filterName="abc";
 		
 	@Test(priority = 1)
 
@@ -25,11 +26,9 @@ public class BuyTest extends BaseSetup {
 		buyPage.selectMyRequirement();  
 		buyPage.validatePropertyCount(); //Reusable method after applying filter.
 		buyPage.enterYieldPercentage(yieldValue);
+		buyPage.saveFilter(filterName);
 		buyPage.clickOnSearchButton();
 		buyPage.validatePropertyCount(); //Reusable method after applying filter.
-		
-	
-	
 	}
 	
 	

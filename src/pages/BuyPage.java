@@ -19,9 +19,12 @@ public class BuyPage extends SafeAction {
 	String buyLinkLoc = "//h6[text()='Buy ']";
 	String myRequirementLoc = "//label[text()='My Requirements ']//following::span[1]";
 	String myRequirementDDLoc = "//label[text()='My Requirements ']//following::a[2]";
-	String propertyFoundLoc = "//label[text()=\"Properties found\"]//preceding::strong[1]";
+	String propertyFoundLoc = "//label[text()='Properties found']//preceding::strong[1]";
 	String yieldInputFieldLoc = "//label[text()='Yield ']//following::input[1]";
-
+	String saveButtonLoc = "//a[text()='Search']//following::a[7]";
+	String inputFieldfilterLoc="//h4[text()='Save a Filter']//following::input[1]";
+	String saveFilterLoc="//h4[text()='Save a Filter']//following::a[1]";
+	String searchButtonLoc = "//a[text()='Search']";
 
 	// String postCodeValue="HA1 1LG";
 
@@ -44,8 +47,7 @@ public class BuyPage extends SafeAction {
 			} catch (Exception e) {
 				WebElement element = driver.findElement(By.xpath(buyLinkLoc));
 				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-				BaseSetup
-						.warningLog("⚠️ Normal click failed. Executed JavaScript click on Buy tab." + element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript click on Buy tab." + element);
 			}
 		}
 
@@ -81,8 +83,10 @@ public class BuyPage extends SafeAction {
 
 		BaseSetup.infoLog("Attempting to Select My Requirement from Drop down.");
 		try {
+		//	waitForPageToLoad(driver, SHORTWAIT);
 			safeExplicitWait(myRequirementDDLoc, SHORTWAIT);
 			try {
+				safeWaitForElementToBeVisible(myRequirementDDLoc, SHORTWAIT);
 				safeWaitForElementToBeClickable(myRequirementDDLoc, SHORTWAIT);
 				safeClick(myRequirementDDLoc);
 				BaseSetup.passLog("✅ My Requirement from Drop down successfully using normal click.");
@@ -105,10 +109,12 @@ public class BuyPage extends SafeAction {
 			safeExplicitWait(propertyFoundLoc, SHORTWAIT);
 			try {
 				safeWaitForElementToBeClickable(propertyFoundLoc, SHORTWAIT);
-
+				
+				boolean propertyValue=safeIsDisplayed(propertyFoundLoc);
+				BaseSetup.passLog("✅ Property Count visible------->"+ propertyValue);
+				
 				String headerGetText = safeGetText(propertyFoundLoc);
 				BaseSetup.passLog("✅ Get property Count successfully------->" + headerGetText);
-
 
 			} catch (Exception e) {
 				WebElement element = driver.findElement(By.xpath(propertyFoundLoc));
@@ -120,7 +126,6 @@ public class BuyPage extends SafeAction {
 		}
 
 	}
-
 
 	public void enterYieldPercentage(String yieldValue) {
 
@@ -142,7 +147,33 @@ public class BuyPage extends SafeAction {
 		}
 
 	}
-	String searchButtonLoc="//a[text()='Search']";
+
+	public void saveFilter(String filterName) {
+		BaseSetup.infoLog("Attempting to Save Filter.");
+		try {
+			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+			safeExplicitWait(saveButtonLoc, SHORTWAIT);
+			try {
+				safeWaitForElementToBeClickable(saveButtonLoc, SHORTWAIT);
+				safeClick(saveButtonLoc);
+				
+				safeWaitForElementToBeClickable(inputFieldfilterLoc, SHORTWAIT);
+				safeType(inputFieldfilterLoc, filterName); 
+				
+				safeWaitForElementToBeClickable(saveFilterLoc, SHORTWAIT);
+				safeClick(saveFilterLoc);
+                BaseSetup.passLog("✅ filterName Saved successfully.------->" + filterName);
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(saveButtonLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript click on filterName.");
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to save filterName. Error: " + e.getMessage());
+		}
+
+	}
+
 	public void clickOnSearchButton() {
 		BaseSetup.infoLog("Attempting to click on search button.");
 		try {
@@ -158,43 +189,9 @@ public class BuyPage extends SafeAction {
 				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript click on Search button ."); //
 			}
 		} catch (Exception e) {
-			BaseSetup.failLog("❌ Unable to click on search button. Error: " + e.getMessage());   //
+			BaseSetup.failLog("❌ Unable to click on search button. Error: " + e.getMessage()); //
 		}
 
 	}
 
 }
-
-/*
- * boolean flag=
- * driver.findElement(By.xpath("//h6[text()='Time']")).isDisplayed();
- * System.out.println("Time page is visible-->"+flag);
- * 
- * 
- * 
- * boolean dashboardFlag =
- * driver.findElement(By.xpath(dashboardPage)).isDisplayed();
- * Thread.sleep(3000); if (dashboardFlag) {
- * System.out.println("Admin dashboard element and logged in successfully");
- * }else {
- * System.out.println("Admin dashboard element and not logged in successfully");
- * }
- * 
- * 
- * 
- * 
- * String headerGetText =
- * driver.findElement(By.xpath("//h6[text()='Dashboard']")).getText(); Boolean
- * headerFlag =
- * driver.findElement(By.xpath("//h6[text()='Dashboard']")).isDisplayed();
- * 
- * System.out.println("Dashobard Page Displayed Successfully. ------> " +
- * headerGetText);
- * System.out.println("Dashobard Page Displayed Successfully. ------>" +
- * headerFlag); String currentPageUrl = driver.getCurrentUrl();
- * System.out.println("URL: " + currentPageUrl); // Get the page title and print
- * it String pageTitle = driver.getTitle(); System.out.println("Page Title: " +
- * pageTitle);
- * 
- * 
- */

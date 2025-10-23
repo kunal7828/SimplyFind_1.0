@@ -249,3 +249,4 @@ Session ID: 1bb8964302124c613e987bd3f2102413
 2025-10-23 16:18:29 [main] ERROR common.BaseSetup: - ❌ Unable to click on  Buy tab. Error: ❌ Failed to click element after multiple retries: //h6[text()='Buy ']
 2025-10-23 16:18:35 [main] ERROR common.BaseSetup: - ❌ Unable to click on My Requirement. Error: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
 2025-10-23 16:19:07 [main] ERROR common.BaseSetup: - ❌ Unable to Select on My Requirement. Error: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+2025-10-23 19:18:03 [main] ERROR common.BaseSetup: - ❌ Unable to Select on My Requirement. Error: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "webDriver" is null
