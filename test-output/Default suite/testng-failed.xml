@@ -8,7 +8,7 @@
           <include name="openBrowserWithLogin"/>
           <include name="beforeMethod"/>
           <include name="closeBrowser"/>
-          <include name="verifyBuyFiltersFunctionality"/>
+          <include name="verifyAICSortingFunctionality"/>
         </methods>
       </class> <!-- tests.BuyTest -->
     </classes>

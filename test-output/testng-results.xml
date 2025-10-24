@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (c71d9044fd62dbc550d204be849afb30)]]>
+      <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (ec3fb6df1ee7d2f47e3ddfe799c84050)]]>
     </line>
     <line>
       <![CDATA[✅ Element(s) visible for XPath: //h6[text()='Buy '] (Waited 15 sec)]]>
@@ -44,117 +44,57 @@
       <![CDATA[Retrieved text from element with XPath: //label[text()='Properties found']//preceding::strong[1]. Text: 4,176]]>
     </line>
     <line>
-      <![CDATA[⏸️ Thread paused for 5 seconds]]>
+      <![CDATA[✅ Element(s) visible for XPath: //label[text()='Sort by']//following::a[1] (Waited 15 sec)]]>
     </line>
     <line>
-      <![CDATA[✅ Element(s) visible for XPath: //label[text()='Yield ']//following::input[1] (Waited 15 sec)]]>
+      <![CDATA[✅ Element clickable for XPath: //label[text()='Sort by']//following::a[1] (Waited 15 sec)]]>
     </line>
     <line>
-      <![CDATA[✅ Element is visible with XPath: //label[text()='Yield ']//following::input[1]]]>
+      <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Sort by']//following::a[1]]]>
     </line>
     <line>
-      <![CDATA[✅ Element clickable for XPath: //label[text()='Yield ']//following::input[1] (Waited 15 sec)]]>
+      <![CDATA[✅ Element(s) visible for XPath: //label[text()='Sort by']//following::a[3] (Waited 15 sec)]]>
     </line>
     <line>
-      <![CDATA[✅ Successfully entered value '5.4' into element with XPath: //label[text()='Yield ']//following::input[1]]]>
+      <![CDATA[✅ Element clickable for XPath: //label[text()='Sort by']//following::a[3] (Waited 15 sec)]]>
     </line>
     <line>
-      <![CDATA[✅ Element(s) visible for XPath: //a[text()='Search']//following::a[7] (Waited 15 sec)]]>
+      <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Sort by']//following::a[3]]]>
     </line>
     <line>
-      <![CDATA[✅ Element is visible with XPath: //a[text()='Search']//following::a[7]]]>
+      <![CDATA[✅ Element(s) visible for XPath: //label[text()='Sort by']//following::span[1] (Waited 15 sec)]]>
     </line>
     <line>
-      <![CDATA[✅ Element clickable for XPath: //a[text()='Search']//following::a[7] (Waited 15 sec)]]>
+      <![CDATA[✅ Element clickable for XPath: //label[text()='Sort by']//following::span[1] (Waited 15 sec)]]>
     </line>
     <line>
-      <![CDATA[✅ Successfully clicked element with XPath: //a[text()='Search']//following::a[7]]]>
-    </line>
-    <line>
-      <![CDATA[✅ Element is visible with XPath: //h4[text()='Save a Filter']//following::input[1]]]>
-    </line>
-    <line>
-      <![CDATA[✅ Element clickable for XPath: //h4[text()='Save a Filter']//following::input[1] (Waited 15 sec)]]>
-    </line>
-    <line>
-      <![CDATA[✅ Successfully entered value 'test1' into element with XPath: //h4[text()='Save a Filter']//following::input[1]]]>
-    </line>
-    <line>
-      <![CDATA[✅ Element is visible with XPath: //h4[text()='Save a Filter']//following::a[1]]]>
-    </line>
-    <line>
-      <![CDATA[✅ Element clickable for XPath: //h4[text()='Save a Filter']//following::a[1] (Waited 15 sec)]]>
-    </line>
-    <line>
-      <![CDATA[✅ Successfully clicked element with XPath: //h4[text()='Save a Filter']//following::a[1]]]>
-    </line>
-    <line>
-      <![CDATA[✅ Element(s) visible for XPath: //a[text()='Search'] (Waited 15 sec)]]>
-    </line>
-    <line>
-      <![CDATA[✅ Element clickable for XPath: //a[text()='Search'] (Waited 15 sec)]]>
-    </line>
-    <line>
-      <![CDATA[⚠️ Click intercepted by another element. XPath: //a[text()='Search']]]>
-    </line>
-    <line>
-      <![CDATA[✅ Element(s) visible for XPath: //label[text()='Properties found']//preceding::strong[1] (Waited 15 sec)]]>
-    </line>
-    <line>
-      <![CDATA[✅ Element(s) visible for XPath: //label[text()='Properties found']//preceding::strong[1] (Waited 15 sec)]]>
-    </line>
-    <line>
-      <![CDATA[Element with XPath: //label[text()='Properties found']//preceding::strong[1] is displayed: true]]>
-    </line>
-    <line>
-      <![CDATA[Retrieved text from element with XPath: //label[text()='Properties found']//preceding::strong[1]. Text: 1,028]]>
-    </line>
-    <line>
-      <![CDATA[✅ Element(s) visible for XPath: //a[text()='Reset'] (Waited 15 sec)]]>
-    </line>
-    <line>
-      <![CDATA[✅ Element clickable for XPath: //a[text()='Reset'] (Waited 15 sec)]]>
-    </line>
-    <line>
-      <![CDATA[✅ Successfully clicked element with XPath: //a[text()='Reset']]]>
-    </line>
-    <line>
-      <![CDATA[✅ Element(s) visible for XPath: //label[text()='Properties found']//preceding::strong[1] (Waited 15 sec)]]>
-    </line>
-    <line>
-      <![CDATA[✅ Element(s) visible for XPath: //label[text()='Properties found']//preceding::strong[1] (Waited 15 sec)]]>
-    </line>
-    <line>
-      <![CDATA[Element with XPath: //label[text()='Properties found']//preceding::strong[1] is displayed: true]]>
-    </line>
-    <line>
-      <![CDATA[Retrieved text from element with XPath: //label[text()='Properties found']//preceding::strong[1]. Text: 4,179]]>
+      <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Sort by']//following::span[1]]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-10-24T17:07:48 IST" name="Default suite" finished-at="2025-10-24T17:08:07 IST" duration-ms="18556">
+  <suite started-at="2025-10-24T18:36:07 IST" name="Default suite" finished-at="2025-10-24T18:36:19 IST" duration-ms="12170">
     <groups>
     </groups>
-    <test started-at="2025-10-24T17:07:48 IST" name="Default test" finished-at="2025-10-24T17:08:07 IST" duration-ms="18556">
+    <test started-at="2025-10-24T18:36:07 IST" name="Default test" finished-at="2025-10-24T18:36:19 IST" duration-ms="12170">
       <class name="tests.BuyTest">
-        <test-method is-config="true" signature="openBrowserWithLogin()[pri:0, instance:tests.BuyTest@7ac2e39b]" started-at="2025-10-24T17:07:30 IST" name="openBrowserWithLogin" finished-at="2025-10-24T17:07:48 IST" duration-ms="18456" status="PASS">
+        <test-method is-config="true" signature="openBrowserWithLogin()[pri:0, instance:tests.BuyTest@7ac2e39b]" started-at="2025-10-24T18:35:48 IST" name="openBrowserWithLogin" finished-at="2025-10-24T18:36:07 IST" duration-ms="19602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowserWithLogin -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.BuyTest@7ac2e39b]" started-at="2025-10-24T17:07:48 IST" name="beforeMethod" finished-at="2025-10-24T17:07:48 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:tests.BuyTest@7ac2e39b]" started-at="2025-10-24T18:36:07 IST" name="beforeMethod" finished-at="2025-10-24T18:36:07 IST" duration-ms="10" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.BuyTest.verifyBuyFiltersFunctionality() throws java.lang.Exception]]>
+                <![CDATA[public void tests.BuyTest.verifyAICSortingFunctionality()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyBuyFiltersFunctionality()[pri:1, instance:tests.BuyTest@7ac2e39b]" started-at="2025-10-24T17:07:48 IST" name="verifyBuyFiltersFunctionality" description="Verifying Buy Filters functionality" finished-at="2025-10-24T17:08:07 IST" duration-ms="18490" status="PASS">
+        <test-method signature="verifyAICSortingFunctionality()[pri:2, instance:tests.BuyTest@7ac2e39b]" started-at="2025-10-24T18:36:07 IST" name="verifyAICSortingFunctionality" finished-at="2025-10-24T18:36:19 IST" duration-ms="12100" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (c71d9044fd62dbc550d204be849afb30)]]>
+              <![CDATA[🔗 Sync initialized with driver instance: ChromeDriver: chrome on windows (ec3fb6df1ee7d2f47e3ddfe799c84050)]]>
             </line>
             <line>
               <![CDATA[✅ Element(s) visible for XPath: //h6[text()='Buy '] (Waited 15 sec)]]>
@@ -196,95 +136,35 @@
               <![CDATA[Retrieved text from element with XPath: //label[text()='Properties found']//preceding::strong[1]. Text: 4,176]]>
             </line>
             <line>
-              <![CDATA[⏸️ Thread paused for 5 seconds]]>
+              <![CDATA[✅ Element(s) visible for XPath: //label[text()='Sort by']//following::a[1] (Waited 15 sec)]]>
             </line>
             <line>
-              <![CDATA[✅ Element(s) visible for XPath: //label[text()='Yield ']//following::input[1] (Waited 15 sec)]]>
+              <![CDATA[✅ Element clickable for XPath: //label[text()='Sort by']//following::a[1] (Waited 15 sec)]]>
             </line>
             <line>
-              <![CDATA[✅ Element is visible with XPath: //label[text()='Yield ']//following::input[1]]]>
+              <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Sort by']//following::a[1]]]>
             </line>
             <line>
-              <![CDATA[✅ Element clickable for XPath: //label[text()='Yield ']//following::input[1] (Waited 15 sec)]]>
+              <![CDATA[✅ Element(s) visible for XPath: //label[text()='Sort by']//following::a[3] (Waited 15 sec)]]>
             </line>
             <line>
-              <![CDATA[✅ Successfully entered value '5.4' into element with XPath: //label[text()='Yield ']//following::input[1]]]>
+              <![CDATA[✅ Element clickable for XPath: //label[text()='Sort by']//following::a[3] (Waited 15 sec)]]>
             </line>
             <line>
-              <![CDATA[✅ Element(s) visible for XPath: //a[text()='Search']//following::a[7] (Waited 15 sec)]]>
+              <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Sort by']//following::a[3]]]>
             </line>
             <line>
-              <![CDATA[✅ Element is visible with XPath: //a[text()='Search']//following::a[7]]]>
+              <![CDATA[✅ Element(s) visible for XPath: //label[text()='Sort by']//following::span[1] (Waited 15 sec)]]>
             </line>
             <line>
-              <![CDATA[✅ Element clickable for XPath: //a[text()='Search']//following::a[7] (Waited 15 sec)]]>
+              <![CDATA[✅ Element clickable for XPath: //label[text()='Sort by']//following::span[1] (Waited 15 sec)]]>
             </line>
             <line>
-              <![CDATA[✅ Successfully clicked element with XPath: //a[text()='Search']//following::a[7]]]>
-            </line>
-            <line>
-              <![CDATA[✅ Element is visible with XPath: //h4[text()='Save a Filter']//following::input[1]]]>
-            </line>
-            <line>
-              <![CDATA[✅ Element clickable for XPath: //h4[text()='Save a Filter']//following::input[1] (Waited 15 sec)]]>
-            </line>
-            <line>
-              <![CDATA[✅ Successfully entered value 'test1' into element with XPath: //h4[text()='Save a Filter']//following::input[1]]]>
-            </line>
-            <line>
-              <![CDATA[✅ Element is visible with XPath: //h4[text()='Save a Filter']//following::a[1]]]>
-            </line>
-            <line>
-              <![CDATA[✅ Element clickable for XPath: //h4[text()='Save a Filter']//following::a[1] (Waited 15 sec)]]>
-            </line>
-            <line>
-              <![CDATA[✅ Successfully clicked element with XPath: //h4[text()='Save a Filter']//following::a[1]]]>
-            </line>
-            <line>
-              <![CDATA[✅ Element(s) visible for XPath: //a[text()='Search'] (Waited 15 sec)]]>
-            </line>
-            <line>
-              <![CDATA[✅ Element clickable for XPath: //a[text()='Search'] (Waited 15 sec)]]>
-            </line>
-            <line>
-              <![CDATA[⚠️ Click intercepted by another element. XPath: //a[text()='Search']]]>
-            </line>
-            <line>
-              <![CDATA[✅ Element(s) visible for XPath: //label[text()='Properties found']//preceding::strong[1] (Waited 15 sec)]]>
-            </line>
-            <line>
-              <![CDATA[✅ Element(s) visible for XPath: //label[text()='Properties found']//preceding::strong[1] (Waited 15 sec)]]>
-            </line>
-            <line>
-              <![CDATA[Element with XPath: //label[text()='Properties found']//preceding::strong[1] is displayed: true]]>
-            </line>
-            <line>
-              <![CDATA[Retrieved text from element with XPath: //label[text()='Properties found']//preceding::strong[1]. Text: 1,028]]>
-            </line>
-            <line>
-              <![CDATA[✅ Element(s) visible for XPath: //a[text()='Reset'] (Waited 15 sec)]]>
-            </line>
-            <line>
-              <![CDATA[✅ Element clickable for XPath: //a[text()='Reset'] (Waited 15 sec)]]>
-            </line>
-            <line>
-              <![CDATA[✅ Successfully clicked element with XPath: //a[text()='Reset']]]>
-            </line>
-            <line>
-              <![CDATA[✅ Element(s) visible for XPath: //label[text()='Properties found']//preceding::strong[1] (Waited 15 sec)]]>
-            </line>
-            <line>
-              <![CDATA[✅ Element(s) visible for XPath: //label[text()='Properties found']//preceding::strong[1] (Waited 15 sec)]]>
-            </line>
-            <line>
-              <![CDATA[Element with XPath: //label[text()='Properties found']//preceding::strong[1] is displayed: true]]>
-            </line>
-            <line>
-              <![CDATA[Retrieved text from element with XPath: //label[text()='Properties found']//preceding::strong[1]. Text: 4,179]]>
+              <![CDATA[✅ Successfully clicked element with XPath: //label[text()='Sort by']//following::span[1]]]>
             </line>
           </reporter-output>
-        </test-method> <!-- verifyBuyFiltersFunctionality -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.BuyTest@7ac2e39b]" started-at="2025-10-24T17:08:07 IST" name="closeBrowser" finished-at="2025-10-24T17:08:07 IST" duration-ms="306" status="PASS">
+        </test-method> <!-- verifyAICSortingFunctionality -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.BuyTest@7ac2e39b]" started-at="2025-10-24T18:36:19 IST" name="closeBrowser" finished-at="2025-10-24T18:36:20 IST" duration-ms="504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

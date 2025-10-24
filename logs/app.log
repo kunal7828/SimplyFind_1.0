@@ -1284,3 +1284,182 @@ Session ID: 37322add4141fcbd6719d083945a690d
 2025-10-24 17:08:07 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,179
 2025-10-24 17:08:07 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
 2025-10-24 17:08:07 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-24 17:52:18 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-24 17:52:22 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-24 17:52:36 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-24 17:52:36 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-24 17:52:39 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-24 17:52:40 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-24 17:52:45 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-24 17:52:46 [main] INFO  common.BaseSetup: - ✅ Page fully loaded and ready.
+2025-10-24 17:52:46 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-24 17:52:46 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-24 17:53:34 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-24 17:53:38 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-24 17:53:53 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-24 17:53:53 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-24 17:53:56 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-24 17:53:57 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-24 17:54:02 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-24 17:54:03 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-24 17:54:03 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-24 17:54:03 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-24 17:54:03 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-24 17:54:08 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-24 17:54:08 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,176
+2025-10-24 17:54:08 [main] INFO  common.BaseSetup: - Attempting to enter Yield Percentage.
+2025-10-24 17:54:14 [main] INFO  common.BaseSetup: - ✅ Yield Percentage Value entered successfully.------->5.4
+2025-10-24 17:54:14 [main] INFO  common.BaseSetup: - Attempting to Save Filter.
+2025-10-24 17:54:14 [main] INFO  common.BaseSetup: - ✅ filterName Saved successfully.------->test1
+2025-10-24 17:54:14 [main] INFO  common.BaseSetup: - Attempting to click on search button.
+2025-10-24 17:54:16 [main] INFO  common.BaseSetup: - ✅ Search button clicked successfully.
+2025-10-24 17:54:16 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-24 17:54:17 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-24 17:54:17 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->1,053
+2025-10-24 17:54:17 [main] INFO  common.BaseSetup: - Attempting to click on Reset Button.
+2025-10-24 17:54:17 [main] INFO  common.BaseSetup: - ✅ Reset Button clicked successfully.
+2025-10-24 17:54:17 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-24 17:54:18 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-24 17:54:18 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,179
+2025-10-24 17:54:20 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-24 17:54:20 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-24 18:03:14 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-24 18:03:16 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-24 18:03:31 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-24 18:03:31 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-24 18:03:35 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-24 18:03:35 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-24 18:03:40 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-24 18:03:41 [main] INFO  common.BaseSetup: - ✅ Page fully loaded and ready.
+2025-10-24 18:03:41 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-24 18:03:41 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-24 18:04:07 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-24 18:04:07 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-24 18:17:52 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-24 18:17:56 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-24 18:18:12 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-24 18:18:12 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-24 18:18:15 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-24 18:18:15 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-24 18:18:20 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-24 18:18:21 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-24 18:18:21 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-24 18:18:22 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-24 18:18:22 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-24 18:18:25 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-24 18:18:26 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,176
+2025-10-24 18:18:26 [main] INFO  common.BaseSetup: - Attempting to enter Yield Percentage.
+2025-10-24 18:18:31 [main] INFO  common.BaseSetup: - ✅ Yield Percentage Value entered successfully.------->5.4
+2025-10-24 18:18:31 [main] INFO  common.BaseSetup: - Attempting to Save Filter.
+2025-10-24 18:18:32 [main] INFO  common.BaseSetup: - ✅ filterName Saved successfully.------->test1
+2025-10-24 18:18:32 [main] INFO  common.BaseSetup: - Attempting to click on search button.
+2025-10-24 18:18:33 [main] INFO  common.BaseSetup: - ✅ Page fully loaded and ready.
+2025-10-24 18:18:33 [main] INFO  common.BaseSetup: - ✅ Search button clicked successfully.
+2025-10-24 18:18:33 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-24 18:18:33 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-24 18:18:33 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,176
+2025-10-24 18:18:33 [main] INFO  common.BaseSetup: - Attempting to click on Reset Button.
+2025-10-24 18:18:34 [main] INFO  common.BaseSetup: - ✅ Reset Button clicked successfully.
+2025-10-24 18:18:34 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-24 18:18:34 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-24 18:18:34 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,179
+2025-10-24 18:18:35 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-24 18:18:35 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-24 18:27:31 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-24 18:27:33 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-24 18:27:48 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-24 18:27:48 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-24 18:30:47 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-24 18:30:49 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-24 18:30:58 [main] ERROR common.BaseSetup: - Login failed! Check Excel file or locators.
+org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=141.0.7390.77)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fbc945244cec0a1412762ea91984f0f0, findElement {value=//input[@placeholder='Enter User id'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.77, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\KUNALS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59624}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59624/devtoo..., se:cdpVersion: 141.0.7390.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fbc945244cec0a1412762ea91984f0f0
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362) ~[selenium-remote-driver-4.25.0.jar:?]
+	at pages.LoginPage.enterUsername(LoginPage.java:23) ~[classes/:?]
+	at common.BaseSetup.openBrowserWithLogin(BaseSetup.java:128) [classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2025-10-24 18:31:13 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-24 18:31:27 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-24 18:31:29 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-24 18:31:44 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-24 18:31:44 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-24 18:32:16 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-24 18:32:18 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-24 18:32:49 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-24 18:32:51 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-24 18:33:06 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-24 18:33:06 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-24 18:33:33 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-24 18:33:33 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-24 18:33:52 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-24 18:33:53 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-24 18:34:00 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-24 18:34:00 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-24 18:35:10 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-24 18:35:10 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-24 18:35:10 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,176
+2025-10-24 18:35:22 [main] INFO  common.BaseSetup: - Attempting to click on Sorting List Icon.
+2025-10-24 18:35:23 [main] INFO  common.BaseSetup: - ✅ Sorting List Icon clicked successfully.
+2025-10-24 18:35:25 [main] INFO  common.BaseSetup: - Attempting to select AIC from Sorting List.
+2025-10-24 18:35:26 [main] INFO  common.BaseSetup: - ✅ AIC Selected Successfully from sorting list.
+2025-10-24 18:35:36 [main] INFO  common.BaseSetup: - Attempting to click on acending And Decending Icon.
+2025-10-24 18:35:36 [main] INFO  common.BaseSetup: - ✅ Acending And Decending Icon clicked successfully.
+2025-10-24 18:35:37 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-24 18:35:37 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-24 18:35:48 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-24 18:35:50 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-24 18:36:04 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-24 18:36:04 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-24 18:36:07 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-24 18:36:07 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-24 18:36:12 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-24 18:36:13 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-24 18:36:13 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-24 18:36:13 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-24 18:36:13 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-24 18:36:17 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-24 18:36:17 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,176
+2025-10-24 18:36:17 [main] INFO  common.BaseSetup: - Attempting to click on Sorting List Icon.
+2025-10-24 18:36:18 [main] INFO  common.BaseSetup: - ✅ Sorting List Icon clicked successfully.
+2025-10-24 18:36:18 [main] INFO  common.BaseSetup: - Attempting to select AIC from Sorting List.
+2025-10-24 18:36:18 [main] INFO  common.BaseSetup: - ✅ AIC Selected Successfully from sorting list.
+2025-10-24 18:36:18 [main] INFO  common.BaseSetup: - Attempting to click on acending And Decending Icon.
+2025-10-24 18:36:19 [main] INFO  common.BaseSetup: - ✅ Acending And Decending Icon clicked successfully.
+2025-10-24 18:36:20 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-24 18:36:20 [main] INFO  common.BaseSetup: - Browser closed successfully.

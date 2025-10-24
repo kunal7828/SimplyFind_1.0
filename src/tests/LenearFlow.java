@@ -79,23 +79,11 @@ public class LenearFlow extends SafeAction{
             System.out.println("❌ Popup handling failed: " + e.getMessage());
         }
  
-         
      
-        
-  
-      
-        
      //   driver.findElement(By.xpath("//a[normalize-space()='Search']")).click();
         Thread.sleep(5000);
     }
  
-    
-    
-    
-    
-    
-    
-    
     
     
     

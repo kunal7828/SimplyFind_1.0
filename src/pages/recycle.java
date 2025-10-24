@@ -1,6 +1,6 @@
 package pages;
 
-public class z {
+public class recycle {
 	/*
 	 * boolean flag=
 	 * driver.findElement(By.xpath("//h6[text()='Time']")).isDisplayed();

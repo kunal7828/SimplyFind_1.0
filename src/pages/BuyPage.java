@@ -30,7 +30,6 @@ public class BuyPage extends SafeAction {
 	String acendingAndDecendingIconLoc="//label[text()='Sort by']//following::span[1]";
 	String resetButtonLoc="//a[text()='Reset']";
 
-	// String postCodeValue="HA1 1LG";
 
 	public BuyPage(WebDriver driver) {
 		super(); // Ensure SafeAction uses this driver
@@ -228,12 +227,8 @@ public class BuyPage extends SafeAction {
 	
 	//verify ascending and descending properties in Aic
 	
-	public void clickOnSortingIcon() {
-		
-		 
-		
+	public void clickOnSortingIcon() {	
 		BaseSetup.infoLog("Attempting to click on Sorting List Icon.");
-	
 		try {
 			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
 			safeExplicitWait(sortByListLoc, LONGWAIT);
@@ -249,7 +244,6 @@ public class BuyPage extends SafeAction {
 		} catch (Exception e) {
 			BaseSetup.failLog("❌ Unable to click on Sorting List Icon. Error: " + e.getMessage()); //
 		}
-
 }
 	
 	public void selectAICFromSortingList() {
@@ -268,12 +262,10 @@ public class BuyPage extends SafeAction {
 			}
 		} catch (Exception e) {
 			BaseSetup.failLog("❌ Unable to select AIC from Sorting List. Error: " + e.getMessage()); //
-		}
-		
+		}	
 	}
 	
 	public void clickOnAcendingAndDecendingIcon() {
-		
 		
 		BaseSetup.infoLog("Attempting to click on acending And Decending Icon.");
 		try {
