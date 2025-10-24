@@ -27,6 +27,8 @@ public class BuyPage extends SafeAction {
 	String searchButtonLoc = "//a[text()='Search']";
 	String sortByListLoc="//label[text()='Sort by']//following::a[1]";
 	String sortAICLoc="//label[text()='Sort by']//following::a[3]";
+	String acendingAndDecendingIconLoc="//label[text()='Sort by']//following::span[1]";
+	String resetButtonLoc="//a[text()='Reset']";
 
 	// String postCodeValue="HA1 1LG";
 
@@ -41,9 +43,9 @@ public class BuyPage extends SafeAction {
 	public void clickOnBuyLink() {
 		BaseSetup.infoLog("Attempting to click on the Buy tab...");
 		try {
-			safeExplicitWait(buyLinkLoc, VERYSHORTWAIT);
+			safeExplicitWait(buyLinkLoc, LONGWAIT);
 			try {
-				safeExplicitWait(buyLinkLoc, VERYSHORTWAIT);
+				safeExplicitWait(buyLinkLoc, LONGWAIT);
 				safeClick(buyLinkLoc);
 				BaseSetup.passLog("✅ Buy tab clicked successfully using normal click.");
 			} catch (Exception e) {
@@ -60,12 +62,13 @@ public class BuyPage extends SafeAction {
 	}
 
 	// ✅ Click On My Requirement drop down.
-	public void clickOnMyRequirement() {
-
-		BaseSetup.infoLog("Attempting to click My Requirement drop down..");
+	public void clickOnMyRequirement() {	
+		needToWait(SHORTWAIT); // right now no option using static wait because of the loading issues
+//		safeExplicitWait(myRequirementLoc, LONGWAIT);
+	    BaseSetup.infoLog("Attempting to click My Requirement drop down..");
 		try {
-			needToWait(VERYSHORTWAIT); // loading time manage by this wait.
-			safeExplicitWait(myRequirementLoc, SHORTWAIT);
+			// loading time manage by this wait.
+			safeExplicitWait(myRequirementLoc, LONGWAIT);
 			try {
 				safeWaitForElementToBeClickable(myRequirementLoc, SHORTWAIT);
 				safeClick(myRequirementLoc);
@@ -85,8 +88,8 @@ public class BuyPage extends SafeAction {
 
 		BaseSetup.infoLog("Attempting to Select My Requirement from Drop down.");
 		try {
-			needToWait(VERYSHORTWAIT);
-			safeExplicitWait(myRequirementDDLoc, SHORTWAIT);
+	//		needToWait(VERYSHORTWAIT);
+			safeExplicitWait(myRequirementDDLoc, LONGWAIT);
 			try {
 			//	safeWaitForElementToBeClickable(myRequirementDDLoc, SHORTWAIT);
 				safeClick(myRequirementDDLoc);
@@ -106,12 +109,12 @@ public class BuyPage extends SafeAction {
 
 		BaseSetup.infoLog("Attempting to Get property Count.");
 		try {
-			 needToWait(VERYSHORTWAIT);//loading time manage by this wait.
-			safeExplicitWait(propertyFoundLoc, SHORTWAIT);
+		//	 needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+			safeExplicitWait(propertyFoundLoc, LONGWAIT);
 			try {
-				safeWaitForElementToBeVisible(propertyFoundLoc, SHORTWAIT);
-				safeWaitForElementToBeClickable(propertyFoundLoc, SHORTWAIT);
-				
+			//	safeWaitForElementToBeVisible(propertyFoundLoc, LONGWAIT);
+			//	safeWaitForElementToBeClickable(propertyFoundLoc, LONGWAIT);
+				safeExplicitWait(propertyFoundLoc, LONGWAIT);
 				boolean propertyValue=safeIsDisplayed(propertyFoundLoc);
 				BaseSetup.passLog("✅ Property Count visible------->"+ propertyValue);
 				
@@ -133,10 +136,11 @@ public class BuyPage extends SafeAction {
 
 		BaseSetup.infoLog("Attempting to enter Yield Percentage.");
 		try {
-		    needToWait(VERYSHORTWAIT);//loading time manage by this wait.
-			safeExplicitWait(yieldInputFieldLoc, SHORTWAIT);
+		   needToWait(SHORTWAIT);//loading time manage by this wait.
+			safeExplicitWait(yieldInputFieldLoc, LONGWAIT);
 			try {
-				safeWaitForElementToBeClickable(yieldInputFieldLoc, SHORTWAIT);
+				safeWaitForElementToBeVisible(yieldInputFieldLoc, LONGWAIT);
+				safeWaitForElementToBeClickable(yieldInputFieldLoc, LONGWAIT);
 				safeType(yieldInputFieldLoc, yieldValue);
 				
 				BaseSetup.passLog("✅ Yield Percentage Value entered successfully.------->" + yieldValue);
@@ -155,18 +159,18 @@ public class BuyPage extends SafeAction {
 		BaseSetup.infoLog("Attempting to Save Filter.");
 		try {
 			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
-			safeExplicitWait(saveButtonLoc, SHORTWAIT);
+			safeExplicitWait(saveButtonLoc, LONGWAIT);
 			try {
-				safeWaitForElementToBeVisible(saveButtonLoc, SHORTWAIT);
-				safeWaitForElementToBeClickable(saveButtonLoc, SHORTWAIT);
+				safeWaitForElementToBeVisible(saveButtonLoc, LONGWAIT);
+				safeWaitForElementToBeClickable(saveButtonLoc, LONGWAIT);
 				safeClick(saveButtonLoc);
 				
-				safeWaitForElementToBeVisible(inputFieldfilterLoc, SHORTWAIT);
-				safeWaitForElementToBeClickable(inputFieldfilterLoc, SHORTWAIT);
+				safeWaitForElementToBeVisible(inputFieldfilterLoc, LONGWAIT);
+				safeWaitForElementToBeClickable(inputFieldfilterLoc, LONGWAIT);
 				safeType(inputFieldfilterLoc, filterName); 
 				
-				safeWaitForElementToBeVisible(saveFilterLoc, SHORTWAIT);
-				safeWaitForElementToBeClickable(saveFilterLoc, SHORTWAIT);
+				safeWaitForElementToBeVisible(saveFilterLoc, LONGWAIT);
+				safeWaitForElementToBeClickable(saveFilterLoc, LONGWAIT);
 				safeClick(saveFilterLoc);
                 BaseSetup.passLog("✅ filterName Saved successfully.------->" + filterName);
 			} catch (Exception e) {
@@ -184,9 +188,9 @@ public class BuyPage extends SafeAction {
 		BaseSetup.infoLog("Attempting to click on search button.");
 		try {
 			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
-			safeExplicitWait(searchButtonLoc, SHORTWAIT);
+			safeExplicitWait(searchButtonLoc, LONGWAIT);
 			try {
-				safeWaitForElementToBeClickable(searchButtonLoc, SHORTWAIT);
+				safeWaitForElementToBeClickable(searchButtonLoc, LONGWAIT);
 				safeClick(searchButtonLoc);
 				BaseSetup.passLog("✅ Search button clicked successfully."); //
 			} catch (Exception e) {
@@ -201,6 +205,27 @@ public class BuyPage extends SafeAction {
 	}
 	
 	
+	public void clickOnResetButton() {
+		BaseSetup.infoLog("Attempting to click on Reset Button.");
+		try {
+			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+			safeExplicitWait(resetButtonLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(resetButtonLoc, LONGWAIT);
+				safeClick(resetButtonLoc);
+				BaseSetup.passLog("✅ Reset Button clicked successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(acendingAndDecendingIconLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript click on Reset Button."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to click on Reset Button. Error: " + e.getMessage()); //
+		}
+		
+	}
+	
+	
 	//verify ascending and descending properties in Aic
 	
 	public void clickOnSortingIcon() {
@@ -211,9 +236,9 @@ public class BuyPage extends SafeAction {
 	
 		try {
 			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
-			safeExplicitWait(sortByListLoc, SHORTWAIT);
+			safeExplicitWait(sortByListLoc, LONGWAIT);
 			try {
-				safeWaitForElementToBeClickable(sortByListLoc, SHORTWAIT);
+				safeWaitForElementToBeClickable(sortByListLoc, LONGWAIT);
 				safeClick(sortByListLoc);
 				BaseSetup.passLog("✅ Sorting List Icon clicked successfully."); //
 			} catch (Exception e) {
@@ -231,9 +256,9 @@ public class BuyPage extends SafeAction {
 		BaseSetup.infoLog("Attempting to select AIC from Sorting List.");
 		try {
 			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
-			safeExplicitWait(sortAICLoc, SHORTWAIT);
+			safeExplicitWait(sortAICLoc, LONGWAIT);
 			try {
-				safeWaitForElementToBeClickable(sortAICLoc, SHORTWAIT);
+				safeWaitForElementToBeClickable(sortAICLoc, LONGWAIT);
 				safeClick(sortAICLoc);
 				BaseSetup.passLog("✅ AIC Selected Successfully from sorting list."); //
 			} catch (Exception e) {
@@ -247,6 +272,31 @@ public class BuyPage extends SafeAction {
 		
 	}
 	
+	public void clickOnAcendingAndDecendingIcon() {
+		
+		
+		BaseSetup.infoLog("Attempting to click on acending And Decending Icon.");
+		try {
+			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+			safeExplicitWait(acendingAndDecendingIconLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(acendingAndDecendingIconLoc, LONGWAIT);
+				safeClick(acendingAndDecendingIconLoc);
+				BaseSetup.passLog("✅ Acending And Decending Icon clicked successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(acendingAndDecendingIconLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript click on Sorting List Icon ."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to click on Sorting List Icon. Error: " + e.getMessage()); //
+		}
+		
+	}
+	
+
+	
+
 	
 	
 	

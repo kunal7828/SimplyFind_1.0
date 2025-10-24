@@ -62,7 +62,7 @@ public class Sync extends ConstantVariable {
 	 * Waits explicitly until all elements matching the XPath are visible.
 	 */
 	public void safeExplicitWait(String locator, int seconds) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds)); 
 		try {
 			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(locator)));
 			Reporter.log(String.format("✅ Element(s) visible for XPath: %s (Waited %d sec)", locator, seconds), true);

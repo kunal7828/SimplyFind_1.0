@@ -295,3 +295,12 @@ Session ID: 37322add4141fcbd6719d083945a690d
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
 2025-10-24 14:19:46 [main] ERROR common.BaseSetup: - ❌ Unable to Select on My Requirement. Error: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "webDriver" is null
 2025-10-24 14:20:41 [main] ERROR common.BaseSetup: - ❌ Unable to Select on My Requirement. Error: Cannot invoke "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" because "webDriver" is null
+2025-10-24 16:39:35 [main] ERROR common.Log4JTest: - This is an error log
+2025-10-24 16:39:35 [main] ERROR common.Log4JTest: - This is an error log
+2025-10-24 16:39:35 [main] ERROR common.Log4JTest: - This is an error log
+2025-10-24 16:39:35 [main] ERROR common.Log4JTest: - This is an error log
+2025-10-24 16:39:35 [main] ERROR common.Log4JTest: - This is an error log
+2025-10-24 16:39:35 [main] ERROR common.Log4JTest: - This is an error log
+2025-10-24 16:40:25 [main] ERROR common.Log4JTest: - Error log: Class info error #1
+2025-10-24 16:40:25 [main] ERROR common.Log4JTest: - Error log: Class info error #2
+2025-10-24 16:40:25 [main] ERROR common.Log4JTest: - Error log: Class info error #3
