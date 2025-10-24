@@ -310,32 +310,61 @@ public class SafeAction extends Sync {
         return null;
     }
     
- // Safe Take Screenshot
-    public void safeTakeScreenshot(String screenshotName) {
+ // Safe Take Screenshot with runtime destination path
+    public void safeTakeScreenshot(String screenshotName, String destinationDir) {
         try {
-            // Generate a timestamp for unique filenames
+            // Ensure the directory path ends with a separator
+            if (!destinationDir.endsWith(File.separator)) {
+                destinationDir = destinationDir + File.separator;
+            }
+
+            // Generate timestamp for unique filenames
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
             String screenshotFileName = screenshotName + "_" + timestamp + ".png";
 
             // Take the screenshot
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-            // Define the destination path (adjust the directory path as per your project structure)
-            String screenshotDir = "C:\\Users\\ak200\\OneDrive\\Documents\\workspace\\SeleniumWD";  // Ensure this directory exists or create it
-            File destination = new File(screenshotDir + screenshotFileName);
+            // Create destination folder if it doesn’t exist
+            File directory = new File(destinationDir);
+            if (!directory.exists()) {
+                directory.mkdirs(); // create folder structure if missing
+            }
 
-            // Save the screenshot to the destination path
+            // Define full destination path
+            File destination = new File(destinationDir + screenshotFileName);
+
+            // Save screenshot
             FileHandler.copy(screenshot, destination);
 
-            Reporter.log("Screenshot saved at: " + destination.getAbsolutePath(), true);
+            Reporter.log("✅ Screenshot saved at: " + destination.getAbsolutePath(), true);
         } catch (WebDriverException e) {
-            Reporter.log("WebDriver exception occurred while taking the screenshot: " + e.getMessage(), true);
+            Reporter.log("⚠️ WebDriver exception while taking screenshot: " + e.getMessage(), true);
         } catch (IOException e) {
-            Reporter.log("IOException occurred while saving the screenshot: " + e.getMessage(), true);
+            Reporter.log("⚠️ IOException while saving screenshot: " + e.getMessage(), true);
         } catch (Exception e) {
-            Reporter.log("An error occurred while taking the screenshot: " + e.getMessage(), true);
+            Reporter.log("⚠️ Unexpected error while taking screenshot: " + e.getMessage(), true);
         }
     }
+	// -----------------------------ScreenShot ------------------
+
+    public void safeTakeScreenshotMethod(String screenshotName) throws Exception
+	{
+		TakesScreenshot takesScreenshot=(TakesScreenshot) driver;		
+		File src= takesScreenshot.getScreenshotAs(OutputType.FILE);
+		File des=new File(screenshotName+".png");
+		FileHandler.copy(src, des);
+		
+	}
+    
+    public void takeScreenshotOfWebElement(String screenshotName) throws Exception
+	{
+		WebElement username=driver.findElement(By.xpath("//input[@name='username' and @placeholder='Username']"));
+		File src= username.getScreenshotAs(OutputType.FILE);
+		File des=new File(screenshotName+".png");
+		FileHandler.copy(src, des);
+		
+	}
 
 
     // Close Window Which is Open

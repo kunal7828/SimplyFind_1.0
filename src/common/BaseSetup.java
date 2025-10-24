@@ -17,6 +17,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -37,7 +38,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class BaseSetup {
+public class BaseSetup  {
 
     public static WebDriver driver;
     private ExtentReports extentReports;
@@ -47,7 +48,7 @@ public class BaseSetup {
     @BeforeSuite
     public void openBrowserWithLogin() throws Exception {
         log.info("Launching Chrome browser...");
-
+        
         // --- Chrome Options setup ---
         ChromeOptions options = new ChromeOptions();
 
@@ -88,6 +89,7 @@ public class BaseSetup {
         
         // Initialize ChromeDriver
         driver = new ChromeDriver(options);
+        
         log.info("Chrome browser launched successfully.");
 
         // Open the URL
@@ -133,8 +135,14 @@ public class BaseSetup {
             Thread.sleep(2000);
             
           BaseSetup.log.info("Login successful with username: " + username);
+          
+          
 
         } catch (Exception e) {
+        	
+           
+        	//div[text()=' Invalid credentials ']
+          	
         	 BaseSetup.  log.error("Login failed! Check Excel file or locators.", e);
             throw e;
         }

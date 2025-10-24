@@ -14,11 +14,10 @@ public class BuyTest extends BaseSetup {
 
 	
 	
-	String yieldValue="8";
-	String filterName="abc";
+	String yieldValue="5.5";
+	String filterName="test2";
 		
-	@Test(priority = 1)
-
+	@Test(priority = 1, enabled=false)
 	 public void verifyBuyFiltersFunctionality() throws Exception {	
 		BuyPage buyPage = new BuyPage(driver);
 		buyPage.clickOnBuyLink();
@@ -29,6 +28,18 @@ public class BuyTest extends BaseSetup {
 		buyPage.saveFilter(filterName);
 		buyPage.clickOnSearchButton();
 		buyPage.validatePropertyCount(); //Reusable method after applying filter.
+	}
+	
+	@Test (priority=2, enabled= true)
+	public void verifyAICSortingFunctionality() {
+		BuyPage buyPage = new BuyPage(driver);
+		buyPage.clickOnBuyLink();
+		buyPage.clickOnMyRequirement();
+		buyPage.selectMyRequirement();  
+		buyPage.validatePropertyCount(); //Reusable method after applying filter.
+		buyPage.clickOnSortingIcon();
+		buyPage.selectAICFromSortingList();
+		
 	}
 	
 	

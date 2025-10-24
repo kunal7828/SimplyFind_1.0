@@ -25,6 +25,8 @@ public class BuyPage extends SafeAction {
 	String inputFieldfilterLoc="//h4[text()='Save a Filter']//following::input[1]";
 	String saveFilterLoc="//h4[text()='Save a Filter']//following::a[1]";
 	String searchButtonLoc = "//a[text()='Search']";
+	String sortByListLoc="//label[text()='Sort by']//following::a[1]";
+	String sortAICLoc="//label[text()='Sort by']//following::a[3]";
 
 	// String postCodeValue="HA1 1LG";
 
@@ -83,11 +85,10 @@ public class BuyPage extends SafeAction {
 
 		BaseSetup.infoLog("Attempting to Select My Requirement from Drop down.");
 		try {
-		//	waitForPageToLoad(driver, SHORTWAIT);
+			needToWait(VERYSHORTWAIT);
 			safeExplicitWait(myRequirementDDLoc, SHORTWAIT);
 			try {
-				safeWaitForElementToBeVisible(myRequirementDDLoc, SHORTWAIT);
-				safeWaitForElementToBeClickable(myRequirementDDLoc, SHORTWAIT);
+			//	safeWaitForElementToBeClickable(myRequirementDDLoc, SHORTWAIT);
 				safeClick(myRequirementDDLoc);
 				BaseSetup.passLog("✅ My Requirement from Drop down successfully using normal click.");
 			} catch (Exception e) {
@@ -105,9 +106,10 @@ public class BuyPage extends SafeAction {
 
 		BaseSetup.infoLog("Attempting to Get property Count.");
 		try {
-			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+			 needToWait(VERYSHORTWAIT);//loading time manage by this wait.
 			safeExplicitWait(propertyFoundLoc, SHORTWAIT);
 			try {
+				safeWaitForElementToBeVisible(propertyFoundLoc, SHORTWAIT);
 				safeWaitForElementToBeClickable(propertyFoundLoc, SHORTWAIT);
 				
 				boolean propertyValue=safeIsDisplayed(propertyFoundLoc);
@@ -131,11 +133,12 @@ public class BuyPage extends SafeAction {
 
 		BaseSetup.infoLog("Attempting to enter Yield Percentage.");
 		try {
-			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+		    needToWait(VERYSHORTWAIT);//loading time manage by this wait.
 			safeExplicitWait(yieldInputFieldLoc, SHORTWAIT);
 			try {
 				safeWaitForElementToBeClickable(yieldInputFieldLoc, SHORTWAIT);
 				safeType(yieldInputFieldLoc, yieldValue);
+				
 				BaseSetup.passLog("✅ Yield Percentage Value entered successfully.------->" + yieldValue);
 			} catch (Exception e) {
 				WebElement element = driver.findElement(By.xpath(yieldInputFieldLoc));
@@ -154,12 +157,15 @@ public class BuyPage extends SafeAction {
 			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
 			safeExplicitWait(saveButtonLoc, SHORTWAIT);
 			try {
+				safeWaitForElementToBeVisible(saveButtonLoc, SHORTWAIT);
 				safeWaitForElementToBeClickable(saveButtonLoc, SHORTWAIT);
 				safeClick(saveButtonLoc);
 				
+				safeWaitForElementToBeVisible(inputFieldfilterLoc, SHORTWAIT);
 				safeWaitForElementToBeClickable(inputFieldfilterLoc, SHORTWAIT);
 				safeType(inputFieldfilterLoc, filterName); 
 				
+				safeWaitForElementToBeVisible(saveFilterLoc, SHORTWAIT);
 				safeWaitForElementToBeClickable(saveFilterLoc, SHORTWAIT);
 				safeClick(saveFilterLoc);
                 BaseSetup.passLog("✅ filterName Saved successfully.------->" + filterName);
@@ -191,7 +197,68 @@ public class BuyPage extends SafeAction {
 		} catch (Exception e) {
 			BaseSetup.failLog("❌ Unable to click on search button. Error: " + e.getMessage()); //
 		}
-
+	
 	}
+	
+	
+	//verify ascending and descending properties in Aic
+	
+	public void clickOnSortingIcon() {
+		
+		 
+		
+		BaseSetup.infoLog("Attempting to click on Sorting List Icon.");
+	
+		try {
+			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+			safeExplicitWait(sortByListLoc, SHORTWAIT);
+			try {
+				safeWaitForElementToBeClickable(sortByListLoc, SHORTWAIT);
+				safeClick(sortByListLoc);
+				BaseSetup.passLog("✅ Sorting List Icon clicked successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(sortByListLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript click on Sorting List Icon ."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to click on Sorting List Icon. Error: " + e.getMessage()); //
+		}
 
 }
+	
+	public void selectAICFromSortingList() {
+		BaseSetup.infoLog("Attempting to select AIC from Sorting List.");
+		try {
+			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+			safeExplicitWait(sortAICLoc, SHORTWAIT);
+			try {
+				safeWaitForElementToBeClickable(sortAICLoc, SHORTWAIT);
+				safeClick(sortAICLoc);
+				BaseSetup.passLog("✅ AIC Selected Successfully from sorting list."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(sortByListLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript select Aic From sorting list ."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to select AIC from Sorting List. Error: " + e.getMessage()); //
+		}
+		
+	}
+	
+	
+	
+	
+}
+	
+		
+		
+		
+		
+		
+		
+		
+		
+
+

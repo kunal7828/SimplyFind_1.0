@@ -37,26 +37,26 @@ public class AdminPage extends SafeAction {
 
     public void clickOnAdmin() {
         safeClick(adminLeftPanel);
-        safeTakeScreenshot("clickOnAdmin");
+    //    safeTakeScreenshot("clickOnAdmin");
         safeExplicitWait(addButtonUnderAdminPage, 10);
     }
 
     public void clickOnAddButton() {
         safeClick(addButtonUnderAdminPage);
-        safeTakeScreenshot("clickOnAddButton");
+ //       safeTakeScreenshot("clickOnAddButton");
         safeExplicitWait(userRoleDropdown, 10);
     }
 
     public void selectUserRole() {
         safeClick(userRoleDropdown);
-        safeTakeScreenshot("selectUserRole");
+ //       safeTakeScreenshot("selectUserRole");
         safeClick(adminRoleOption);
         safeExplicitWait(employeeNameInput, 10);
     }
 
     public void selectEmployeeName(String employeeNameValue) {
         safeType(employeeNameInput, employeeNameValue);
-        safeTakeScreenshot("selectEmployeeName_" + employeeNameValue);
+  //      safeTakeScreenshot("selectEmployeeName_" + employeeNameValue);
         needToWait(3);
         safeClick(selectEmployeeOption);
         safeExplicitWait(statusDropdown, 10);
@@ -64,83 +64,83 @@ public class AdminPage extends SafeAction {
 
     public void selectStatus() {
         safeClick(statusDropdown);
-        safeTakeScreenshot("selectStatus");
+    //    safeTakeScreenshot("selectStatus");
         safeClick(enabledStatusOption);
         safeExplicitWait(usernameField, 10);
     }
 
     public void enterUsername(String usernameValue) {
         safeType(usernameField, usernameValue);
-        safeTakeScreenshot("enterUsername_" + usernameValue);
+  //      safeTakeScreenshot("enterUsername_" + usernameValue);
         safeExplicitWait(passwordField, 10);
     }
 
     public void enterPassword(String passwordValue) {
         safeType(passwordField, passwordValue);
-        safeTakeScreenshot("enterPassword");
+   //     safeTakeScreenshot("enterPassword");
         safeExplicitWait(confirmPasswordField, 10);
     }
 
     public void enterConfirmPassword(String confirmPasswordValue) {
         safeType(confirmPasswordField, confirmPasswordValue);
-        safeTakeScreenshot("enterConfirmPassword");
+   //     safeTakeScreenshot("enterConfirmPassword");
         safeExplicitWait(saveButton, 10);
     }
 
     public void clickOnSaveButton() {
         safeClick(saveButton);
-        safeTakeScreenshot("clickOnSaveButton");
+    //    safeTakeScreenshot("clickOnSaveButton");
         safeExplicitWait(usernameSearchField, 10);
         needToWait(8);
     }
 
     public void enterUsernameInSearchPanel(String username) {
         safeType(usernameSearchField, username);
-        safeTakeScreenshot("enterUsernameInSearchPanel_" + username);
+  //      safeTakeScreenshot("enterUsernameInSearchPanel_" + username);
         safeExplicitWait(searchButton, 10);
     }
 
     public void clickOnSearchButton() {
         safeClick(searchButton);
-        safeTakeScreenshot("clickOnSearchButton");
-        safeExplicitWait(updateButton, 10);
+  //      safeTakeScreenshot("clickOnSearchButton");
+      safeExplicitWait(updateButton, 10);
     }
 
     public void clickOnUpdateButton() {
         safeClick(updateButton);
-        safeTakeScreenshot("clickOnUpdateButton");
+   //     safeTakeScreenshot("clickOnUpdateButton");
         needToWait(2);
     }
 
     public void clickOnBoxInUpdatePanel() {
         safeClick(updateCheckbox);
-        safeTakeScreenshot("clickOnBoxInUpdatePanel");
+    //    safeTakeScreenshot("clickOnBoxInUpdatePanel");
         safeExplicitWait(updatePasswordField, 10);
     }
 
     public void changePasswordInUpdatePanel(String password) {
         safeType(updatePasswordField, password);
-        safeTakeScreenshot("changePasswordInUpdatePanel");
+ //       safeTakeScreenshot("changePasswordInUpdatePanel");
         safeExplicitWait(updateConfirmPasswordField, 10);
     }
 
     public void confirmPasswordInUpdatePanel(String confirmPassword) {
         safeType(updateConfirmPasswordField, confirmPassword);
-        safeTakeScreenshot("confirmPasswordInUpdatePanel");
+  //      safeTakeScreenshot("confirmPasswordInUpdatePanel");
         safeExplicitWait(saveButtonInUpdatePanel, 10);
     }
 
     public void clickOnSaveButtonInUpdatePanel() {
         safeClick(saveButtonInUpdatePanel);
-        safeTakeScreenshot("clickOnSaveButtonInUpdatePanel");
+  //      safeTakeScreenshot("clickOnSaveButtonInUpdatePanel");
         safeExplicitWait(deleteButton, 10);
     }
 
     public void clickOnDeleteButton() {
         safeClick(deleteButton);
-        safeTakeScreenshot("clickOnDeleteButton");
+    //    safeTakeScreenshot("clickOnDeleteButton");
         safeClick(confirmDeleteButton);
-        safeTakeScreenshot("clickOnConfirmDeleteButton");
+    //    safeTakeScreenshot("clickOnConfirmDeleteButton");
         needToWait(10);
     }
 }
