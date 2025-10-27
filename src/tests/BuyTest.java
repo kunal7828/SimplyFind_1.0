@@ -45,6 +45,7 @@ public class BuyTest extends BaseSetup {
 	public void verifySortingFunctionality() { 
 		BuyPage buyPage = new BuyPage(driver);
 		buyPage.clickOnBuyLink();
+		
 		buyPage.clickOnMyRequirement();
 		buyPage.selectMyRequirement();  
 		
