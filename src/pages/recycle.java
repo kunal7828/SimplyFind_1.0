@@ -33,5 +33,39 @@ public class recycle {
 	 * pageTitle);
 	 * 
 	 * 
+	 * public void safeClick(String xpathLocator) {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    try {
+        safeScroll(xpathLocator, "into-view"); // <-- scroll before clicking
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpathLocator)));
+        element.click();
+        Reporter.log(String.format("✅ Successfully clicked element with XPath: %s", xpathLocator), true);
+    } catch (Exception e) {
+        Reporter.log(String.format("❌ Error clicking element with XPath: %s - %s", xpathLocator, e.getMessage()), true);
+    }
+}
+
+
+
+public void safeScrollBy(int x, int y) {
+    try {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(arguments[0], arguments[1]);", x, y);
+        Reporter.log(String.format("✅ Scrolled by x:%d, y:%d pixels.", x, y), true);
+    } catch (JavascriptException e) {
+        Reporter.log(String.format("⚠️ JavaScript execution failed while scrolling by coordinates. Error: %s", e.getMessage()), true);
+    } catch (Exception e) {
+        Reporter.log(String.format("❌ Unexpected error while scrolling by coordinates. Error: %s", e.getMessage()), true);
+    }
+}
+
+
+safeScroll("//button[@id='submit']", "into-view");
+safeScroll("", "to-top");
+safeScroll("", "to-bottom");
+safeScrollBy(0, 500); // scrolls 500px down
+	 * 
+	 * 
+	 * 
 	 */
 }

@@ -4,6 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
 import common.BaseSetup;
 import pages.BuyPage;
 
@@ -16,6 +19,11 @@ public class BuyTest extends BaseSetup {
 	
 	String yieldValue="5.4";
 	String filterName="test1";
+	
+	ExtentReports extent = new ExtentReports();
+	ExtentTest test = extent.createTest("Validate Sorting");
+
+
 		
 	@Test(priority = 1, enabled=false, description="Verifying Buy Filters functionality")
 	
@@ -42,7 +50,11 @@ public class BuyTest extends BaseSetup {
 		buyPage.validatePropertyCount(); //Reusable method after applying filter.
 		buyPage.clickOnSortingIcon();
 		buyPage.selectAICFromSortingList();
-		buyPage.clickOnAcendingAndDecendingIcon();
+		buyPage.takeScreenshotForValidateSorting(test);
+		
+	//	buyPage.clickOnAcendingAndDecendingIcon();
+	//	buyPage.clickOnAcendingAndDecendingIcon();
+
 
 		
 	}

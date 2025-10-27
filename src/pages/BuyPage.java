@@ -1,6 +1,8 @@
 package pages;
 
+import java.io.IOException;
 import java.time.Duration;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -8,8 +10,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import common.BaseSetup;
+import common.ExtentReport;
 import common.SafeAction;
+
+
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+
 
 public class BuyPage extends SafeAction {
 
@@ -30,7 +40,6 @@ public class BuyPage extends SafeAction {
 	String acendingAndDecendingIconLoc="//label[text()='Sort by']//following::span[1]";
 	String resetButtonLoc="//a[text()='Reset']";
 
-
 	public BuyPage(WebDriver driver) {
 		super(); // Ensure SafeAction uses this driver
 		this.driver = driver;
@@ -46,6 +55,7 @@ public class BuyPage extends SafeAction {
 			try {
 				safeExplicitWait(buyLinkLoc, LONGWAIT);
 				safeClick(buyLinkLoc);
+				needToWait(SHORTWAIT);
 				BaseSetup.passLog("✅ Buy tab clicked successfully using normal click.");
 			} catch (Exception e) {
 				WebElement element = driver.findElement(By.xpath(buyLinkLoc));
@@ -62,10 +72,11 @@ public class BuyPage extends SafeAction {
 
 	// ✅ Click On My Requirement drop down.
 	public void clickOnMyRequirement() {	
-		needToWait(SHORTWAIT); // right now no option using static wait because of the loading issues
+		
 //		safeExplicitWait(myRequirementLoc, LONGWAIT);
 	    BaseSetup.infoLog("Attempting to click My Requirement drop down..");
 		try {
+		//	needToWait(SHORTWAIT); // right now no option using static wait because of the loading issues
 			// loading time manage by this wait.
 			safeExplicitWait(myRequirementLoc, LONGWAIT);
 			try {
@@ -225,7 +236,7 @@ public class BuyPage extends SafeAction {
 	}
 	
 	
-	//verify ascending and descending properties in Aic
+	//click on sort control icon ascending and descending properties
 	
 	public void clickOnSortingIcon() {	
 		BaseSetup.infoLog("Attempting to click on Sorting List Icon.");
@@ -265,6 +276,26 @@ public class BuyPage extends SafeAction {
 		}	
 	}
 	
+	
+	
+
+
+public void takeScreenshotForValidateSorting(ExtentTest test) {
+    safeScrollBy(0, 200);
+    needToWait(VERYSHORTWAIT);
+    
+
+    String screenshotPath = System.getProperty("user.dir") + "/reports/screenshots/sorting.png";
+    safeTakeScreenshot(test, screenshotPath);
+
+    test.log(Status.INFO, "Screenshot after sorting validation",
+        MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+
+    BaseSetup.passLog("Ascending and Descending Icon clicked successfully.");
+}
+
+
+	
 	public void clickOnAcendingAndDecendingIcon() {
 		
 		BaseSetup.infoLog("Attempting to click on acending And Decending Icon.");
@@ -274,7 +305,10 @@ public class BuyPage extends SafeAction {
 			try {
 				safeWaitForElementToBeClickable(acendingAndDecendingIconLoc, LONGWAIT);
 				safeClick(acendingAndDecendingIconLoc);
-				BaseSetup.passLog("✅ Acending And Decending Icon clicked successfully."); //
+				BaseSetup.passLog("✅ Acending And Decending Icon clicked successfully.");
+				
+				
+				//
 			} catch (Exception e) {
 				WebElement element = driver.findElement(By.xpath(acendingAndDecendingIconLoc));
 				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
@@ -285,6 +319,8 @@ public class BuyPage extends SafeAction {
 		}
 		
 	}
+
+	
 	
 
 	

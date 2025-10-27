@@ -2,7 +2,9 @@ package common;
 
 import java.io.File;
 
+
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -15,6 +17,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -24,6 +27,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
 
 
 
@@ -311,7 +318,7 @@ public class SafeAction extends Sync {
     }
     
  // Safe Take Screenshot with runtime destination path
-    public void safeTakeScreenshot(String screenshotName, String destinationDir) {
+    public void safeTakeScreenshot2(String screenshotName, String destinationDir) {
         try {
             // Ensure the directory path ends with a separator
             if (!destinationDir.endsWith(File.separator)) {
@@ -346,6 +353,111 @@ public class SafeAction extends Sync {
             Reporter.log("⚠️ Unexpected error while taking screenshot: " + e.getMessage(), true);
         }
     }
+    
+
+public String safeCaptureAndAttachScreenshot(ExtentTest test, Status logLevel, String message) {
+    try {
+        // 🔹 Generate timestamp and screenshot name
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String screenshotName = "Screenshot_" + timestamp + ".png";
+
+        // 🔹 Destination directory
+        String destinationDir = System.getProperty("user.dir") + File.separator + "reports" + File.separator + "screenshots" + File.separator;
+        File directory = new File(destinationDir);
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
+
+        // 🔹 Capture screenshot
+        File src = ((TakesScreenshot) this.driver).getScreenshotAs(OutputType.FILE);
+        File dest = new File(destinationDir + screenshotName);
+        FileHandler.copy(src, dest);
+
+        String absolutePath = dest.getAbsolutePath();
+
+        // 🔹 Attach screenshot to Extent Report based on log level
+        switch (logLevel) {
+            case PASS:
+                test.pass(message, MediaEntityBuilder.createScreenCaptureFromPath(absolutePath).build());
+                break;
+            case FAIL:
+                test.fail(message, MediaEntityBuilder.createScreenCaptureFromPath(absolutePath).build());
+                break;
+            case WARNING:
+                test.warning(message, MediaEntityBuilder.createScreenCaptureFromPath(absolutePath).build());
+                break;
+            default:
+                test.info(message, MediaEntityBuilder.createScreenCaptureFromPath(absolutePath).build());
+                break;
+        }
+
+        System.out.println("✅ Screenshot saved at: " + absolutePath);
+        return absolutePath;
+
+    } catch (Exception e) {
+        System.out.println("⚠️ Error while taking screenshot: " + e.getMessage());
+        test.warning("⚠️ Error while taking screenshot: " + e.getMessage());
+    }
+    return null;
+}
+
+    
+    
+    public String safeTakeScreenshot( ExtentTest test, String destinationDir) {
+        try {
+            // Ensure directory path ends with separator
+            if (!destinationDir.endsWith(File.separator)) {
+                destinationDir = destinationDir + File.separator;
+            }
+
+            // 🔹 Get caller method name
+            String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
+
+            // 🔹 Generate timestamp
+            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            String screenshotFileName = methodName + "_" + timestamp + ".png";
+
+            // 🔹 Capture screenshot
+            File screenshot = ((TakesScreenshot) this.driver).getScreenshotAs(OutputType.FILE);
+
+            // 🔹 Create destination folder (if not exists)
+            File directory = new File(destinationDir);
+            if (!directory.exists()) {
+                directory.mkdirs();
+            }
+
+            // 🔹 Define destination path
+            File destination = new File(destinationDir + screenshotFileName);
+            FileHandler.copy(screenshot, destination);
+
+            // 🔹 Log path info
+            String absolutePath = destination.getAbsolutePath();
+            String relativePath = "screenshots/" + screenshotFileName; // for HTML linking
+            Reporter.log("✅ Screenshot saved: " + absolutePath, true);
+
+            // 🔹 Attach to Extent Report (both inline and clickable)
+            test.info("📸 Screenshot captured in method: " + methodName)
+                .addScreenCaptureFromPath(absolutePath, "Screenshot - " + methodName);
+
+            // OR optionally use relative path if report in same parent folder
+            // test.addScreenCaptureFromPath(relativePath, "Screenshot - " + methodName);
+
+            return absolutePath;
+
+        } catch (WebDriverException e) {
+            Reporter.log("⚠️ WebDriver exception while taking screenshot: " + e.getMessage(), true);
+            test.warning("⚠️ WebDriver exception while taking screenshot: " + e.getMessage());
+        } catch (IOException e) {
+            Reporter.log("⚠️ IOException while saving screenshot: " + e.getMessage(), true);
+            test.warning("⚠️ IOException while saving screenshot: " + e.getMessage());
+        } catch (Exception e) {
+            Reporter.log("⚠️ Unexpected error while taking screenshot: " + e.getMessage(), true);
+            test.warning("⚠️ Unexpected error while taking screenshot: " + e.getMessage());
+        }
+
+        return null;
+    }
+
 	// -----------------------------ScreenShot ------------------
 
     public void safeTakeScreenshotMethod(String screenshotName) throws Exception
@@ -364,6 +476,16 @@ public class SafeAction extends Sync {
 		File des=new File(screenshotName+".png");
 		FileHandler.copy(src, des);
 		
+	}
+    
+	public void takeScreenshot(Method method) throws Exception { //method ka object banayege for printing name with screenshot
+		
+		System.out.println("Test Case Name------------->"+method.getName());
+		Thread.sleep(3000);  //manage synchronization here other wise it will take blank picture
+		TakesScreenshot takeScreenshot=(TakesScreenshot) driver; //takesScreenshot object reference variable aur //driver ko typecast kiya
+		File src= takeScreenshot.getScreenshotAs(OutputType.FILE);
+		File des= new File(method.getName()+".png");  //destination
+		FileHandler.copy(src, des); //file handler org openqa selenium io ki use karna hai
 	}
 
 
@@ -387,9 +509,29 @@ public class SafeAction extends Sync {
         }
     }
     
-    
+    public void safeScrollBy(int x, int y) {
+        try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollBy(arguments[0], arguments[1]);", x, y);
+            Reporter.log(String.format("✅ Scrolled by x:%d, y:%d pixels.", x, y), true);
+        } catch (JavascriptException e) {
+            Reporter.log(String.format("⚠️ JavaScript execution failed while scrolling by coordinates. Error: %s", e.getMessage()), true);
+        } catch (Exception e) {
+            Reporter.log(String.format("❌ Unexpected error while scrolling by coordinates. Error: %s", e.getMessage()), true);
+        }
+    }
  
+ // Scroll down by 500 pixels
+ //   safeScrollBy(0, 500);
 
+    // Scroll up by 300 pixels
+//    safeScrollBy(0, -300);
+
+    // Scroll right by 200 pixels
+ //   safeScrollBy(200, 0);
+
+    // Scroll diagonally (right and down)
+ //  safeScrollBy(300, 400);
   
     
 
