@@ -37,6 +37,12 @@ public class BuyPage extends SafeAction {
 	String searchButtonLoc = "//a[text()='Search']";
 	String sortByListLoc="//label[text()='Sort by']//following::a[1]";
 	String sortAICLoc="//label[text()='Sort by']//following::a[3]";
+	String sortDaysOnMKTLoc="//label[text()='Sort by']//following::a[4]";
+	
+	String sortDiscountLoc="//label[text()='Sort by']//following::a[5]";
+	String sortEPCLoc="//label[text()='Sort by']//following::a[6]";
+	String sortYieldLoc="//label[text()='Sort by']//following::a[7]";
+	
 	String acendingAndDecendingIconLoc="//label[text()='Sort by']//following::span[1]";
 	String resetButtonLoc="//a[text()='Reset']";
 
@@ -76,7 +82,7 @@ public class BuyPage extends SafeAction {
 //		safeExplicitWait(myRequirementLoc, LONGWAIT);
 	    BaseSetup.infoLog("Attempting to click My Requirement drop down..");
 		try {
-		//	needToWait(SHORTWAIT); // right now no option using static wait because of the loading issues
+			needToWait(SHORTWAIT); // right now no option using static wait because of the loading issues
 			// loading time manage by this wait.
 			safeExplicitWait(myRequirementLoc, LONGWAIT);
 			try {
@@ -241,7 +247,7 @@ public class BuyPage extends SafeAction {
 	public void clickOnSortingIcon() {	
 		BaseSetup.infoLog("Attempting to click on Sorting List Icon.");
 		try {
-			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+			 needToWait(VERYSHORTWAIT);//loading time manage by this wait.
 			safeExplicitWait(sortByListLoc, LONGWAIT);
 			try {
 				safeWaitForElementToBeClickable(sortByListLoc, LONGWAIT);
@@ -267,7 +273,7 @@ public class BuyPage extends SafeAction {
 				safeClick(sortAICLoc);
 				BaseSetup.passLog("✅ AIC Selected Successfully from sorting list."); //
 			} catch (Exception e) {
-				WebElement element = driver.findElement(By.xpath(sortByListLoc));
+				WebElement element = driver.findElement(By.xpath(sortAICLoc));
 				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript select Aic From sorting list ."); //
 			}
@@ -277,8 +283,86 @@ public class BuyPage extends SafeAction {
 	}
 	
 	
+	public void selectDaysOnMKTFromSortingList() {
+		BaseSetup.infoLog("Attempting to select Days On MKT from Sorting List.");
+		try {
+			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+			safeExplicitWait(sortDaysOnMKTLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(sortDaysOnMKTLoc, LONGWAIT);
+				safeClick(sortDaysOnMKTLoc);
+				BaseSetup.passLog("✅ Days On MKT Selected Successfully from sorting list."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(sortDaysOnMKTLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript select Days On MKT From sorting list ."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to select Days On MKT from Sorting List. Error: " + e.getMessage()); //
+		}
+		
+	}
 	
-
+	public void selectDiscountFromSortingList() {
+		BaseSetup.infoLog("Attempting to select Discount from Sorting List.");
+		try {
+			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+			safeExplicitWait(sortDiscountLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(sortDiscountLoc, LONGWAIT);
+				safeClick(sortDiscountLoc);
+				BaseSetup.passLog("✅ Discount Selected Successfully from sorting list."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(sortDiscountLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript select Discount From sorting list ."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to select Discount from Sorting List. Error: " + e.getMessage()); //
+		}
+		
+	}
+	
+	
+	public void selectEPCFromSortingList() {
+		BaseSetup.infoLog("Attempting to select EPC from Sorting List.");
+		try {
+			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+			safeExplicitWait(sortEPCLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(sortEPCLoc, LONGWAIT);
+				safeClick(sortEPCLoc);
+				BaseSetup.passLog("✅ EPC Selected Successfully from sorting list."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(sortEPCLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript select EPC From sorting list ."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to select EPC from Sorting List. Error: " + e.getMessage()); //
+		}
+		
+	}
+	
+	public void selectYieldFromSortingList() {
+		BaseSetup.infoLog("Attempting to select Yield from Sorting List.");
+		try {
+			// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+			safeExplicitWait(sortYieldLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(sortYieldLoc, LONGWAIT);
+				safeClick(sortYieldLoc);
+				BaseSetup.passLog("✅ Yield Selected Successfully from sorting list."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(sortYieldLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript select Yield From sorting list ."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to select Discount from Yield List. Error: " + e.getMessage()); //
+		}
+		
+	}
 
 public void takeScreenshotForValidateSorting(ExtentTest test) {
     safeScrollBy(0, 200);
@@ -293,7 +377,6 @@ public void takeScreenshotForValidateSorting(ExtentTest test) {
 
     BaseSetup.passLog("Ascending and Descending Icon clicked successfully.");
 }
-
 
 	
 	public void clickOnAcendingAndDecendingIcon() {
@@ -319,13 +402,6 @@ public void takeScreenshotForValidateSorting(ExtentTest test) {
 		}
 		
 	}
-
-	
-	
-
-	
-
-	
 	
 	
 }

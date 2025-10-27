@@ -83,9 +83,7 @@ public class BaseSetup  {
  //       prefs.put("profile.password_manager_leak_detection", false);
    //     prefs.put("profile.credentials_enable_service", false);
 
-     
-        
-        options.setExperimentalOption("prefs", prefs);   
+       options.setExperimentalOption("prefs", prefs);   
         
         // Initialize ChromeDriver
         driver = new ChromeDriver(options);
@@ -110,15 +108,7 @@ public class BaseSetup  {
         extentReports.setSystemInfo("Environment", "QA");
         extentReports.setSystemInfo("Suite", "Sanity");
         extentReports.setSystemInfo("Browser", "Chrome");
-        
-        
-        
  
-        
-        
-        
-        
-
         // --- Perform Login ---
         try {
             LoginPage loginPage = new LoginPage(driver);
@@ -147,8 +137,6 @@ public class BaseSetup  {
             throw e;
         }
 
-        
-
         // Headless mode
         options.addArguments("--headless=new"); // Use "--headless=new" for Chrome 109+
         options.addArguments("--enable-gpu");  // Recommended for headless
@@ -171,26 +159,7 @@ public class BaseSetup  {
         //driver = new ChromeDriver(options);
      //   log.info("Chrome browser launched successfully in headless mode.");
 
-       
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-		/*
+ 		/*
 		 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); try {
 		 * wait.until(ExpectedConditions.alertIsPresent());
 		 * driver.switchTo().alert().accept(); } catch (TimeoutException e) {
@@ -236,6 +205,7 @@ public class BaseSetup  {
     public void beforeMethod(Method method) {
         System.out.println("Running Test Case: " + method.getName());
         extentTest = extentReports.createTest(method.getName());
+        BaseSetup.infoLog("Running Test Case: " + method.getName());   //changes Addded by kunal 
     }
 
     @AfterSuite (enabled=true)
@@ -260,16 +230,14 @@ public class BaseSetup  {
         log.info(steps);
     }
     
-    
-
     public static void failLog(String steps) {
         extentTest.log(Status.FAIL, steps);
-        log.error(steps);
+        log.fatal(steps);
     }
 
     public static void skipLog(String steps) {
         extentTest.log(Status.SKIP, steps);
-        log.warn(steps);
+        log.debug(steps);
     }
 
     public static void warningLog(String steps) {

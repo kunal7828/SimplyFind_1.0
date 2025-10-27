@@ -32,16 +32,13 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
-
-
 public class SafeAction extends Sync {
     public WebDriver driver;
 
     public SafeAction() {
         this.driver = BaseSetup.driver;
     }
-    
-   
+     
     // Click action using XPath
     public void safeClick(String xpathLocator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -65,7 +62,6 @@ public class SafeAction extends Sync {
         }
     }
     
-    
    /*
     public void safeClick(By locator) {
         int attempts = 0;
@@ -80,9 +76,10 @@ public class SafeAction extends Sync {
             attempts++;
         }
         throw new RuntimeException("❌ Failed to click element after multiple retries: " + locator);
-    }
-    
+    }  
     */
+    
+    
     public void waitForPageToLoad(WebDriver driver, int timeoutInSeconds) {
         new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds)).until(webDriver ->
             ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete")
@@ -96,10 +93,6 @@ public class SafeAction extends Sync {
         BaseSetup.infoLog("✅ Loader disappeared, page ready for interaction.");
     }
     
-    
-    
-    
-
     // Type action using XPath
     public void safeType(String xpathLocator, String value) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -128,7 +121,6 @@ public class SafeAction extends Sync {
             Reporter.log(String.format("❌ Unexpected error while typing into element with XPath: %s. Error: %s", xpathLocator, e.getMessage()), true);
         }
     }
-
 
     // Clear action using XPath
     public void safeClear(String xpathLocator) {
