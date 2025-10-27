@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.BuyTest">
+      <class name="tests.ExtentReport4">
         <methods>
-          <include name="openBrowserWithLogin"/>
-          <include name="beforeMethod"/>
-          <include name="closeBrowser"/>
-          <include name="verifyAICSortingFunctionality"/>
+          <include name="TitleTest"/>
+          <include name="setUp"/>
+          <include name="afterSuite"/>
         </methods>
-      </class> <!-- tests.BuyTest -->
+      </class> <!-- tests.ExtentReport4 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
