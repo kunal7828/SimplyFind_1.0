@@ -1378,3 +1378,294 @@ Session ID: 3db39d0d8d74715c31bd5d8b3d1c1f40
 2025-10-28 18:29:09 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->377
 2025-10-28 18:29:11 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
 2025-10-28 18:29:11 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-28 18:37:42 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-28 18:37:46 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-28 18:38:02 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-28 18:38:02 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-28 18:38:05 [main] INFO  common.BaseSetup: - Running Test Case: verifyMoreFilterFunctionality
+2025-10-28 18:38:08 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-28 18:38:11 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-28 18:38:17 [main] INFO  common.BaseSetup: - My Requirements
+2025-10-28 18:38:17 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-28 18:38:17 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-28 18:38:22 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-28 18:38:22 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-28 18:38:22 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 18:38:26 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-28 18:38:26 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,176
+2025-10-28 18:38:26 [main] INFO  common.BaseSetup: - Attempting to click on More Filter Drop Down.
+2025-10-28 18:38:27 [main] INFO  common.BaseSetup: - ✅ More Filter Drop Down clicked successfully.
+2025-10-28 18:38:27 [main] INFO  common.BaseSetup: - ✅ Added To Site DropDown Drop Down clicked successfully.
+2025-10-28 18:38:32 [main] INFO  common.BaseSetup: - Attempting to click on Sorting List Icon.
+2025-10-28 18:38:32 [main] INFO  common.BaseSetup: - ✅ Anytime Value Selected successfully.
+2025-10-28 18:38:32 [main] INFO  common.BaseSetup: - Attempting to Select Must Haves.
+2025-10-28 18:38:32 [main] INFO  common.BaseSetup: - ✅ Must Haves selected successfully.
+2025-10-28 18:38:32 [main] INFO  common.BaseSetup: - Attempting to Select Dont Show.
+2025-10-28 18:38:36 [main] INFO  common.BaseSetup: - ✅ View Filter checkbox selected successfully.
+2025-10-28 18:38:36 [main] INFO  common.BaseSetup: - Attempting to click on search button.
+2025-10-28 18:38:36 [main] INFO  common.BaseSetup: - ✅ Search button clicked successfully.
+2025-10-28 18:38:36 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 18:38:37 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-28 18:38:37 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->377
+2025-10-28 18:38:37 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-28 18:38:37 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-28 18:43:12 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-28 18:43:15 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-28 18:43:33 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-28 18:43:33 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-28 18:43:36 [main] INFO  common.BaseSetup: - Running Test Case: verifyMoreFilterFunctionality
+2025-10-28 18:43:39 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-28 18:43:42 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-28 18:43:47 [main] INFO  common.BaseSetup: - My Requirements
+2025-10-28 18:43:47 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-28 18:43:47 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-28 18:43:52 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-28 18:43:53 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-28 18:43:53 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 18:43:56 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-28 18:43:56 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,176
+2025-10-28 18:43:56 [main] INFO  common.BaseSetup: - Attempting to click on More Filter Drop Down.
+2025-10-28 18:43:57 [main] INFO  common.BaseSetup: - ✅ More Filter Drop Down clicked successfully.
+2025-10-28 18:43:57 [main] INFO  common.BaseSetup: - ✅ Added To Site DropDown Drop Down clicked successfully.
+2025-10-28 18:44:02 [main] INFO  common.BaseSetup: - Attempting to click on Sorting List Icon.
+2025-10-28 18:44:02 [main] INFO  common.BaseSetup: - ✅ Anytime Value Selected successfully.
+2025-10-28 18:44:02 [main] INFO  common.BaseSetup: - Attempting to Select Must Haves.
+2025-10-28 18:44:02 [main] INFO  common.BaseSetup: - ✅ Must Haves selected successfully.
+2025-10-28 18:44:02 [main] INFO  common.BaseSetup: - Attempting to Select Dont Show.
+2025-10-28 18:44:02 [main] INFO  common.BaseSetup: - ✅ Select Dont Show Filters successfully.
+2025-10-28 18:44:02 [main] INFO  common.BaseSetup: - Attempting to Select Dont Show.
+2025-10-28 18:44:06 [main] INFO  common.BaseSetup: - ✅ View Filter checkbox selected successfully.
+2025-10-28 18:44:06 [main] INFO  common.BaseSetup: - Attempting to Select Radon Filter.
+2025-10-28 18:44:06 [main] INFO  common.BaseSetup: - ✅ Radon Filter selected successfully.
+2025-10-28 18:44:06 [main] INFO  common.BaseSetup: - Attempting to click On Current DropDown.
+2025-10-28 18:44:06 [main] INFO  common.BaseSetup: - ✅ Current DropDown clicked successfully.
+2025-10-28 18:44:06 [main] INFO  common.BaseSetup: - Attempting to Select EPC Current DropDown.
+2025-10-28 18:44:07 [main] INFO  common.BaseSetup: - ✅ Radon Filter selected successfully.
+2025-10-28 18:44:07 [main] INFO  common.BaseSetup: - Attempting to click on search button.
+2025-10-28 18:44:07 [main] INFO  common.BaseSetup: - ✅ Search button clicked successfully.
+2025-10-28 18:44:07 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 18:44:07 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-28 18:44:07 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->11
+2025-10-28 18:44:08 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-28 18:44:08 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-28 18:46:16 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-28 18:46:19 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-28 18:46:33 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-28 18:46:33 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-28 18:46:36 [main] INFO  common.BaseSetup: - Running Test Case: verifyMoreFilterFunctionality
+2025-10-28 18:46:39 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-28 18:46:43 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-28 18:46:48 [main] INFO  common.BaseSetup: - My Requirements
+2025-10-28 18:46:48 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-28 18:46:48 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-28 18:46:53 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-28 18:46:53 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-28 18:46:53 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 18:46:57 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-28 18:46:57 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,176
+2025-10-28 18:46:57 [main] INFO  common.BaseSetup: - Attempting to click on More Filter Drop Down.
+2025-10-28 18:46:57 [main] INFO  common.BaseSetup: - ✅ More Filter Drop Down clicked successfully.
+2025-10-28 18:46:58 [main] INFO  common.BaseSetup: - ✅ Added To Site DropDown Drop Down clicked successfully.
+2025-10-28 18:47:03 [main] INFO  common.BaseSetup: - Attempting to click on Sorting List Icon.
+2025-10-28 18:47:03 [main] INFO  common.BaseSetup: - ✅ Anytime Value Selected successfully.
+2025-10-28 18:47:03 [main] INFO  common.BaseSetup: - Attempting to Select Must Haves.
+2025-10-28 18:47:04 [main] INFO  common.BaseSetup: - ✅ Must Haves selected successfully.
+2025-10-28 18:47:04 [main] INFO  common.BaseSetup: - Attempting to Select Dont Show.
+2025-10-28 18:47:07 [main] INFO  common.BaseSetup: - ✅ View Filter checkbox selected successfully.
+2025-10-28 18:47:07 [main] INFO  common.BaseSetup: - Attempting to Select Radon Filter.
+2025-10-28 18:47:08 [main] INFO  common.BaseSetup: - ✅ Radon Filter selected successfully.
+2025-10-28 18:47:08 [main] INFO  common.BaseSetup: - Attempting to click On Current DropDown.
+2025-10-28 18:47:08 [main] INFO  common.BaseSetup: - ✅ Current DropDown clicked successfully.
+2025-10-28 18:47:08 [main] INFO  common.BaseSetup: - Attempting to Select EPC Current DropDown.
+2025-10-28 18:47:09 [main] INFO  common.BaseSetup: - ✅ Radon Filter selected successfully.
+2025-10-28 18:47:09 [main] INFO  common.BaseSetup: - Attempting to click on search button.
+2025-10-28 18:47:09 [main] INFO  common.BaseSetup: - ✅ Search button clicked successfully.
+2025-10-28 18:47:09 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 18:48:09 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->false
+2025-10-28 18:48:09 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->null
+2025-10-28 18:48:10 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-28 18:48:10 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-28 18:48:26 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-28 18:48:29 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-28 18:48:44 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-28 18:48:47 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-28 18:49:01 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-28 18:49:01 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-28 18:49:04 [main] INFO  common.BaseSetup: - Running Test Case: verifyMoreFilterFunctionality
+2025-10-28 18:49:07 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-28 18:49:10 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-28 18:49:15 [main] INFO  common.BaseSetup: - My Requirements
+2025-10-28 18:49:15 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-28 18:49:16 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-28 18:49:21 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-28 18:49:21 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-28 18:49:21 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 18:49:26 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-28 18:49:26 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,176
+2025-10-28 18:54:43 [main] INFO  common.BaseSetup: - Attempting to click on More Filter Drop Down.
+2025-10-28 18:54:43 [main] INFO  common.BaseSetup: - ✅ More Filter Drop Down clicked successfully.
+2025-10-28 19:11:49 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-28 19:11:51 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-28 19:12:04 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-28 19:12:04 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-28 19:12:07 [main] INFO  common.BaseSetup: - Running Test Case: verifyMoreFilterFunctionality
+2025-10-28 19:12:10 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-28 19:12:14 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-28 19:12:19 [main] INFO  common.BaseSetup: - My Requirements
+2025-10-28 19:12:19 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-28 19:12:20 [main] INFO  common.BaseSetup: - ✅ Page fully loaded and ready.
+2025-10-28 19:12:20 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-28 19:12:25 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-28 19:12:45 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-28 19:12:45 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 19:12:48 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->false
+2025-10-28 19:12:48 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->null
+2025-10-28 19:12:48 [main] INFO  common.BaseSetup: - Attempting to click on More Filter Drop Down.
+2025-10-28 19:12:48 [main] INFO  common.BaseSetup: - ✅ More Filter Drop Down clicked successfully.
+2025-10-28 19:12:48 [main] INFO  common.BaseSetup: - ✅ Added To Site DropDown Drop Down clicked successfully.
+2025-10-28 19:12:53 [main] INFO  common.BaseSetup: - Attempting to click on Sorting List Icon.
+2025-10-28 19:12:53 [main] INFO  common.BaseSetup: - ✅ Anytime Value Selected successfully.
+2025-10-28 19:12:53 [main] INFO  common.BaseSetup: - Attempting to Select Must Haves.
+2025-10-28 19:12:53 [main] INFO  common.BaseSetup: - ✅ Must Haves selected successfully.
+2025-10-28 19:12:53 [main] INFO  common.BaseSetup: - Attempting to Select Dont Show.
+2025-10-28 19:12:55 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - ✅ View Filter checkbox selected successfully.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - Attempting to Select Radon Filter.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - ✅ Radon Filter selected successfully.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - Attempting to click On Current DropDown.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - ✅ Current DropDown clicked successfully.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - Attempting to Select EPC Current DropDown.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - ✅ Radon Filter selected successfully.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - Attempting to click on search button.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - ✅ Search button clicked successfully.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->false
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->null
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - Attempting to click On Current DropDown.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - ✅ Current DropDown clicked successfully.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - Attempting to Select EPC Current DropDown.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - ✅ Radon Filter selected successfully.
+2025-10-28 19:12:56 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-28 19:12:57 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-28 19:12:57 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-28 19:13:06 [main] ERROR common.BaseSetup: - Login failed! Check Excel file or locators.
+org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=141.0.7390.77)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9c2c957e4340928258f5f9de9fb565f4, findElement {using=xpath, value=//input[@placeholder='Enter Password']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.77, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\KUNALS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63870}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63870/devtoo..., se:cdpVersion: 141.0.7390.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c2c957e4340928258f5f9de9fb565f4
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368) ~[selenium-remote-driver-4.25.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362) ~[selenium-remote-driver-4.25.0.jar:?]
+	at pages.LoginPage.enterPassword(LoginPage.java:28) ~[classes/:?]
+	at common.BaseSetup.openBrowserWithLogin(BaseSetup.java:126) [classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400) [testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2025-10-28 19:13:42 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-28 19:13:43 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-28 19:13:57 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-28 19:13:58 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-28 19:14:01 [main] INFO  common.BaseSetup: - Running Test Case: verifyMoreFilterFunctionality
+2025-10-28 19:14:04 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-28 19:14:07 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-28 19:14:12 [main] INFO  common.BaseSetup: - My Requirements
+2025-10-28 19:14:12 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-28 19:14:12 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-28 19:14:17 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-28 19:14:17 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-28 19:14:17 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 19:14:22 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-28 19:14:22 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,176
+2025-10-28 19:16:53 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-28 19:16:56 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-28 19:17:01 [main] INFO  common.BaseSetup: - null
+2025-10-28 19:17:01 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-28 19:17:01 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-28 19:17:06 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-28 19:17:06 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-28 19:17:07 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 19:17:07 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->false
+2025-10-28 19:17:07 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->null
+2025-10-28 19:17:12 [main] INFO  common.BaseSetup: - Attempting to click on More Filter Drop Down.
+2025-10-28 19:17:12 [main] INFO  common.BaseSetup: - ✅ More Filter Drop Down clicked successfully.
+2025-10-28 19:17:15 [main] INFO  common.BaseSetup: - ✅ Added To Site DropDown Drop Down clicked successfully.
+2025-10-28 19:17:22 [main] INFO  common.BaseSetup: - Attempting to click on Sorting List Icon.
+2025-10-28 19:17:23 [main] INFO  common.BaseSetup: - ✅ Anytime Value Selected successfully.
+2025-10-28 19:17:33 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-28 19:17:34 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-28 19:17:49 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-28 19:17:49 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-28 19:17:52 [main] INFO  common.BaseSetup: - Running Test Case: verifyMoreFilterFunctionality
+2025-10-28 19:17:55 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-28 19:17:58 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.
+2025-10-28 19:18:03 [main] INFO  common.BaseSetup: - My Requirements
+2025-10-28 19:18:03 [main] INFO  common.BaseSetup: - Attempting to click My Requirement drop down..
+2025-10-28 19:18:04 [main] INFO  common.BaseSetup: - ✅ My Requirement drop down clicked successfully using normal click.
+2025-10-28 19:18:09 [main] INFO  common.BaseSetup: - Attempting to Select My Requirement from Drop down.
+2025-10-28 19:18:09 [main] INFO  common.BaseSetup: - ✅ My Requirement from Drop down successfully using normal click.
+2025-10-28 19:18:09 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 19:18:13 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->true
+2025-10-28 19:18:13 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->4,176
+2025-10-28 19:18:13 [main] INFO  common.BaseSetup: - Attempting to click on More Filter Drop Down.
+2025-10-28 19:18:13 [main] INFO  common.BaseSetup: - ✅ More Filter Drop Down clicked successfully.
+2025-10-28 19:18:13 [main] INFO  common.BaseSetup: - ✅ Added To Site DropDown Drop Down clicked successfully.
+2025-10-28 19:18:18 [main] INFO  common.BaseSetup: - Attempting to click on Sorting List Icon.
+2025-10-28 19:18:18 [main] INFO  common.BaseSetup: - ✅ Anytime Value Selected successfully.
+2025-10-28 19:18:18 [main] INFO  common.BaseSetup: - Attempting to Select Must Haves.
+2025-10-28 19:18:19 [main] INFO  common.BaseSetup: - ✅ Must Haves selected successfully.
+2025-10-28 19:18:19 [main] INFO  common.BaseSetup: - Attempting to Select Dont Show.
+2025-10-28 19:18:23 [main] INFO  common.BaseSetup: - ✅ View Filter checkbox selected successfully.
+2025-10-28 19:18:23 [main] INFO  common.BaseSetup: - Attempting to Select Radon Filter.
+2025-10-28 19:18:23 [main] INFO  common.BaseSetup: - ✅ Radon Filter selected successfully.
+2025-10-28 19:18:23 [main] INFO  common.BaseSetup: - Attempting to click On Current DropDown.
+2025-10-28 19:18:23 [main] INFO  common.BaseSetup: - ✅ Current DropDown clicked successfully.
+2025-10-28 19:18:23 [main] INFO  common.BaseSetup: - Attempting to Select EPC Current DropDown.
+2025-10-28 19:18:23 [main] INFO  common.BaseSetup: - ✅ Radon Filter selected successfully.
+2025-10-28 19:18:23 [main] INFO  common.BaseSetup: - Attempting to click on search button.
+2025-10-28 19:18:24 [main] INFO  common.BaseSetup: - ✅ Search button clicked successfully.
+2025-10-28 19:18:24 [main] INFO  common.BaseSetup: - Attempting to Get property Count.
+2025-10-28 19:19:24 [main] INFO  common.BaseSetup: - ✅ Property Count visible------->false
+2025-10-28 19:19:24 [main] INFO  common.BaseSetup: - ✅ Get property Count successfully------->null
+2025-10-28 19:19:24 [main] INFO  common.BaseSetup: - Attempting to click On Current DropDown.
+2025-10-28 19:20:36 [main] INFO  common.BaseSetup: - ✅ Current DropDown clicked successfully.
+2025-10-28 19:20:36 [main] INFO  common.BaseSetup: - Attempting to Select EPC Current DropDown.
+2025-10-28 19:21:46 [main] INFO  common.BaseSetup: - ✅ Radon Filter selected successfully.
+2025-10-28 19:21:47 [main] INFO  common.BaseSetup: - Extent Report generated successfully.
+2025-10-28 19:21:47 [main] INFO  common.BaseSetup: - Browser closed successfully.
+2025-10-28 19:42:21 [main] INFO  common.BaseSetup: - Launching Chrome browser...
+2025-10-28 19:42:23 [main] INFO  common.BaseSetup: - Chrome browser launched successfully.
+2025-10-28 19:42:37 [main] INFO  common.BaseSetup: - Login successful with username: kunal@simplyphi.co.uk
+2025-10-28 19:42:37 [main] WARN  common.BaseSetup: - No alert present after login.
+2025-10-28 19:42:40 [main] INFO  common.BaseSetup: - Running Test Case: verifyMoreFilterFunctionality
+2025-10-28 19:42:43 [main] INFO  common.BaseSetup: - Attempting to click on the Buy tab...
+2025-10-28 19:43:56 [main] INFO  common.BaseSetup: - ✅ Buy tab clicked successfully using normal click.

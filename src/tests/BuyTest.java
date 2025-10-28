@@ -15,15 +15,11 @@ public class BuyTest extends BaseSetup {
 	WebDriver driver;
     WebDriverWait wait;
 
-	
-	
 	String yieldValue="5.4";
 	String filterName="test1";
-	
+
 	ExtentReports extent = new ExtentReports();
 	ExtentTest test = extent.createTest("Validate Sorting");
-
-
 		
 	@Test(priority = 1, enabled=false, description="Verifying Buy Filters functionality")
 	
@@ -99,11 +95,19 @@ public class BuyTest extends BaseSetup {
 		buyPage.selectMustHave();
 	//	buyPage.selectDontShow();
 		buyPage.viewFilterCheckbox();
-	//	buyPage.RadonFilter();	
-	//	buyPage.clickOnEPCCurrentDropDown();
-	//	buyPage.selectEPCCurrentDropDown();
+		buyPage.RadonFilter();	
+		buyPage.clickOnEPCCurrentDropDown();
+		buyPage.selectEPCCurrentDropDown();
+		buyPage.clickOnEPCPotentialDropDown();
+		buyPage.selectEPCPotentialDropDown();
+		
 		buyPage.clickOnSearchButton();
 		buyPage.validatePropertyCount(); //Reusable method after applying filter.
+		
+
+		
+		
+		
 		
 
 		

@@ -89,6 +89,16 @@ public class BuyPage extends SafeAction {
 	String selectFCurrentLoc="//label[text()='Current']//following::a[8]";
 	String selectGCurrentLoc="//label[text()='Current']//following::a[9]";
 	
+	String potentialDropDownLoc="//label[text()='Potential']//following::a[1]";
+	
+	String selectAPotentialLoc="//label[text()='Current']//following::a[3]";
+	String selectBPotentialLoc="//label[text()='Current']//following::a[4]";
+	String selectCPotentialLoc="//label[text()='Current']//following::a[5]";
+	String selectDPotentialLoc="//label[text()='Current']//following::a[6]";
+	String selectEPotentialLoc="//label[text()='Current']//following::a[7]";
+	String selectFPotentialLoc="//label[text()='Current']//following::a[8]";
+	String selectGPotentialLoc="//label[text()='Current']//following::a[9]";
+	
 
 	public BuyPage(WebDriver driver) {
 		super(); // Ensure SafeAction uses this driver
@@ -539,11 +549,11 @@ public class BuyPage extends SafeAction {
 			try {
 				safeWaitForElementToBeClickable(newHome1Loc, LONGWAIT);
 				safeClick(newHome1Loc); // 1.
-				// safeClick(leasehold1Loc); //2
-				// safeClick(retirementHome1Loc); //3
-				// safeClick(auction1Loc); //4
-				// safeClick(exLocalAuthority1Loc); //5
-				// safeClick(sharedOwnership1Loc); //6
+				 safeClick(leasehold1Loc); //2
+				 safeClick(retirementHome1Loc); //3
+				 safeClick(auction1Loc); //4
+				 safeClick(exLocalAuthority1Loc); //5
+				safeClick(sharedOwnership1Loc); //6
 
 				BaseSetup.passLog("✅ Must Haves selected successfully."); //
 			} catch (Exception e) {
@@ -594,9 +604,9 @@ public class BuyPage extends SafeAction {
 			safeExplicitWait(includeUnderOfferSoldStc, LONGWAIT);
 			try {
 				safeWaitForElementToBeClickable(includeUnderOfferSoldStc, LONGWAIT);
-				//safeClick(includeUnderOfferSoldStc); // 1.
+				safeClick(includeUnderOfferSoldStc); // 1.
 				 safeClick(includeExcludedProperties); //2.
-				// safeClick(discountedPropertiesOnly); //3.
+				 safeClick(discountedPropertiesOnly); //3.
 		BaseSetup.passLog("✅ View Filter checkbox selected successfully."); //
 			} catch (Exception e) {
 				WebElement element = driver.findElement(By.xpath(includeUnderOfferSoldStc));
@@ -616,11 +626,11 @@ public class BuyPage extends SafeAction {
 			try {
 				safeWaitForElementToBeClickable(greaterThan1percent, LONGWAIT);
 				safeClick(greaterThan1percent);   //1.
-				// safeClick(Radon1to3percent);   //2.
-				// safeClick(Radona3to5percent);  //3.
-				// safeClick(Radona5to10percent); //4.
-				// safeClick(Radon10to30percent); //5.
-				// safeClick(lessThan30percent);  //6.
+				safeClick(Radon1to3percent);   //2.
+				 safeClick(Radona3to5percent);  //3.
+				 safeClick(Radona5to10percent); //4.
+				 safeClick(Radon10to30percent); //5.
+				 safeClick(lessThan30percent);  //6.
 				
 		BaseSetup.passLog("✅ Radon Filter selected successfully."); //
 			} catch (Exception e) {
@@ -634,9 +644,6 @@ public class BuyPage extends SafeAction {
 	}
 	 
 	public void clickOnEPCCurrentDropDown() {
-		
-	
-		
 		BaseSetup.infoLog("Attempting to click On Current DropDown.");
 		// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
 		try {
@@ -657,8 +664,6 @@ public class BuyPage extends SafeAction {
 	}
 	
 	public void selectEPCCurrentDropDown() {
-		
-		
 		BaseSetup.infoLog("Attempting to Select EPC Current DropDown.");
 		try {
 			safeExplicitWait(selectACurrentLoc, LONGWAIT);
@@ -680,8 +685,54 @@ public class BuyPage extends SafeAction {
 		} catch (Exception e) {
 			BaseSetup.failLog("❌ Unable to Radon Filter. Error: " + e.getMessage()); //
 		}
+	}
+	
+	public void clickOnEPCPotentialDropDown() {
+		
+		BaseSetup.infoLog("Attempting to click On Current DropDown.");
+		// needToWait(VERYSHORTWAIT);//loading time manage by this wait.
+		try {
+			safeExplicitWait(potentialDropDownLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(potentialDropDownLoc, LONGWAIT);
+				safeClick(potentialDropDownLoc); // 1.
+				
+		BaseSetup.passLog("✅ Current DropDown clicked successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(potentialDropDownLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Current DropDown."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to click Current DropDown Error: " + e.getMessage()); //
+		}	
 		
 	}
+	public void selectEPCPotentialDropDown() {
+		BaseSetup.infoLog("Attempting to Select EPC Current DropDown.");
+		try {
+			safeExplicitWait(selectAPotentialLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(selectAPotentialLoc, LONGWAIT);
+				safeClick(selectAPotentialLoc); // 1.
+			//	safeClick(selectBPotentialLoc); //2.
+				// safeClick(selectCPotentialLoc); //3.
+				// safeClick(selectDPotentialLoc); //4.
+				// safeClick(selectEPotentialLoc); //5.
+				// safeClick(selectFPotentialLoc); //6.
+				// safeClick(selectGPotentialLoc); //7.
+		BaseSetup.passLog("✅ Radon Filter selected successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(selectAPotentialLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Radon Filter."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to Radon Filter. Error: " + e.getMessage()); //
+		}
+	}
+	
+	
 	
 	
 	

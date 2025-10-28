@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.ExtentReport4">
+      <class name="tests.BuyTest">
         <methods>
-          <include name="TitleTest"/>
-          <include name="setUp"/>
-          <include name="afterSuite"/>
+          <include name="verifyMoreFilterFunctionality"/>
+          <include name="openBrowserWithLogin"/>
+          <include name="beforeMethod"/>
+          <include name="closeBrowser"/>
+          <include name="takeScreenshot"/>
         </methods>
-      </class> <!-- tests.ExtentReport4 -->
+      </class> <!-- tests.BuyTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
