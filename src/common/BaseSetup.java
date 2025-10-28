@@ -1,7 +1,9 @@
 package common;
 
 import org.testng.annotations.BeforeSuite;
+
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -15,6 +17,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,11 +27,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
-
+import org.openqa.selenium.io.FileHandler;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -58,6 +62,7 @@ public class BaseSetup  {
         options.addArguments("--disable-infobars");
         options.addArguments("--disable-save-password-bubble");
         options.addArguments("--disable-autofill-keyboard-accessory-view");
+        options.addArguments("--force-device-scale-factor=0.95"); // 75% zoom
 
         // Remove “Chrome is being controlled by automated test software” message
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
@@ -99,7 +104,7 @@ public class BaseSetup  {
         ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter("ExtentReport.html");
         extentSparkReporter.config().setTheme(Theme.DARK); //STANDARD OR DARK
         extentSparkReporter.config().setDocumentTitle("Automation Test Report");
-        extentSparkReporter.config().setReportName("IRIS2 QA Sanity Report");
+        extentSparkReporter.config().setReportName("SimplyFind QA Sanity Report");
         extentSparkReporter.config().setTimeStampFormat("dd-MM-yyyy HH:mm:ss");
 
         extentReports = new ExtentReports();
@@ -207,6 +212,16 @@ public class BaseSetup  {
         extentTest = extentReports.createTest(method.getName());
         BaseSetup.infoLog("Running Test Case: " + method.getName());   //changes Addded by kunal 
     }
+    
+    @AfterMethod  (enabled=false)
+	 public void takeScreenshot(Method method) throws Exception
+	 {
+		 Thread.sleep(5000);
+		File src=  ((ChromeDriver)driver).getScreenshotAs(OutputType.FILE);
+		File des=new File(".//screenshot//"+method.getName()+".png");
+		FileHandler.copy(src, des);
+		//driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
+	 }
 
     @AfterSuite (enabled=true)
     public void closeBrowser() {

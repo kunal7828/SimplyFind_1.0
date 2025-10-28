@@ -41,7 +41,7 @@ public class BuyTest extends BaseSetup {
 		buyPage.validatePropertyCount(); //Reusable method after applying filter.
 	}
 	
-	@Test (priority=2, enabled= true) //enabled= false , true
+	@Test (priority=2, enabled= false) //enabled= false , true
 	public void verifySortingFunctionality() { 
 		BuyPage buyPage = new BuyPage(driver);
 		buyPage.clickOnBuyLink();
@@ -49,38 +49,67 @@ public class BuyTest extends BaseSetup {
 		buyPage.clickOnMyRequirement();
 		buyPage.selectMyRequirement();  
 		
-		buyPage.clickOnSortingIcon();
-		buyPage.selectAICFromSortingList();
+		buyPage.clickOnSortByDropDown();
+		buyPage.selectAICFromSortingList();	 
+		buyPage.clickOnAcendingAndDecendingIcon();
 		buyPage.takeScreenshotForValidateSorting(test); 
+		buyPage.clickOnAcendingAndDecendingIcon();
+		buyPage.takeScreenshotForValidateSorting(test);
 		
-		buyPage.clickOnSortingIcon();
+		buyPage.clickOnSortByDropDown();
 		buyPage.selectDaysOnMKTFromSortingList();
-		
-		buyPage.clickOnSortingIcon();
+		buyPage.clickOnAcendingAndDecendingIcon();
+		buyPage.takeScreenshotForValidateSorting(test); 
+		buyPage.clickOnAcendingAndDecendingIcon();
+		buyPage.takeScreenshotForValidateSorting(test);
+			
+		buyPage.clickOnSortByDropDown();
 		buyPage.selectDiscountFromSortingList();
-		
-		buyPage.clickOnSortingIcon();
+		buyPage.clickOnAcendingAndDecendingIcon();
+		buyPage.takeScreenshotForValidateSorting(test); 
+		buyPage.clickOnAcendingAndDecendingIcon();
+		buyPage.takeScreenshotForValidateSorting(test); 
+
+		buyPage.clickOnSortByDropDown();
 		buyPage.selectEPCFromSortingList();
-		
-		buyPage.clickOnSortingIcon();
+		buyPage.clickOnAcendingAndDecendingIcon();
+		buyPage.takeScreenshotForValidateSorting(test); 
+		buyPage.clickOnAcendingAndDecendingIcon();
+		buyPage.takeScreenshotForValidateSorting(test); 
+
+		buyPage.clickOnSortByDropDown();
 		buyPage.selectYieldFromSortingList();
-
+		buyPage.clickOnAcendingAndDecendingIcon();
+		buyPage.takeScreenshotForValidateSorting(test); 
+		buyPage.clickOnAcendingAndDecendingIcon();
+		buyPage.takeScreenshotForValidateSorting(test);
+	
+	}
+	
+	@Test (priority=3, enabled= true) //enabled= false , true
+	public void verifyMoreFilterFunctionality() { 
+		BuyPage buyPage = new BuyPage(driver);
+		buyPage.clickOnBuyLink();
+		buyPage.clickOnMyRequirement();
+		buyPage.selectMyRequirement();  
+		buyPage.validatePropertyCount(); //Reusable method after applying filter.
+		buyPage.clickOnMoreFilterDropDown();
+		buyPage.clickOnAddedToSiteDropDown();
+		buyPage.selectAddedToSiteDropDownValue();
+		buyPage.selectMustHave();
+	//	buyPage.selectDontShow();
+		buyPage.viewFilterCheckbox();
+	//	buyPage.RadonFilter();	
+	//	buyPage.clickOnEPCCurrentDropDown();
+	//	buyPage.selectEPCCurrentDropDown();
+		buyPage.clickOnSearchButton();
+		buyPage.validatePropertyCount(); //Reusable method after applying filter.
 		
-		
-		
-		
-		
-		
-		
-		
-		
-	//	buyPage.takeScreenshotForValidateSorting(test);                          ///checking after some time 		
-	//    buyPage.clickOnAcendingAndDecendingIcon();
-		//buyPage.clickOnAcendingAndDecendingIcon();
-
 
 		
 	}
+	
+	
 	
 	
  

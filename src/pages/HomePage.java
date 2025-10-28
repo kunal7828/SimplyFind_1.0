@@ -14,6 +14,9 @@ public class HomePage {
 	
 	public void validateAdminVisibility()
 	{
+	//	boolean flag=safeIsDisplayed(homepage);
+	//	Reporter.log("User login successfully.", true );
+	//	return flag;
 		
 		if (driver.findElement(By.xpath(adminLocator)).isDisplayed()) {
 			System.out.println("Home page is visible.");
@@ -23,5 +26,16 @@ public class HomePage {
 System.out.println("Home page is not visible.");
 		}
 	}
-
+/*	
+	public void clickOnProfileIcon() throws Exception {
+		safeClick(clickOnProfileIcon);
+		Reporter.log("profile icon clicked successfully.",true);
+	}
+	
+     public void clickOnLogoutButton() throws Exception {
+		
+		safeClick(clickOnLogoutButton);
+		Reporter.log("logout ckicked successfully.",true);
+	}
+*/
 }
