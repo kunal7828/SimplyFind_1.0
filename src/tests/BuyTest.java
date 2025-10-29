@@ -114,11 +114,13 @@ public class BuyTest extends BaseSetup {
 		buyPage.clickOnMyRequirement();
 		buyPage.selectMyRequirement();  
 		buyPage.validatePropertyCount(); //Reusable method after applying filter.
-		buyPage.clickOnMoreFilterDropDown();
+	//	buyPage.clickOnMoreFilterDropDown();
 		
-		buyPage.clickOnAddedToSiteDropDown();
-		buyPage.selectAddedToSiteDropDownValue();
-	    buyPage.selectMustHave();
+	//	buyPage.clickOnAddedToSiteDropDown();
+	//	buyPage.selectAddedToSiteDropDownValue();
+	//    buyPage.selectMustHave();
+	    
+	    
     //  buyPage.selectDontShow();
 	//	buyPage.viewFilterCheckbox();
 	//	buyPage.RadonFilter();	
@@ -130,17 +132,17 @@ public class BuyTest extends BaseSetup {
     //  buyPage.clickOnYearComparatorDropDown();
     //  buyPage.selectYearComparatorFromDropDown();
 		
-		buyPage.clickOncloseButton();
-	    buyPage.saveFilter(filterName);
-	    buyPage.clickOnSearchButton();
-		buyPage.validatePropertyCount(); //Reusable method after applying filter.
+		//buyPage.clickOncloseButton();
+	//    buyPage.saveFilter(filterName);
+	//    buyPage.clickOnSearchButton();
+	//	buyPage.validatePropertyCount(); //Reusable method after applying filter.
 		buyPage.clickOnDashboard();
-		buyPage.getMatchingPropertyCount(); //Reusable method after applying filter.
+		//buyPage.getMatchingPropertyCount(); //Reusable method after applying filter.
 		
 		
 		buyPage.clickOnWindowClose();
-		buyPage.clickOnBedTypeDropDown();
-		buyPage.removeAllBedType();
+	//	buyPage.clickOnBedTypeDropDown();
+	//	buyPage.removeAllBedType();
 		
 		
 

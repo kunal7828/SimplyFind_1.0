@@ -818,29 +818,16 @@ public class BuyPage extends SafeAction {
 		
 	public void clickOncloseButton() {
 		String closeButtonLoc="//a[text()='Close']";
-		BaseSetup.infoLog("Attempting to click on close button.");
-		try {
-			safeExplicitWait(closeButtonLoc, LONGWAIT);
-			try {
-				safeWaitForElementToBeClickable(closeButtonLoc, LONGWAIT);
-				safeClick(closeButtonLoc); // 1.
-			//	safeClick(selectYearComparatorAfterLoc); //2.
-			BaseSetup.passLog("✅ click on close button. clicked successfully."); //
-			} catch (Exception e) {
-				WebElement element = driver.findElement(By.xpath(closeButtonLoc));
-				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator click on close button"); //
-			}
-		} catch (Exception e) {
-			BaseSetup.failLog("❌ Unable to click on close button Error: " + e.getMessage()); //
-		}
+		safeClick(closeButtonLoc); // 1.
 		
 	}
 	
 	
 	public void clickOnDashboard() {
-		needToWait(VERYVERYSHORTWAIT);
 		String dashboardButtonLoc="//a[text()='Dashboard']";
+
+		
+		needToWait(VERYVERYSHORTWAIT);
 		BaseSetup.infoLog("Attempting to click on dashboard button.");
 		try {
 			safeExplicitWait(dashboardButtonLoc, LONGWAIT);
@@ -944,25 +931,28 @@ public class BuyPage extends SafeAction {
 	}
 
       public void clickOnWindowClose() {
-	
-	//needToWait(VERYVERYSHORTWAIT);
-	String windowCloseIconLoc="//img[@class='logo-image']//following::a[1]";
-	BaseSetup.infoLog("Click On Current Window close icon.");
-	try {
-		safeExplicitWait(windowCloseIconLoc, LONGWAIT);
-		try {
-			safeWaitForElementToBeClickable(windowCloseIconLoc, LONGWAIT);
-			safeClick(windowCloseIconLoc); // 1.
-		//	safeClick(selectYearComparatorAfterLoc); //2.
-		BaseSetup.passLog("✅ Current Window close icon. clicked successfully."); //
-		} catch (Exception e) {
-			WebElement element = driver.findElement(By.xpath(windowCloseIconLoc));
-			((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-			BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator click on Current Window close icon."); //
-		}
-	} catch (Exception e) {
-		BaseSetup.failLog("❌ Unable to click on Current Window close icon. Error: " + e.getMessage()); //
-	}
+    		String windowCloseIconLoc="//a[@class='icons ic_close_popup popup_close ng-star-inserted']";
+    		
+    		safeClick(windowCloseIconLoc); // 1.
+
+//	needToWait(SHORTWAIT);
+//	
+//	BaseSetup.infoLog("Click On Current Window close icon.");
+//	try {
+//		safeExplicitWait(windowCloseIconLoc, LONGWAIT);
+//		try {
+//			safeWaitForElementToBeClickable(windowCloseIconLoc, LONGWAIT);
+//			safeClick(windowCloseIconLoc); // 1.
+//		//	safeClick(selectYearComparatorAfterLoc); //2.
+//		BaseSetup.passLog("✅ Current Window close icon. clicked successfully."); //
+//		} catch (Exception e) {
+//			WebElement element = driver.findElement(By.xpath(windowCloseIconLoc));
+//			((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+//			BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator click on Current Window close icon."); //
+//		}
+//	} catch (Exception e) {
+//		BaseSetup.failLog("❌ Unable to click on Current Window close icon. Error: " + e.getMessage()); //
+//	}
 }
       
       public void clickOnBedTypeDropDown() {
