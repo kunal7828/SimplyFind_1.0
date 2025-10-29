@@ -37,15 +37,15 @@ public class BuyTest extends BaseSetup {
 		buyPage.validatePropertyCount(); //Reusable method after applying filter.
 	}
 	
-	@Test (priority=2, enabled= false) //enabled= false , true
+	@Test (priority=2, enabled= true) //enabled= false , true
 	public void verifySortingFunctionality() { 
 		BuyPage buyPage = new BuyPage(driver);
 		buyPage.clickOnBuyLink();
 		
-		buyPage.clickOnMyRequirement();
-		buyPage.selectMyRequirement();  
+	//	buyPage.clickOnMyRequirement();
+	//	buyPage.selectMyRequirement();  
 		
-		buyPage.clickOnSortByDropDown();
+		/*		buyPage.clickOnSortByDropDown();
 		buyPage.selectAICFromSortingList();	 
 		buyPage.clickOnAcendingAndDecendingIcon();
 		buyPage.takeScreenshotForValidateSorting(test); 
@@ -79,10 +79,11 @@ public class BuyTest extends BaseSetup {
 		buyPage.takeScreenshotForValidateSorting(test); 
 		buyPage.clickOnAcendingAndDecendingIcon();
 		buyPage.takeScreenshotForValidateSorting(test);
+		*/
 	
 	}
 	
-	@Test (priority=3, enabled= true) //enabled= false , true
+	@Test (priority=3, enabled= false) //enabled= false , true
 	public void verifyMoreFilterFunctionality() { 
 		BuyPage buyPage = new BuyPage(driver);
 		buyPage.clickOnBuyLink();

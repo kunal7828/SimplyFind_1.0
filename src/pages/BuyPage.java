@@ -436,11 +436,11 @@ public class BuyPage extends SafeAction {
 //    safeScrollBy(0, 300); // Scroll down
 		needToWait(SHORTWAIT); // Short wait
 
-		String screenshotPath = System.getProperty("user.dir") + "/reports/screenshots/sorting.png";
-		safeTakeScreenshot(test, screenshotPath); // Screenshot taken and saved
+		String screenshotPath = System.getProperty("user.dir") + "/reports/screenshots/sorting";
+	     String actualPathIncludingImageName=	safeTakeScreenshot(test, screenshotPath); // Screenshot taken and saved
 
 		test.log(Status.INFO, "Screenshot after sorting validation",
-				MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()); // Screenshot logged in report
+				MediaEntityBuilder.createScreenCaptureFromPath(actualPathIncludingImageName).build()); // Screenshot logged in report
 
 		// safeScrollBy(0, -400); // Scroll back up
 		needToWait(SHORTWAIT); // Short wait

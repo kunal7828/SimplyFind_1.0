@@ -8,6 +8,7 @@ import org.testng.annotations.AfterSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -18,6 +19,7 @@ import org.apache.logging.log4j.Logger;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -213,14 +215,16 @@ public class BaseSetup  {
         BaseSetup.infoLog("Running Test Case: " + method.getName());   //changes Addded by kunal 
     }
     
-    @AfterMethod  (enabled=false)
+    @AfterMethod
 	 public void takeScreenshot(Method method) throws Exception
 	 {
-		 Thread.sleep(5000);
-		File src=  ((ChromeDriver)driver).getScreenshotAs(OutputType.FILE);
-		File des=new File(".//screenshot//"+method.getName()+".png");
+    	TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+		File src = takesScreenshot.getScreenshotAs(OutputType.FILE);
+		File des = new File(method.getName() + ".png");
 		FileHandler.copy(src, des);
-		//driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
+		extentTest.info("Final Screenshot of the Test",
+				MediaEntityBuilder.createScreenCaptureFromPath(method.getName() + ".png").build());
+		
 	 }
 
     @AfterSuite (enabled=true)
