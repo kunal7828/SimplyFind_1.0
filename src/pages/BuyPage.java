@@ -1,14 +1,22 @@
 package pages;
 
+import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
+
 import org.testng.Reporter;
 
 import java.time.Duration;
+import java.util.List;
 
+import org.checkerframework.checker.guieffect.qual.SafeType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -91,13 +99,13 @@ public class BuyPage extends SafeAction {
 	
 	String potentialDropDownLoc="//label[text()='Potential']//following::a[1]";
 	
-	String selectAPotentialLoc="//label[text()='Current']//following::a[3]";
-	String selectBPotentialLoc="//label[text()='Current']//following::a[4]";
-	String selectCPotentialLoc="//label[text()='Current']//following::a[5]";
-	String selectDPotentialLoc="//label[text()='Current']//following::a[6]";
-	String selectEPotentialLoc="//label[text()='Current']//following::a[7]";
-	String selectFPotentialLoc="//label[text()='Current']//following::a[8]";
-	String selectGPotentialLoc="//label[text()='Current']//following::a[9]";
+	String selectAPotentialLoc="//label[text()='Potential']//following::a[3]";
+	String selectBPotentialLoc="//label[text()='Potential']//following::a[4]";
+	String selectCPotentialLoc="//label[text()='Potential']//following::a[5]";
+	String selectDPotentialLoc="//label[text()='Potential']//following::a[6]";
+	String selectEPotentialLoc="//label[text()='Potential']//following::a[7]";
+	String selectFPotentialLoc="//label[text()='Potential']//following::a[8]";
+	String selectGPotentialLoc="//label[text()='Potential']//following::a[9]";
 	
 
 	public BuyPage(WebDriver driver) {
@@ -131,6 +139,8 @@ public class BuyPage extends SafeAction {
 		}
 
 	}
+	
+
 
 	// ✅ Click On My Requirement drop down.
 	public void clickOnMyRequirement() {
@@ -549,11 +559,11 @@ public class BuyPage extends SafeAction {
 			try {
 				safeWaitForElementToBeClickable(newHome1Loc, LONGWAIT);
 				safeClick(newHome1Loc); // 1.
-				 safeClick(leasehold1Loc); //2
-				 safeClick(retirementHome1Loc); //3
-				 safeClick(auction1Loc); //4
-				 safeClick(exLocalAuthority1Loc); //5
-				safeClick(sharedOwnership1Loc); //6
+				// safeClick(leasehold1Loc); //2
+			//	 safeClick(retirementHome1Loc); //3
+			//	 safeClick(auction1Loc); //4
+			//	 safeClick(exLocalAuthority1Loc); //5
+			//	safeClick(sharedOwnership1Loc); //6
 
 				BaseSetup.passLog("✅ Must Haves selected successfully."); //
 			} catch (Exception e) {
@@ -604,9 +614,9 @@ public class BuyPage extends SafeAction {
 			safeExplicitWait(includeUnderOfferSoldStc, LONGWAIT);
 			try {
 				safeWaitForElementToBeClickable(includeUnderOfferSoldStc, LONGWAIT);
-				safeClick(includeUnderOfferSoldStc); // 1.
-				 safeClick(includeExcludedProperties); //2.
-				 safeClick(discountedPropertiesOnly); //3.
+			//	safeClick(includeUnderOfferSoldStc); // 1.
+			//	 safeClick(includeExcludedProperties); //2.
+			//	 safeClick(discountedPropertiesOnly); //3.
 		BaseSetup.passLog("✅ View Filter checkbox selected successfully."); //
 			} catch (Exception e) {
 				WebElement element = driver.findElement(By.xpath(includeUnderOfferSoldStc));
@@ -626,11 +636,11 @@ public class BuyPage extends SafeAction {
 			try {
 				safeWaitForElementToBeClickable(greaterThan1percent, LONGWAIT);
 				safeClick(greaterThan1percent);   //1.
-				safeClick(Radon1to3percent);   //2.
-				 safeClick(Radona3to5percent);  //3.
-				 safeClick(Radona5to10percent); //4.
-				 safeClick(Radon10to30percent); //5.
-				 safeClick(lessThan30percent);  //6.
+			//	safeClick(Radon1to3percent);   //2.
+			//	 safeClick(Radona3to5percent);  //3.
+			//	 safeClick(Radona5to10percent); //4.
+			//	 safeClick(Radon10to30percent); //5.
+			//	 safeClick(lessThan30percent);  //6.
 				
 		BaseSetup.passLog("✅ Radon Filter selected successfully."); //
 			} catch (Exception e) {
@@ -732,10 +742,380 @@ public class BuyPage extends SafeAction {
 		}
 	}
 	
+	public void enterPropertyAgeBuiltYear(String BuiltYear) {
+		
+		String propertyBuitYearInputLoc="//label[text()='Property Built Year']//following::input[1]";
+		
+		BaseSetup.infoLog("Attempting to click on property Age Built Year to enter Text.");
+		try {
+			safeExplicitWait(propertyBuitYearInputLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(propertyBuitYearInputLoc, LONGWAIT);
+				safeType(propertyBuitYearInputLoc, BuiltYear);
+
+		BaseSetup.passLog("✅ Enter property Age Built Year selected successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(propertyBuitYearInputLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Enter property Age Built Year."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to Enter property Age Built Year. Error: " + e.getMessage()); //
+		}
+		
+	}
+		public void clickOnYearComparatorDropDown() {
+			
+			String propertyYearComparatorLoc="//label[text()='Property Built Year']//following::span[1]";
+			
+			BaseSetup.infoLog("Attempting to click on year comparator drop down.");
+			try {
+				safeExplicitWait(propertyYearComparatorLoc, LONGWAIT);
+				try {
+					safeWaitForElementToBeClickable(propertyYearComparatorLoc, LONGWAIT);
+					safeClick(propertyYearComparatorLoc);
+
+		    	BaseSetup.passLog("✅ year comparator drop down clicked successfully."); //
+				} catch (Exception e) {
+					WebElement element = driver.findElement(By.xpath(propertyYearComparatorLoc));
+					((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+					BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript year comparator drop down."); //
+				}
+			} catch (Exception e) {
+				BaseSetup.failLog("❌ Unable to click on year comparator drop down. Error: " + e.getMessage()); //
+			}
+			
+		}
+		
+		
+		public void selectYearComparatorFromDropDown() {
+			
+			String selectYearComparatorBeforeLoc="//label[text()='Property Built Year']//following::a[3]";
+			String selectYearComparatorAfterLoc="//label[text()='Property Built Year']//following::a[4]";
+			
+			
+			BaseSetup.infoLog("Attempting to select Year Comparator From DropDown.");
+			try {
+				safeExplicitWait(selectYearComparatorBeforeLoc, LONGWAIT);
+				try {
+					safeWaitForElementToBeClickable(selectYearComparatorBeforeLoc, LONGWAIT);
+					safeClick(selectYearComparatorBeforeLoc); // 1.
+				//	safeClick(selectYearComparatorAfterLoc); //2.
+				BaseSetup.passLog("✅ Year Comparator From DropDown. selected successfully."); //
+				} catch (Exception e) {
+					WebElement element = driver.findElement(By.xpath(selectYearComparatorBeforeLoc));
+					((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+					BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator From DropDown."); //
+				}
+			} catch (Exception e) {
+				BaseSetup.failLog("❌ Unable to Select Year Comparator From DropDown. Error: " + e.getMessage()); //
+			}
+			
+		}
+			
+	
+
+		
+	public void clickOncloseButton() {
+		String closeButtonLoc="//a[text()='Close']";
+		BaseSetup.infoLog("Attempting to click on close button.");
+		try {
+			safeExplicitWait(closeButtonLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(closeButtonLoc, LONGWAIT);
+				safeClick(closeButtonLoc); // 1.
+			//	safeClick(selectYearComparatorAfterLoc); //2.
+			BaseSetup.passLog("✅ click on close button. clicked successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(closeButtonLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator click on close button"); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to click on close button Error: " + e.getMessage()); //
+		}
+		
+	}
+	
+	
+	public void clickOnDashboard() {
+		needToWait(VERYVERYSHORTWAIT);
+		String dashboardButtonLoc="//a[text()='Dashboard']";
+		BaseSetup.infoLog("Attempting to click on dashboard button.");
+		try {
+			safeExplicitWait(dashboardButtonLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(dashboardButtonLoc, LONGWAIT);
+				safeClick(dashboardButtonLoc); // 1.
+			//	safeClick(selectYearComparatorAfterLoc); //2.
+			BaseSetup.passLog("✅ click on dashboard button. clicked successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(dashboardButtonLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator click on dashboard button."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to click on dashboard button. Error: " + e.getMessage()); //
+		}
+		
+	}
+/*	
+	public void getMatchingPropertyCount() {
+		String propertyCountRowLoc= "//span[contains(text(),'No. of properties matching')]";
+		String Studio="//div[text()='Studio ']//following::div[contains(@class,'dasboard_list_inner bg_white txr font-600')][13]";
+		String Bed1="//div[text()='Studio ']//following::div[contains(@class,'dasboard_list_inner bg_white txr font-600')][14]";
+		String Bed2="//div[text()='Studio ']//following::div[contains(@class,'dasboard_list_inner bg_white txr font-600')][15]";
+		String Bed3="//div[text()='Studio ']//following::div[contains(@class,'dasboard_list_inner bg_white txr font-600')][16]";
+		
+		
+//		 
+		safeGetText(propertyCountRowLoc);
+		
+		
+		BaseSetup.infoLog("Attempting to click on dashboard button.");
+		try {
+			safeExplicitWait(propertyCountRowLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(propertyCountRowLoc, LONGWAIT);
+				
+				safeGetText(Studio);
+				safeGetText(Bed1);
+				safeGetText(Bed2);
+				safeGetText(Bed3);
+				
+			BaseSetup.passLog("✅ click on dashboard button. clicked successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(propertyCountRowLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator click on dashboard button."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to click on dashboard button. Error: " + e.getMessage()); //
+		}
+		
+		
+	}
+	*/
+	
+	public void getMatchingPropertyCount() {
+	    String propertyCountRowLoc = "//div[contains(text(),'No. of properties matching')]";
+
+	    // Wait for the row to be visible
+	    safeExplicitWait(propertyCountRowLoc, LONGWAIT);
+	    BaseSetup.infoLog("🔍 Collecting property count for Studio to 3 Bed...");
+
+	    int totalCount = 0;
+
+	    try {
+	        // Your defined locators
+	        String Studio = "//span[contains(text(),'No. of properties ')]//following::div[contains(@class,'dasboard_list_inner bg_white txr font-600')][9]";
+	        String Bed1 = "//span[contains(text(),'No. of properties ')]//following::div[contains(@class,'dasboard_list_inner bg_white txr font-600')][10]";
+	        String Bed2 = "//span[contains(text(),'No. of properties ')]//following::div[contains(@class,'dasboard_list_inner bg_white txr font-600')][11]";
+	        String Bed3 = "//span[contains(text(),'No. of properties ')]//following::div[contains(@class,'dasboard_list_inner bg_white txr font-600')][12]";
+
+	        // Fetch and sum up all counts
+	        String[] bedNames = {"Studio", "1 Bed", "2 Bed", "3 Bed"};
+	        String[] locators = {Studio, Bed1, Bed2, Bed3};
+
+	        for (int i = 0; i < locators.length; i++) {
+	            String rawText = safeGetText(locators[i]).trim();
+	            
+	            // Extract only the integer value before any bracket or space
+	            // This will capture numbers like "487", "483", "708", "431" from your table
+	            String cleanText = rawText.split("\\s*\\(")[0].trim(); // Split at opening bracket and take first part
+	            cleanText = cleanText.split("\\s+")[0].trim(); // Split at spaces and take first part
+	            
+	            int count = 0;
+
+	            if (!cleanText.isEmpty()) {
+	                count = Integer.parseInt(cleanText);
+	                totalCount += count;
+	                BaseSetup.infoLog(bedNames[i] + " property count: " + count);
+	            } else {
+	                BaseSetup.warningLog("⚠️ " + bedNames[i] + " count not found or is zero.");
+	            }
+	        }
+
+	        BaseSetup.passLog("✅ Total property count (Studio to 3 Bed):-----> " + totalCount);
+
+	    } catch (Exception e) {
+	        BaseSetup.failLog("❌ Error while fetching property counts: " + e.getMessage());
+	    }
+	}
+
+      public void clickOnWindowClose() {
+	
+	//needToWait(VERYVERYSHORTWAIT);
+	String windowCloseIconLoc="//img[@class='logo-image']//following::a[1]";
+	BaseSetup.infoLog("Click On Current Window close icon.");
+	try {
+		safeExplicitWait(windowCloseIconLoc, LONGWAIT);
+		try {
+			safeWaitForElementToBeClickable(windowCloseIconLoc, LONGWAIT);
+			safeClick(windowCloseIconLoc); // 1.
+		//	safeClick(selectYearComparatorAfterLoc); //2.
+		BaseSetup.passLog("✅ Current Window close icon. clicked successfully."); //
+		} catch (Exception e) {
+			WebElement element = driver.findElement(By.xpath(windowCloseIconLoc));
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+			BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator click on Current Window close icon."); //
+		}
+	} catch (Exception e) {
+		BaseSetup.failLog("❌ Unable to click on Current Window close icon. Error: " + e.getMessage()); //
+	}
+}
+      
+      public void clickOnBedTypeDropDown() {
+    	  String bedTypeDropDownLoc="//label[text()='Bed Type']//following::button[1]";
+    	  BaseSetup.infoLog("Click On Current Window close icon.");
+  		try {
+  			safeExplicitWait(bedTypeDropDownLoc, LONGWAIT);
+  			try {
+  				safeWaitForElementToBeClickable(bedTypeDropDownLoc, LONGWAIT);
+  				safeClick(bedTypeDropDownLoc); // 1.
+  			//	safeClick(selectYearComparatorAfterLoc); //2.
+  			BaseSetup.passLog("✅ Bed Type Drop Down. clicked successfully."); //
+  			} catch (Exception e) {
+  				WebElement element = driver.findElement(By.xpath(bedTypeDropDownLoc));
+  				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+  				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator click on Bed Type Drop Down. ."); //
+  			}
+  		} catch (Exception e) {
+  			BaseSetup.failLog("❌ Unable to click on Bed Type Drop Down. Error: " + e.getMessage()); //
+  		}
+    	  
+      }
+	
+	public void removeAllBedType() {
+		String studioLabelLoc="//label[text()='Bed Type']//following::label[1]";
+		String bed1LabelLoc="//label[text()='Bed Type']//following::label[2]";
+		String bed2LabelLoc="//label[text()='Bed Type']//following::label[3]";
+		String bed3LabelLoc="//label[text()='Bed Type']//following::label[4]";
+
+		BaseSetup.infoLog("Click On Current Window close icon.");
+		try {
+			safeExplicitWait(studioLabelLoc, LONGWAIT);
+			try {
+				safeWaitForElementToBeClickable(studioLabelLoc, LONGWAIT);
+				safeClick(studioLabelLoc); // 1.
+				safeClick(bed1LabelLoc); //2.
+				safeClick(bed2LabelLoc); //3.
+				safeClick(bed3LabelLoc); //4.
+				
+			BaseSetup.passLog("✅ Current Window close icon. clicked successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(studioLabelLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator click on Current Window close icon."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to click on Current Window close icon. Error: " + e.getMessage()); //
+		}
+	}
 	
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	@param test      //  ExtentTest instance (passed from test class)
+	//	 @param stepName  //  Description shown in report (e.g., "After Ascending sort")
+	//	 @param status
+		public void logScreenshot(ExtentTest test, String stepName, Status status) {
+		    try {
+		        // Define folder
+		        String screenshotDir = System.getProperty("user.dir") + "/reports/screenshots/";
+		        new File(screenshotDir).mkdirs();
+
+		        // Unique filename with timestamp
+		        String fileName = stepName.replaceAll("[^a-zA-Z0-9]", "_") + "_" + System.currentTimeMillis() + ".png";
+		        String fullPath = screenshotDir + fileName;
+
+		        // Take screenshot
+		        TakesScreenshot ts = (TakesScreenshot) driver;
+		        File src = ts.getScreenshotAs(OutputType.FILE);
+		        FileHandler.copy(src, new File(fullPath));
+
+		        // Relative path for Extent Report
+		        String relativePath = "screenshots/" + fileName;
+
+		        // Log with status
+		        test.log(status, stepName,
+		                MediaEntityBuilder.createScreenCaptureFromPath(relativePath).build());
+
+		        BaseSetup.infoLog("Screenshot logged: " + stepName + " → " + relativePath);
+
+		    } catch (Exception e) {
+		        BaseSetup.failLog("Failed to take screenshot: " + e.getMessage());
+		        test.log(Status.FAIL, "Screenshot capture failed: " + stepName);
+		    }
+		}
+			
 	
 
 }

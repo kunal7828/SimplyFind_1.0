@@ -208,14 +208,14 @@ public class BaseSetup  {
     }
 
 
-    @BeforeMethod
+    @BeforeMethod 
     public void beforeMethod(Method method) {
         System.out.println("Running Test Case: " + method.getName());
         extentTest = extentReports.createTest(method.getName());
         BaseSetup.infoLog("Running Test Case: " + method.getName());   //changes Addded by kunal 
     }
     
-    @AfterMethod
+    @AfterMethod (enabled=false)
 	 public void takeScreenshot(Method method) throws Exception
 	 {
     	TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
@@ -235,7 +235,7 @@ public class BaseSetup  {
                 log.info("Extent Report generated successfully.");
             }
             if (driver != null) {
-        //       driver.quit();
+           //    driver.quit();
                 log.info("Browser closed successfully.");
             }
         } catch (Exception e) {

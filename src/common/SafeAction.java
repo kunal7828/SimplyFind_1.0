@@ -526,6 +526,37 @@ public String safeCaptureAndAttachScreenshot(ExtentTest test, Status logLevel, S
  //  safeScrollBy(300, 400);
   
     
+//	@param test      //  ExtentTest instance (passed from test class)
+	//	 @param stepName  //  Description shown in report (e.g., "After Ascending sort")
+	//	 @param status
+		public void safeLogScreenshot(ExtentTest test, String stepName, Status status) {
+		    try {
+		        // Define folder
+		        String screenshotDir = System.getProperty("user.dir") + "/reports/screenshots/";
+		        new File(screenshotDir).mkdirs();
 
+		        // Unique filename with timestamp
+		        String fileName = stepName.replaceAll("[^a-zA-Z0-9]", "_") + "_" + System.currentTimeMillis() + ".png";
+		        String fullPath = screenshotDir + fileName;
+
+		        // Take screenshot
+		        TakesScreenshot ts = (TakesScreenshot) driver;
+		        File src = ts.getScreenshotAs(OutputType.FILE);
+		        FileHandler.copy(src, new File(fullPath));
+
+		        // Relative path for Extent Report
+		        String relativePath = "screenshots/" + fileName;
+
+		        // Log with status
+		        test.log(status, stepName,
+		                MediaEntityBuilder.createScreenCaptureFromPath(relativePath).build());
+
+		        BaseSetup.infoLog("Screenshot logged: " + stepName + " → " + relativePath);
+
+		    } catch (Exception e) {
+		        BaseSetup.failLog("Failed to take screenshot: " + e.getMessage());
+		        test.log(Status.FAIL, "Screenshot capture failed: " + stepName);
+		    }
+		}
     
 }
