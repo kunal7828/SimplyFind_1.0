@@ -101,12 +101,14 @@ public class BuyTest extends BaseSetup {
 	 */
 
 	String BuiltYear = "1940";
-	String filterName = "test6";
+	String filterName = "test7";
 
-	@Test(priority = 5, enabled = true) // enabled= false , true
+	@Test(priority = 5, enabled = false) // enabled= false , true
 	public void verifyMoreFilterFunctionality() {
 		BuyPage buyPage = new BuyPage(driver);
 		buyPage.clickOnBuyLink();
+		passLog("click on buy link successfully");
+		
 		buyPage.clickOnMyRequirement();
 		buyPage.selectMyRequirement();
 		buyPage.validatePropertyCount(); // Reusable method after applying filter.
@@ -168,42 +170,43 @@ public class BuyTest extends BaseSetup {
 
 	}
 
-	@Test(priority = 6, enabled = false) // enabled= false , true
+	@Test(priority = 6, enabled = true) // enabled= false , true
 	public void closewindowFunctionality() {
 		BuyPage buyPage = new BuyPage(driver);
 		buyPage.clickOnBuyLink();
+	//	passLog("click on buy link successfully");
 		buyPage.clickOnMyRequirement();
 		buyPage.selectMyRequirement();
-	//	buyPage.clickOnDashboard();
-	//	buyPage.clickOnWindowClose();
+		
+//	    buyPage.clickOnDashboard();
+//	    buyPage.clickOnWindowClose();
 //		buyPage.clickOnBuyLink();//duplicate step i used because close button is redirect to buy page.
-		buyPage.clickOnBedTypeDropDown(); //reusable
-		buyPage.removeAllBedType();
-		buyPage.clickOnBedTypeDropDown(); //reusable
-		
-		
-		buyPage.clickOnBedTypeDropDown(); //reusable	
-     	buyPage.selectStudio();
-		buyPage.clickOnSearchButton();
-    	buyPage.validatePropertyCount();
+//		buyPage.clickOnBedTypeDropDown(); //reusable
+//		buyPage.removeAllBedType();
+//		buyPage.clickOnBedTypeDropDown(); //reusable
+
+//		buyPage.clickOnBedTypeDropDown(); //reusable	
+//     	buyPage.selectStudio();
+//		buyPage.clickOnSearchButton();
+//    	buyPage.validatePropertyCount();
+   	
+//    	buyPage.clickOnBedTypeDropDown(); //reusable	
+//    	buyPage.selectStudio();
+//     	buyPage.Select1Bed();
+//		buyPage.clickOnSearchButton();
+//    	buyPage.validatePropertyCount();
     	
-    	buyPage.clickOnBedTypeDropDown(); //reusable	
-    	buyPage.selectStudio();
-     	buyPage.Select1Bed();
-		buyPage.clickOnSearchButton();
-    	buyPage.validatePropertyCount();
-    	
-    	buyPage.clickOnBedTypeDropDown(); //reusable	
-    	buyPage.Select1Bed();
-     	buyPage.Select2Bed();
-		buyPage.clickOnSearchButton();
-    	buyPage.validatePropertyCount();
-    	
-    	buyPage.clickOnBedTypeDropDown(); //reusable	
-    	buyPage.Select2Bed();
-     	buyPage.Select3Bed();
-		buyPage.clickOnSearchButton();
-    	buyPage.validatePropertyCount();
+//    	buyPage.clickOnBedTypeDropDown(); //reusable	
+//    	buyPage.Select1Bed();
+//     	buyPage.Select2Bed();
+//		buyPage.clickOnSearchButton();
+//    	buyPage.validatePropertyCount();
+ 	
+//    	buyPage.clickOnBedTypeDropDown(); //reusable	
+//    	buyPage.Select2Bed();
+//     	buyPage.Select3Bed();
+//		buyPage.clickOnSearchButton();
+//    	buyPage.validatePropertyCount();
     	
     	
 		

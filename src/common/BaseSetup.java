@@ -74,21 +74,21 @@ public class BaseSetup  {
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("credentials_enable_service", false);
         prefs.put("profile.password_manager_enabled", false);
+        prefs.put("profile.password_manager_leak_detection", false);
+        prefs.put("profile.credentials_enable_service", false);
         options.setExperimentalOption("prefs", prefs);
         
-     // Disable password manager completely
-        //    Map<String, Object> prefs = new HashMap<>();
-            prefs.put("credentials_enable_service", false);
-            prefs.put("profile.password_manager_enabled", false);
-            prefs.put("profile.password_manager_leak_detection", false);
-            prefs.put("profile.credentials_enable_service", false);
-            options.setExperimentalOption("prefs", prefs);
+     
+      
+          
             
-            //OR
-      //  ChromeOptions options = new ChromeOptions();   duplicate code
-     //     Map<String, Object> prefs = new HashMap<>(); duplicate code
- //       prefs.put("profile.password_manager_leak_detection", false);
-   //     prefs.put("profile.credentials_enable_service", false);
+           
+            
+      //      OR
+//        ChromeOptions options = new ChromeOptions();   duplicate code
+      
+        prefs.put("profile.password_manager_leak_detection", false);
+        prefs.put("profile.credentials_enable_service", false);
 
        options.setExperimentalOption("prefs", prefs);   
         
