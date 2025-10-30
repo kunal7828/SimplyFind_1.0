@@ -11,155 +11,203 @@ import common.BaseSetup;
 import pages.BuyPage;
 
 public class BuyTest extends BaseSetup {
-	
-	WebDriver driver;
-    WebDriverWait wait;
 
-	String yieldValue="5.4";
-	
-    public static ExtentTest extentTest;
+	WebDriver driver;
+	WebDriverWait wait;
+
+	String yieldValue = "5.4";
+
+	public static ExtentTest extentTest;
 
 //	ExtentReports extent = new ExtentReports();
 //	ExtentTest test = extent.createTest("Validate Sorting"); 
-		
-	@Test(priority = 1, enabled=false, description="Verifying Buy Filters functionality")  //enabled= false , true
-	
-	 public void verifyPropertyCountWithYieldFiltersFunctionality() throws Exception {	
+
+	@Test(priority = 1, enabled = false, description = "Verifying Buy Filters functionality") // enabled= false , true
+
+	public void verifyPropertyCountWithYieldFiltersFunctionality() throws Exception {
 		BuyPage buyPage = new BuyPage(driver);
 		buyPage.clickOnBuyLink();
 		buyPage.clickOnMyRequirement();
-		buyPage.selectMyRequirement();  
-		buyPage.validatePropertyCount(); //Reusable method after applying filter.
+		buyPage.selectMyRequirement();
+		buyPage.validatePropertyCount(); // Reusable method after applying filter.
 		buyPage.enterYieldPercentage(yieldValue);
 		buyPage.saveFilter(filterName);
 		buyPage.clickOnSearchButton();
-		buyPage.validatePropertyCount(); //Reusable method after applying filter.
+		buyPage.validatePropertyCount(); // Reusable method after applying filter.
 		buyPage.clickOnResetButton();
-		buyPage.validatePropertyCount(); //Reusable method after applying filter.
+		buyPage.validatePropertyCount(); // Reusable method after applying filter.
 	}
-	
-	@Test (priority=2, enabled= false) //enabled= false , true 
-	public void verifySortingFunctionality() { 
+
+	@Test(priority = 2, enabled = false) // enabled= false , true
+	public void verifySortingFunctionality() {
 		BuyPage buyPage = new BuyPage(driver);
 		buyPage.clickOnBuyLink();
 		buyPage.clickOnMyRequirement();
-		buyPage.selectMyRequirement();  
-		
+		buyPage.selectMyRequirement();
+
 	}
-	
-	@Test (priority=3, enabled=false)
-		public void verifyAicSortingAcending() {
-			BuyPage buyPage = new BuyPage(driver);
-			buyPage.clickOnSortByDropDown();
-			buyPage.selectAICFromSortingList();	 
-			buyPage.clickOnAcendingAndDecendingIcon();
-			
-		}
-	@Test (priority=4, enabled=false)
+
+	@Test(priority = 3, enabled = false)
+	public void verifyAicSortingAcending() {
+		BuyPage buyPage = new BuyPage(driver);
+		buyPage.clickOnSortByDropDown();
+		buyPage.selectAICFromSortingList();
+		buyPage.clickOnAcendingAndDecendingIcon();
+
+	}
+
+	@Test(priority = 4, enabled = false)
 	public void verifyAicSortingDescending() {
 		BuyPage buyPage = new BuyPage(driver);
 		buyPage.clickOnAcendingAndDecendingIcon();
 //		buyPage.safeLogScreenshot(extentTest, "AIC - Ascending", Status.PASS);
 		// Screenshot after ascending
 	}
-		
-		/*		
-		 * 
-		 * 
-		
-		
-		buyPage.clickOnSortByDropDown();
-		buyPage.selectAICFromSortingList();	 
-		buyPage.clickOnAcendingAndDecendingIcon();
-		buyPage.takeScreenshotForValidateSorting(test); 
-		buyPage.clickOnAcendingAndDecendingIcon();
-		buyPage.takeScreenshotForValidateSorting(test);
-		
-		buyPage.clickOnSortByDropDown();
-		buyPage.selectDaysOnMKTFromSortingList();
-		buyPage.clickOnAcendingAndDecendingIcon();
-		buyPage.takeScreenshotForValidateSorting(test); 
-		buyPage.clickOnAcendingAndDecendingIcon();
-		buyPage.takeScreenshotForValidateSorting(test);
-			
-		buyPage.clickOnSortByDropDown();
-		buyPage.selectDiscountFromSortingList();
-		buyPage.clickOnAcendingAndDecendingIcon();
-		buyPage.takeScreenshotForValidateSorting(test); 
-		buyPage.clickOnAcendingAndDecendingIcon();
-		buyPage.takeScreenshotForValidateSorting(test); 
 
-		buyPage.clickOnSortByDropDown();
-		buyPage.selectEPCFromSortingList();
-		buyPage.clickOnAcendingAndDecendingIcon();
-		buyPage.takeScreenshotForValidateSorting(test); 
-		buyPage.clickOnAcendingAndDecendingIcon();
-		buyPage.takeScreenshotForValidateSorting(test); 
+	/*
+	 * 
+	 * 
+	 * 
+	 * 
+	 * buyPage.clickOnSortByDropDown(); buyPage.selectAICFromSortingList();
+	 * buyPage.clickOnAcendingAndDecendingIcon();
+	 * buyPage.takeScreenshotForValidateSorting(test);
+	 * buyPage.clickOnAcendingAndDecendingIcon();
+	 * buyPage.takeScreenshotForValidateSorting(test);
+	 * 
+	 * buyPage.clickOnSortByDropDown(); buyPage.selectDaysOnMKTFromSortingList();
+	 * buyPage.clickOnAcendingAndDecendingIcon();
+	 * buyPage.takeScreenshotForValidateSorting(test);
+	 * buyPage.clickOnAcendingAndDecendingIcon();
+	 * buyPage.takeScreenshotForValidateSorting(test);
+	 * 
+	 * buyPage.clickOnSortByDropDown(); buyPage.selectDiscountFromSortingList();
+	 * buyPage.clickOnAcendingAndDecendingIcon();
+	 * buyPage.takeScreenshotForValidateSorting(test);
+	 * buyPage.clickOnAcendingAndDecendingIcon();
+	 * buyPage.takeScreenshotForValidateSorting(test);
+	 * 
+	 * buyPage.clickOnSortByDropDown(); buyPage.selectEPCFromSortingList();
+	 * buyPage.clickOnAcendingAndDecendingIcon();
+	 * buyPage.takeScreenshotForValidateSorting(test);
+	 * buyPage.clickOnAcendingAndDecendingIcon();
+	 * buyPage.takeScreenshotForValidateSorting(test);
+	 * 
+	 * buyPage.clickOnSortByDropDown(); buyPage.selectYieldFromSortingList();
+	 * buyPage.clickOnAcendingAndDecendingIcon();
+	 * buyPage.takeScreenshotForValidateSorting(test);
+	 * buyPage.clickOnAcendingAndDecendingIcon();
+	 * buyPage.takeScreenshotForValidateSorting(test);
+	 */
 
-		buyPage.clickOnSortByDropDown();
-		buyPage.selectYieldFromSortingList();
-		buyPage.clickOnAcendingAndDecendingIcon();
-		buyPage.takeScreenshotForValidateSorting(test); 
-		buyPage.clickOnAcendingAndDecendingIcon();
-		buyPage.takeScreenshotForValidateSorting(test);
-		*/
-	
-	String BuiltYear="1940";
-	String filterName="test17";
-	
-	@Test (priority=5, enabled= true) //enabled= false , true
-	public void verifyMoreFilterFunctionality() { 
+	String BuiltYear = "1940";
+	String filterName = "test6";
+
+	@Test(priority = 5, enabled = true) // enabled= false , true
+	public void verifyMoreFilterFunctionality() {
 		BuyPage buyPage = new BuyPage(driver);
 		buyPage.clickOnBuyLink();
 		buyPage.clickOnMyRequirement();
-		buyPage.selectMyRequirement();  
-		buyPage.validatePropertyCount(); //Reusable method after applying filter.
-	//	buyPage.clickOnMoreFilterDropDown();
-		
-	//	buyPage.clickOnAddedToSiteDropDown();
-	//	buyPage.selectAddedToSiteDropDownValue();
-	//    buyPage.selectMustHave();
-	    
-	    
-    //  buyPage.selectDontShow();
-	//	buyPage.viewFilterCheckbox();
-	//	buyPage.RadonFilter();	
-	//	buyPage.clickOnEPCCurrentDropDown();
-	//	buyPage.selectEPCCurrentDropDown();
-	//	buyPage.clickOnEPCPotentialDropDown();
-	//	buyPage.selectEPCPotentialDropDown();	
-	//	buyPage.enterPropertyAgeBuiltYear(BuiltYear);    //change built year on runtime	
-    //  buyPage.clickOnYearComparatorDropDown();
-    //  buyPage.selectYearComparatorFromDropDown();
-		
-		//buyPage.clickOncloseButton();
-	//    buyPage.saveFilter(filterName);
-	//    buyPage.clickOnSearchButton();
-	//	buyPage.validatePropertyCount(); //Reusable method after applying filter.
+		buyPage.selectMyRequirement();
+		buyPage.validatePropertyCount(); // Reusable method after applying filter.
+		buyPage.clickOnMoreFilterDropDown();
+		buyPage.clickOnAddedToSiteDropDown();
+		buyPage.selectAddedToSiteDropDownValue();
+		buyPage.selectMustHave();
+
+		// buyPage.selectDontShow();
+		// buyPage.viewFilterCheckbox();
+		// buyPage.RadonFilter();
+		// buyPage.clickOnEPCCurrentDropDown();
+		// buyPage.selectEPCCurrentDropDown();
+		// buyPage.clickOnEPCPotentialDropDown();
+		// buyPage.selectEPCPotentialDropDown();
+		// buyPage.enterPropertyAgeBuiltYear(BuiltYear); //change built year on runtime
+		// buyPage.clickOnYearComparatorDropDown();
+		// buyPage.selectYearComparatorFromDropDown();
+
+		buyPage.clickOncloseButton();
+		buyPage.saveFilter(filterName);
+		buyPage.clickOnSearchButton();
+		buyPage.validatePropertyCount(); // Reusable method after applying filter.
 		buyPage.clickOnDashboard();
-		//buyPage.getMatchingPropertyCount(); //Reusable method after applying filter.
-		
-		
+		buyPage.getMatchingPropertyCount(); // Reusable method after applying filter.
 		buyPage.clickOnWindowClose();
-	//	buyPage.clickOnBedTypeDropDown();
-	//	buyPage.removeAllBedType();
+		// buyPage.clickOnBedTypeDropDown();
+		// buyPage.removeAllBedType();
 		
 		
+		buyPage.clickOnBuyLink();
+		buyPage.clickOnBedTypeDropDown(); //reusable
+		buyPage.removeAllBedType();
+		buyPage.clickOnBedTypeDropDown(); //reusable
+		
+		
+		buyPage.clickOnBedTypeDropDown(); //reusable	
+     	buyPage.selectStudio();
+		buyPage.clickOnSearchButton();
+    	buyPage.validatePropertyCount();
+    	
+    	buyPage.clickOnBedTypeDropDown(); //reusable	
+    	buyPage.selectStudio();
+     	buyPage.Select1Bed();
+		buyPage.clickOnSearchButton();
+    	buyPage.validatePropertyCount();
+    	
+    	buyPage.clickOnBedTypeDropDown(); //reusable	
+    	buyPage.Select1Bed();
+     	buyPage.Select2Bed();
+		buyPage.clickOnSearchButton();
+    	buyPage.validatePropertyCount();
+    	
+    	buyPage.clickOnBedTypeDropDown(); //reusable	
+    	buyPage.Select2Bed();
+     	buyPage.Select3Bed();
+		buyPage.clickOnSearchButton();
+    	buyPage.validatePropertyCount();
 
-		
-		
-
-
-		
-//		
-		
-		
-
-		
 	}
-	
-	
-	
-	
- 
+
+	@Test(priority = 6, enabled = false) // enabled= false , true
+	public void closewindowFunctionality() {
+		BuyPage buyPage = new BuyPage(driver);
+		buyPage.clickOnBuyLink();
+		buyPage.clickOnMyRequirement();
+		buyPage.selectMyRequirement();
+	//	buyPage.clickOnDashboard();
+	//	buyPage.clickOnWindowClose();
+//		buyPage.clickOnBuyLink();//duplicate step i used because close button is redirect to buy page.
+		buyPage.clickOnBedTypeDropDown(); //reusable
+		buyPage.removeAllBedType();
+		buyPage.clickOnBedTypeDropDown(); //reusable
+		
+		
+		buyPage.clickOnBedTypeDropDown(); //reusable	
+     	buyPage.selectStudio();
+		buyPage.clickOnSearchButton();
+    	buyPage.validatePropertyCount();
+    	
+    	buyPage.clickOnBedTypeDropDown(); //reusable	
+    	buyPage.selectStudio();
+     	buyPage.Select1Bed();
+		buyPage.clickOnSearchButton();
+    	buyPage.validatePropertyCount();
+    	
+    	buyPage.clickOnBedTypeDropDown(); //reusable	
+    	buyPage.Select1Bed();
+     	buyPage.Select2Bed();
+		buyPage.clickOnSearchButton();
+    	buyPage.validatePropertyCount();
+    	
+    	buyPage.clickOnBedTypeDropDown(); //reusable	
+    	buyPage.Select2Bed();
+     	buyPage.Select3Bed();
+		buyPage.clickOnSearchButton();
+    	buyPage.validatePropertyCount();
+    	
+    	
+		
+
+	}
+
 }

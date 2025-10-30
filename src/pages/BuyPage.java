@@ -107,6 +107,16 @@ public class BuyPage extends SafeAction {
 	String selectFPotentialLoc="//label[text()='Potential']//following::a[8]";
 	String selectGPotentialLoc="//label[text()='Potential']//following::a[9]";
 	
+	
+	
+	
+	 String bedTypeDropDownLoc="//button[@id='bed_options_btn']";
+	  String studioLabelLoc="//label[text()='Bed Type']//following::label[1]";
+		String bed1LabelLoc="//label[text()='Bed Type']//following::label[2]";
+		String bed2LabelLoc="//label[text()='Bed Type']//following::label[3]";
+		String bed3LabelLoc="//label[text()='Bed Type']//following::label[4]";
+		
+	
 
 	public BuyPage(WebDriver driver) {
 		super(); // Ensure SafeAction uses this driver
@@ -117,7 +127,7 @@ public class BuyPage extends SafeAction {
 	// ✅ Click on Buy tab
 
 	public void clickOnBuyLink() {
-		needToWait(VERYSHORTWAIT);
+		safeImplicitWait(SHORTWAIT);
 		BaseSetup.infoLog("Attempting to click on the Buy tab...");
 		try {
 			safeExplicitWait(buyLinkLoc, LONGWAIT);
@@ -825,15 +835,16 @@ public class BuyPage extends SafeAction {
 	
 	public void clickOnDashboard() {
 		String dashboardButtonLoc="//a[text()='Dashboard']";
-
-		
-		needToWait(VERYVERYSHORTWAIT);
 		BaseSetup.infoLog("Attempting to click on dashboard button.");
+
+		needToWait(SHORTWAIT);
 		try {
+			safeImplicitWait(SHORTWAIT);
 			safeExplicitWait(dashboardButtonLoc, LONGWAIT);
 			try {
 				safeWaitForElementToBeClickable(dashboardButtonLoc, LONGWAIT);
 				safeClick(dashboardButtonLoc); // 1.
+				needToWait(SHORTWAIT);
 			//	safeClick(selectYearComparatorAfterLoc); //2.
 			BaseSetup.passLog("✅ click on dashboard button. clicked successfully."); //
 			} catch (Exception e) {
@@ -932,15 +943,24 @@ public class BuyPage extends SafeAction {
 
       public void clickOnWindowClose() {
     		String windowCloseIconLoc="//a[@class='icons ic_close_popup popup_close ng-star-inserted']";
-    		
-    		safeClick(windowCloseIconLoc); // 1.
-
-//	needToWait(SHORTWAIT);
-//	
+    	//	safeImplicitWait(LONGWAIT);
+    		safeClickUsingJavaScript(By.xpath(windowCloseIconLoc));
+    //		safeClick(windowCloseIconLoc); // 1.
+    		//    		needToWait(SHORTWAIT);
+//    		safeImplicitWait(LONGWAIT);
+//    		safeWaitForElementToBeVisible(windowCloseIconLoc, LONGWAIT);
+//			safeWaitForElementToBeClickable(windowCloseIconLoc, LONGWAIT);
+//			safeClick(windowCloseIconLoc); // 1.
+    	//	needToWait(LONGWAIT);
+	
+	
 //	BaseSetup.infoLog("Click On Current Window close icon.");
 //	try {
 //		safeExplicitWait(windowCloseIconLoc, LONGWAIT);
 //		try {
+//			
+//			
+//			safeWaitForElementToBeVisible(windowCloseIconLoc, LONGWAIT);
 //			safeWaitForElementToBeClickable(windowCloseIconLoc, LONGWAIT);
 //			safeClick(windowCloseIconLoc); // 1.
 //		//	safeClick(selectYearComparatorAfterLoc); //2.
@@ -956,12 +976,16 @@ public class BuyPage extends SafeAction {
 }
       
       public void clickOnBedTypeDropDown() {
-    	  String bedTypeDropDownLoc="//label[text()='Bed Type']//following::button[1]";
-    	  BaseSetup.infoLog("Click On Current Window close icon.");
+    	 
+    	  BaseSetup.infoLog("Attempting to click on Bed Type Drop Down.");
+    	  needToWait(SHORTWAIT);
+    //	  safeImplicitWait(SHORTWAIT);
   		try {
   			safeExplicitWait(bedTypeDropDownLoc, LONGWAIT);
   			try {
-  				safeWaitForElementToBeClickable(bedTypeDropDownLoc, LONGWAIT);
+  				safeImplicitWait(SHORTWAIT);
+  			//	safeWaitForElementToBeVisible(bedTypeDropDownLoc, SHORTWAIT);
+  				safeWaitForElementToBeClickable(bedTypeDropDownLoc, SHORTWAIT);
   				safeClick(bedTypeDropDownLoc); // 1.
   			//	safeClick(selectYearComparatorAfterLoc); //2.
   			BaseSetup.passLog("✅ Bed Type Drop Down. clicked successfully."); //
@@ -977,39 +1001,132 @@ public class BuyPage extends SafeAction {
       }
 	
 	public void removeAllBedType() {
-		String studioLabelLoc="//label[text()='Bed Type']//following::label[1]";
-		String bed1LabelLoc="//label[text()='Bed Type']//following::label[2]";
-		String bed2LabelLoc="//label[text()='Bed Type']//following::label[3]";
-		String bed3LabelLoc="//label[text()='Bed Type']//following::label[4]";
-
-		BaseSetup.infoLog("Click On Current Window close icon.");
+		
+       needToWait(SHORTWAIT);
+		BaseSetup.infoLog("Attempting to remove All BedType.");
 		try {
 			safeExplicitWait(studioLabelLoc, LONGWAIT);
 			try {
-				safeWaitForElementToBeClickable(studioLabelLoc, LONGWAIT);
-				safeClick(studioLabelLoc); // 1.
-				safeClick(bed1LabelLoc); //2.
-				safeClick(bed2LabelLoc); //3.
-				safeClick(bed3LabelLoc); //4.
+			safeWaitForElementToBeClickable(studioLabelLoc, LONGWAIT);
+			safeClick(studioLabelLoc); // 1.
+			safeClick(bed1LabelLoc); //2.
+			safeClick(bed2LabelLoc); //3.
+			safeClick(bed3LabelLoc); //4.
+	//		safeClick(bedTypeDropDownLoc); //5.
+			
 				
-			BaseSetup.passLog("✅ Current Window close icon. clicked successfully."); //
+			BaseSetup.passLog("✅ remove All BedType clicked successfully."); //
 			} catch (Exception e) {
 				WebElement element = driver.findElement(By.xpath(studioLabelLoc));
 				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator click on Current Window close icon."); //
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator click on remove All Bed Type."); //
 			}
 		} catch (Exception e) {
-			BaseSetup.failLog("❌ Unable to click on Current Window close icon. Error: " + e.getMessage()); //
+			BaseSetup.failLog("❌ Unable to remove All BedType. Error: " + e.getMessage()); //
 		}
 	}
 	
 	
+	public void selectStudio() {
+		
+		needToWait(SHORTWAIT);
+
+		BaseSetup.infoLog("Attempting select studio from drop down.");
+		try {
+			safeExplicitWait(studioLabelLoc, LONGWAIT);
+			try {
+			safeWaitForElementToBeClickable(studioLabelLoc, LONGWAIT);
+			safeClick(studioLabelLoc); // 1.
+			BaseSetup.passLog("✅ Select studio from drop down successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(studioLabelLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator select studio from drop down."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to select studio from drop down. Error: " + e.getMessage()); //
+		}
+	}
+	
+	public void Select1Bed() {
+		needToWait(SHORTWAIT);
+		BaseSetup.infoLog("Attempting to Select1Bed BedType.");
+		try {
+			safeExplicitWait(bed1LabelLoc, LONGWAIT);
+			try {
+			safeWaitForElementToBeClickable(bed1LabelLoc, LONGWAIT);
+		//	safeClick(studioLabelLoc); // 1.
+			safeClick(bed1LabelLoc); //2.
+		//	safeClick(bed2LabelLoc); //3.
+		//	safeClick(bed3LabelLoc); //4.
+		//	safeClick(bedTypeDropDownLoc); //4
+			
+				
+			BaseSetup.passLog("✅ Select 1Bed BedType successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(bed1LabelLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator Select 1Bed BedType ."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to Select 1Bed BedType . Error: " + e.getMessage()); //
+		}
+		
+	}
 	
 	
+	public void Select2Bed() {
+		needToWait(SHORTWAIT);
+		BaseSetup.infoLog("Attempting to Select 2Bed BedType.");
+		try {
+			safeExplicitWait(bed2LabelLoc, LONGWAIT);
+			try {
+			safeWaitForElementToBeClickable(bed2LabelLoc, LONGWAIT);
+		//	safeClick(studioLabelLoc); // 1.
+		//	safeClick(bed1LabelLoc); //2.
+			safeClick(bed2LabelLoc); //3.
+		//	safeClick(bed3LabelLoc); //4.
+		//	safeClick(bedTypeDropDownLoc); //4
+			
+				
+			BaseSetup.passLog("✅ Select 2Bed BedType successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(bed2LabelLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator Select 2Bed BedType ."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to Select 2Bed BedType . Error: " + e.getMessage()); //
+		}
+		
+	}
 	
 	
-	
-	
+	public void Select3Bed() {
+		needToWait(SHORTWAIT);
+		BaseSetup.infoLog("Attempting to Select 3Bed BedType.");
+		try {
+			safeExplicitWait(bed3LabelLoc, LONGWAIT);
+			try {
+			safeWaitForElementToBeClickable(bed3LabelLoc, LONGWAIT);
+		//	safeClick(studioLabelLoc); // 1.
+		//	safeClick(bed1LabelLoc); //2.
+	//		safeClick(bed2LabelLoc); //3.
+			safeClick(bed3LabelLoc); //4.
+		//	safeClick(bedTypeDropDownLoc); //4
+			
+				
+			BaseSetup.passLog("✅ Select 3Bed BedType successfully."); //
+			} catch (Exception e) {
+				WebElement element = driver.findElement(By.xpath(bed3LabelLoc));
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				BaseSetup.warningLog("⚠️ Normal click failed. Executed JavaScript Year Comparator Select 3Bed BedType ."); //
+			}
+		} catch (Exception e) {
+			BaseSetup.failLog("❌ Unable to Select 3Bed BedType . Error: " + e.getMessage()); //
+		}
+		
+	}
 	
 	
 	

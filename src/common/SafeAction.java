@@ -62,6 +62,50 @@ public class SafeAction extends Sync {
         }
     }
     
+    
+    /**
+     * Safely clicks an element using JavaScript.
+     * Waits for the element to be clickable and scrolls it into view if needed.
+     *
+     * @param driver The WebDriver instance
+     * @param locator The By locator to find the element
+     * @param timeoutInSeconds Maximum time to wait for the element
+     * 
+     * // Click the close popup button
+    safeClickUsingJavaScript(
+    driver,
+    By.xpath("//a[@class='icons ic_close_popup popup_close ng-star-inserted']"),
+    10
+);
+     */
+    public void safeClickUsingJavaScript(By locator) {           //, int timeoutInSeconds
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(VERYSHORTWAIT));
+
+    //	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+    	
+        
+        try {
+            // Wait until element is present and clickable
+            WebElement element = wait.until(
+                ExpectedConditions.elementToBeClickable(locator)
+                
+                
+            );
+
+            // Scroll into view (optional but recommended)
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+
+            // Perform click using JavaScript
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+        
+
+            System.out.println("Successfully clicked element using JavaScript: " + locator);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to click element using JavaScript: " + locator, e);
+        }
+    }
+    
+    
    /*
     public void safeClick(By locator) {
         int attempts = 0;

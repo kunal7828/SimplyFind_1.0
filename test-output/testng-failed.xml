@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.BuyTest">
         <methods>
-          <include name="verifyMoreFilterFunctionality"/>
+          <include name="closewindowFunctionality"/>
           <include name="openBrowserWithLogin"/>
           <include name="beforeMethod"/>
           <include name="closeBrowser"/>
